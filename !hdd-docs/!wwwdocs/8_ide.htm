@@ -1,0 +1,1224 @@
+<html>
+<head>
+<title>Восстановление информации - Интерфейс IDE</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<link rel="stylesheet" href="../sStyles.css" type="text/css">
+<script language="JavaScript">
+<!--
+function MM_preloadimages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadimages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v3.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : args[i+1];
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    if ((nbArr = document[grpName]) != null)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = args[i+1];
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+<link rel="stylesheet" href="../sStyles.css" type="text/css">
+</head>
+
+<body bgcolor="#FFCC99" text="#663300" link="#CC6600" alink="#CC6600" vlink="#CC6600" onLoad="MM_preloadimages('../images/recv3.gif','../images/recv2.gif','../images/info3.gif','../images/info2.gif','../images/prog3.gif','../images/prog2.gif','../images/link3.gif','../images/link2.gif','../images/help3.gif','../images/help2.gif')">
+<table width="99%" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td rowspan="2" bgcolor="#FFFFFF" width="160"> 
+      <div align="center"><a href="../www.iatp.ru"><img src="../images/iatp.gif" width="156" height="104" border="0"></a></div>
+    </td>
+    <td rowspan="2" bgcolor="#FFFFFF" width="10" background="../images/tube_ver.gif">&nbsp;</td>
+    <td height="62" bgcolor="#FFFFFF" background="../images/grad_ver.gif" valign="top" align="center" rowspan="2" width="112"> 
+      <div align="right"><img src="../images/hdd.gif" width="71" height="105"></div>
+    </td>
+    <td bgcolor="#FFCC99" background="../images/grad_ver.gif" width="680" height="62"> 
+      <div align="right"><img src="../images/title.gif" width="423" height="70"></div>
+    </td>
+  </tr>
+  <tr> 
+    <td bgcolor="#FFFFFF" height="41" width="680"> 
+      <div align="right"><font face="Arial, Helvetica, sans-serif"><a href="../recovery/1_first.htm" onClick="MM_nbGroup('down','group1','Recov','../images/recv3.gif',1)" onMouseOver="MM_nbGroup('over','Recov','../images/recv2.gif','../images/recv3.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="Recov" src="../images/recv1.gif" border="0" onLoad=""></a><a href="../index.htm" onClick="MM_nbGroup('down','group1','info','../images/info3.gif',1)" onMouseOver="MM_nbGroup('over','info','../images/info2.gif','../images/info3.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="info" src="../images/info1.gif" border="0" onLoad=""></a><a href="../programs/index.htm" onClick="MM_nbGroup('down','group1','progs','../images/prog3.gif',1)" onMouseOver="MM_nbGroup('over','progs','../images/prog2.gif','../images/prog3.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="progs" src="../images/prog1.gif" border="0" onLoad=""></a><a href="../links/index.htm" onClick="MM_nbGroup('down','group1','links','../images/link3.gif',1)" onMouseOver="MM_nbGroup('over','links','../images/link2.gif','../images/link3.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="links" src="../images/link1.gif" border="0" onLoad=""></a><a href="../help/index.htm" onClick="MM_nbGroup('down','group1','help','../images/help3.gif',1)" onMouseOver="MM_nbGroup('over','help','../images/help2.gif','../images/help3.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="help" src="../images/help1.gif" border="0" onLoad=""></a></font></div>
+    </td>
+  </tr>
+  <tr> 
+    <td width="160" height="12" class="LeftMenu" valign="top" bgcolor="#FFFFFF"><img src="../images/grad_htt.gif" width="160" height="19"></td>
+    <td background="../images/grad_htt.gif" class="LeftMenu" valign="top" width="10" height="12"><img src="../images/tube_crs.gif" width="14" height="19"></td>
+    <td background="../images/grad_tub.gif" colspan="2" valign="top" height="12">&nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td width="160" background="../images/grad_hor.gif" class="LeftMenu" valign="top" bgcolor="#FFFFFF">
+      <table width="98%" border="0">
+        <tr> 
+          <td background="../images/grad_hor.gif" height="40" class="LeftMenu" valign="middle" bgcolor="#FFFFFF"> 
+            <p><font face="Arial, Helvetica, sans-serif"><a href="index.htm">Разделы 
+              жесткого диска</a></font><a href="../index.htm"><font face="Arial, Helvetica, sans-serif"> 
+              </font></a><font face="Arial, Helvetica, sans-serif"> </font></p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="40" class="LeftMenu" valign="middle"><font face="Arial, Helvetica, sans-serif"><b><a href="1_file_sys.htm">Общее 
+            описание файловых систем</a> </b> </font></td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="40" class="LeftMenu" valign="middle"><font face="Arial, Helvetica, sans-serif"><a href="2_fat32.htm">FAT-32</a></font></td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="40" class="LeftMenu" valign="middle"><font face="Arial, Helvetica, sans-serif"><a href="3_ntfs.htm">ntfs</a></font></td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="40" class="LeftMenu" valign="middle"><a href="4_FAT_ntfs.htm">Сравнение 
+            FAT и ntfs</a></td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="20" class="LeftMenu" valign="middle"> 
+            <hr>
+          </td>
+        </tr>
+        <tr> 
+          <td width="20%" background="../images/grad_hor.gif" height="40" class="LeftMenu" valign="middle"><a href="5_hdd.htm">Анатомия 
+            жесткого диска</a></td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="40" class="LeftMenu" valign="middle"><font face="Arial, Helvetica, sans-serif"><a href="6_raid.htm">RAID-массивы</a></font></td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="20" class="LeftMenu" valign="middle"> 
+            <hr>
+          </td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="40" class="LeftMenu" valign="middle"><a href="7_general.htm">Общее 
+            описание интерфейсов жестких дисков</a></td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="40" class="LeftMenu" valign="middle">Интерфейс 
+            IDE </td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="40" class="LeftMenu" valign="middle"><a href="9_ata_rags.htm">Сигналы 
+            интерфейса ATA и регистры ввода-вывода</a></td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="20" class="LeftMenu" valign="middle"> 
+            <hr>
+          </td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="40" class="LeftMenu" valign="middle"><a href="winnt_pswd.htm">Если 
+            утерян пароль администратора Win NT (Win 2000)</a></td>
+        </tr>
+      </table>
+    </td>
+    <td width="10" background="../images/tube_ver.gif" class="LeftMenu" valign="top" bgcolor="#FFFFFF">&nbsp;</td>
+    <td background="../images/hdd_bg.jpg" colspan="2" valign="top"> 
+      <blockquote> 
+        <p><font face="Arial, Helvetica, sans-serif"><br>
+          </font></p>
+        <h4><font face="Arial, Helvetica, sans-serif" size="3">ИНТЕРФЕЙС IDE</font><br>
+        </h4>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Что бы ни говорили 
+          сторонники SCSI, широкое распространение IDE-устройств на сегодняшний 
+          день - свершившийся факт. Как посчитали умные люди из компании Quantum, 
+          свыше 90% РС-совместимых персональных компьютеров оснащены жесткими 
+          дисками с интерфейсом IDE. Беда, однако, в том, что IDE или Integrated 
+          Device Electronic - понятие слишком общее и относится, вообще говоря, 
+          к любому устройству с интегрированным контроллером вплоть до электрического 
+          чайника с автоматическим отключением при закипании. В попытках как-то 
+          конкретизировать, какой именно интерфейс имеется в виду, было изобретено 
+          столько различных названий, что при выборе жесткого диска с интерфейсом 
+          IDE у неподготовленного человека может закружиться голова. Посудите 
+          сами: есть интерфейсы АТА с различными номерами, Fast ATA (тоже с номерами), 
+          Ultra ATA (тоже несколько), и, наконец, EIDE! Действительно ли все эти 
+          интерфейсы разные, какие из них совместимы и какой лучше? Попробуем 
+          разобраться. </font> </p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Для начала немного 
+          истории. После того, как компания IBM выпустила модель АТ (Advanced 
+          Technology), в 1984 году у компаний Compaq и Western Digital возникла 
+          идея встроить AT-совместимый контроллер, использующий 16-разрядную шину 
+          ISA, непосредственно в электронику жесткого диска. Сказано - сделано. 
+          Получилось удачно: цена жесткого диска увеличилась несущественно, зато 
+          стоимость всей дисковой подсистемы заметно снизилась. Так и родился 
+          на свет интерфейс ATA (AT Attachment - в дословном переводе - "прикрепление 
+          к АТ"), который стал широко известен под названием IDE. Так как шина 
+          ISA в модели АТ была 16-битной, интерфейс, естественно, получился тоже 
+          16-битным, причем эта разрядность сохранилась до настоящего времени, 
+          невзирая на последующие улучшения и добавления. В скором времени, однако, 
+          выяснилось, что разные производители умудрялись делать несовместимые 
+          между собой диски с интерфейсом ATA. Если такие диски устанавливались 
+          в паре master/slave на один канал IDE, то дисковая подсистема просто 
+          не работала. Для устранения этих неприятных явлений был принят стандарт 
+          ANSI спецификации АТА. "Оригинальный" интерфейс АТА имел следующие возможности: 
+          </font> 
+        <ul>
+          <li><font face="Arial, Helvetica, sans-serif" size="2"><strong>Поддержка 
+            двух жестких дисков</strong>. Один канал делится между двумя устройствами, 
+            сконфигурированными как master и slave; </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2"><strong>PIO Modes</strong>. 
+            ATA включает поддержку PIO modes 0,1 и 2; </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2"><strong>DMA Modes</strong>. 
+            ATA включает поддержку single word DMA modes 0, 1 и 2 и multiword 
+            DMA mode 0. </font></li>
+        </ul>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">"Оригинальный" интерфейс 
+          АТА предназначен только для подключения жестких дисков и не поддерживает 
+          такие возможности, как ATAPI - интерфейс для подключения IDE-устройств, 
+          отличных от жестких дисков, режим передачи block mode и LBA (logical 
+          block addressing). </font> 
+        <p><font face="Arial, Helvetica, sans-serif" size="2">В скором времени 
+          стандарт АТА перестал удовлетворять возросшим потребностям, поскольку 
+          вновь выпускаемые жесткие диски требовали большей скорости передачи 
+          данных и наличия новых возможностей. Так родился на свет интерфейс АТА-2, 
+          который вскоре был также стандартизирован ANSI. Сохраняя обратную совместимость 
+          со стандартом ATA, ATA-2 содержал несколько новых возможностей: </font> 
+        <ul>
+          <li><font face="Arial, Helvetica, sans-serif" size="2"><strong>Более 
+            скоростные PIO Modes</strong>. В АТА-2 добавлена поддержка PIO modes 
+            3 и 4; </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2"><strong>Более 
+            скоростные DMA Modes</strong>. АТА-2 поддерживает multiword DMA modes 
+            1 и 2; </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2"><strong>Block 
+            Transfer</strong>. ATA-2 включает команды, позволяющие осуществлять 
+            обмен в режиме block transfer для повышения производительности; </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2"><strong>Logical 
+            Block Addressing (LBA)</strong>. АТА-2 требует поддержки жестким диском 
+            протокола передачи LBA. Разумеется, для использования этого протокола 
+            необходимо, чтобы его поддерживал также и BIOS; </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2"><strong>Усовершенствованная 
+            команда Identify Drive</strong>. Увеличен объем информации о характеристиках, 
+            которую жесткий диск выдает по системным запросам. </font></li>
+        </ul>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">И все было бы хорошо, 
+          но фирмы-производители в стремлении заполучить еще кусочек рынка начали 
+          придумывать красивые названия и обзывать ими интерфейсы своих жестких 
+          дисков. На самом деле интерфейсы Fast ATA, Fast ATA-2 и Enhanced IDE 
+          базируются на стандарте АТА-2 и являются не более, чем маркетинговыми 
+          терминами. Все различие между ними состоит в том, какую часть стандарта 
+          и как они поддерживают. </font> 
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Наибольшую путаницу 
+          вызывают названия Fast ATA и Fast ATA-2, принадлежащие перу соответственно 
+          Seagate и Quantum. Создается вполне естественное впечатление, что Fast 
+          ATA является некоторым улучшением стандарта АТА, тогда как Fast ATA-2 
+          базируется на стандарте АТА-2. Но все, увы, не так просто. На самом 
+          деле Fast ATA-2 есть просто другое название стандарта АТА-2, а Fast 
+          ATA отличается от него лишь тем, что не поддерживает самые быстрые режимы 
+          - PIO mode 4 и DMA mode 2. При этом обе компании нападают на компанию 
+          Western Digital и ее стандарт EIDE за то, что он вносит еще большую 
+          путаницу. У EIDE есть свои недостатки, но об этом чуть позже. </font> 
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Попыткой дальнейшего 
+          развития интерфейса АТА был проект стандарта АТА-3, в котором основное 
+          внимание уделялось повышению надежности: </font> 
+        <ul>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">AТА-3 содержит 
+            средства, повышающие надежность передачи данных с использованием высокоскоростных 
+            режимов, что действительно является проблемой, поскольку кабель IDE/ATA 
+            остался тем же, что и при рождении стандарта; </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">АТА-3 включает 
+            Self-Monitoring Analysis and Reporting Technology (SMART). </font></li>
+        </ul>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">АТА-3 не был утвержден 
+          в качестве стандарта ANSI в основном потому, что не вводил новых режимов 
+          передачи данных, хотя технология SMART в настоящее время широко используется 
+          производителями жестких дисков. </font> 
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Следующим шагом 
+          в развитии интерфейса IDE/ATA явился стандарт Ultra ATA (он же Ultra 
+          DMA, он же ATA-33, он же DMA-33, его же иногда называют АТА-3(!)). Ultra 
+          ATA является стандартом де-факто использования самого быстрого режима 
+          DMA - mode 3, обеспечивающего скорость передачи данных 33.3 МВ/сек. 
+          Для обеспечения надежной передачи данных по все тому же кабелю используются 
+          специальные схемы контроля и коррекции ошибок, при этом сохраняется 
+          обратная совместимость с предыдущими стандартами - АТА и АТА-2. То есть 
+          если вы, купив жесткий диск с интерфейсом Ultra АТА, вдруг обнаружили, 
+          что ваша системная плата его не поддерживает, не огорчайтесь - диск 
+          все равно будет работать, хотя и медленнее :) </font> 
+        <p><font face="Arial, Helvetica, sans-serif" size="2">И, наконец, последнее 
+          достижение в этой области - интерфейс Ultra ATA/66, разработанный компанией 
+          Quantum, позволяющий осуществлять передачу данных со скоростью 66МВ/сек. 
+          </font> 
+        <p><font face="Arial, Helvetica, sans-serif" size="2">В то время, когда 
+          разрабатывался интерфейс IDE/ATA, единственным устройством, которое 
+          нуждалось в этом интерфейсе, был жесткий диск, поскольку стриммеры и 
+          зарождающиеся драйвы CD-ROM имели собственный интерфейс (многие помнят 
+          времена, когда CD-ROM подключался через интерфейс на звуковой карте). 
+          Однако вскоре стало ясно, что использование для подключения всех устройств 
+          быстрого и относительно простого интерфейса IDE/ATA сулит значительные 
+          выгоды, в том числе и за счет своей универсальности. Однако система 
+          команд интерфейса IDE/ATA была рассчитана только на жесткие диски, поэтому 
+          просто подключить, например, CD-ROM к IDE-каналу нельзя - работать не 
+          будет (проверялось мною лично при попытке подключить CD-ROM вместо загрузочного 
+          IDE-диска на 486 сервере Hewlett-Packard). Поначалу, по молодости лет 
+          пребывал в недоумении: как так - шлейф подходит, а не работает?). Пришлось 
+          разработать новый протокол - ATA Packet Interface или ATAPI. Этот протокол 
+          позволяет другим устройствам подключаться с помощью стандартного шлейфа 
+          IDE и "вести себя" как IDE/ATA жесткий диск. На самом деле протокол 
+          ATAPI намного сложнее, чем ATA, поскольку передача данных идет с использованием 
+          стандартных режимов PIO и DMA, а реализация поддержки этих режимов существенно 
+          зависит от типа подключенного устройства. Название packet (пакетный) 
+          этот протокол получил по той причине, что команды устройству действительно 
+          приходится передавать группами или пакетами. Тем не менее, с точки зрения 
+          пользователя, что, согласитесь, важнее всего, нет разницы между IDE/ATA 
+          жестким диском, ATAPI CD-ROMом или ZIP-драйвом. Современные BIOSы даже 
+          поддерживают загрузку с ATAPI-устройств. </font> 
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Теперь, как и было 
+          обещано, поговорим немного о EIDE. Этот термин, введенный компанией 
+          Western Digital, достаточно широко употребляется в компьютерной индустрии 
+          и почти так же широко критикуется, причем справедливо. Одной из причин 
+          для критики является тот факт, что EIDE не является стандартом, а лишь 
+          маркетинговым термином, причем его содержание меняется с течением времени. 
+          Так, изначально EIDE включал поддержку режимов PIO до mode 3, потом 
+          была добавлена поддержка mode 4. Еще одним существенным недостатком 
+          EIDE как стандарта является тот факт, что его спецификация включает 
+          в себя совершенно разноплановые вещи. Судите сами, EIDE на данный момент 
+          включает в себя: </font> 
+        <ul>
+          <li><font face="Arial, Helvetica, sans-serif" size="2"><strong>ATA-2</strong>. 
+            Целиком, включая самые быстрые режимы; </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2"><strong>ATAPI</strong>. 
+            Целиком; </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2"><strong>Dual 
+            IDE/ATA Host Adapters</strong>. Стандарт EIDE включает поддержку двух 
+            IDE/ATA хостов, что позволяет использовать одновременно до 4 IDE/ATA/ATAPI 
+            устройств. </font></li>
+        </ul>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Теперь посмотрим, 
+          что означает фраза "жесткий диск с интерфейсом EIDE". Поскольку поддерживать 
+          ATAPI ему абсолютно незачем, а два канала IDE он поддержать не в состоянии, 
+          то все это сводится к гораздо более скромному: "жесткий диск с интерфейсом 
+          АТА-2". В принципе идея была хорошая - создать стандарт, охватывающий 
+          BIOS, чипсет и жесткий диск. Но поскольку большая часть EIDE как стандарта 
+          относится именно к BIOS и чипсету, то получилась еще и путаница между 
+          Enhanced IDE и возникшим приблизительно в это же время Enhanced BIOS 
+          (BIOS, поддерживающий IDE/ATA диски емкостью больше 504MB). Сложилось 
+          вполне естественное мнение, что для использования дисков объемом больше 
+          504МВ нужен интерфейс EIDE (тогда как на самом деле нужен был только 
+          Enhanced BIOS), тем более, что производители карт с Enhanced BIOS рекламировали 
+          их как "enhanced IDE cards". Сейчас, к счастью, эти проблемы позади 
+          (как и барьер 540МВ). </font> 
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Итак, основные (как 
+          официальные, так и неофициальные) стандарты интерфейса IDE приведены 
+          в следующей таблице. </font>
+        <p>&nbsp;
+        <center>
+          <table border=1 cellpadding=0 cellspacing=0 align="center" bordercolor="cc6600">
+            <tr bgcolor="ffcc99"> 
+              <th><font face="Arial, Helvetica, sans-serif" size="2">Интерфейс</font></th>
+              <th><font face="Arial, Helvetica, sans-serif" size="2">Стандарт</font></th>
+              <th><font face="Arial, Helvetica, sans-serif" size="2">PIO modes</font></th>
+              <th><font face="Arial, Helvetica, sans-serif" size="2">DMA modes</font></th>
+              <th><font face="Arial, Helvetica, sans-serif" size="2">Отличия от 
+                IDE/ATA</font></th>
+            </tr>
+            <tr bgcolor="#FFFFFF"> 
+              <td><font face="Arial, Helvetica, sans-serif" size="2">IDE/ATA</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">ANSI</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">0, 1, 2</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Single word 
+                0, 1, 2; multiword 0</font></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr bgcolor="#FFFFFF"> 
+              <td><font face="Arial, Helvetica, sans-serif" size="2">ATA-2</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">ANSI</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">0, 1, 2, 
+                3, 4</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Single word 
+                0, 1, 2; multiword 0, 1, 2</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Режим block 
+                transfer, поддержка LBA, Усовершенствованная команда identify 
+                drive</font></td>
+            </tr>
+            <tr bgcolor="#FFFFFF"> 
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Fast ATA</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Маркетинговый 
+                термин</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">0, 1, 2, 
+                3</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Single word 
+                0, 1, 2; multiword 0, 1</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Аналогично 
+                АТА-2</font></td>
+            </tr>
+            <tr bgcolor="#FFFFFF"> 
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Fast ATA-2</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Маркетинговый 
+                термин</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">0, 1, 2, 
+                3, 4</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Single word 
+                0, 1, 2; multiword 0, 1, 2</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Аналогично 
+                АТА-2</font></td>
+            </tr>
+            <tr bgcolor="#FFFFFF"> 
+              <td><font face="Arial, Helvetica, sans-serif" size="2">ATA-3</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Неофициальный</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">0, 1, 2, 
+                3, 4</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Single word 
+                0, 1, 2; multiword 0, 1, 2</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Аналогично 
+                АТА-2, добавлена поддержка надежности передачи на высоких скоростях 
+                и SMART</font></td>
+            </tr>
+            <tr bgcolor="#FFFFFF"> 
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Ultra ATA</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Неофициальный</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">0, 1, 2, 
+                3, 4</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Single word 
+                0, 1, 2; multiword 0, 1, 2, 3 (DMA-33/66)</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Аналогично 
+                АТА-3</font></td>
+            </tr>
+            <tr bgcolor="#FFFFFF"> 
+              <td><font face="Arial, Helvetica, sans-serif" size="2">ATAPI</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">ANSI</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">0, 1, 2, 
+                3, 4</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Single word 
+                0, 1, 2; multiword 0, 1, 2</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Аналогично 
+                АТА-2, добавлена поддержка устройств, отличных от жестких дисков</font></td>
+            </tr>
+            <tr bgcolor="#FFFFFF"> 
+              <td><font face="Arial, Helvetica, sans-serif" size="2">EIDE</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Маркетинговый 
+                термин</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">0, 1, 2, 
+                3, 4</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Single word 
+                0, 1, 2; multiword 0, 1, 2</font></td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">ATA-2 + ATAPI 
+                и поддержка двух хост-адаптеров</font></td>
+            </tr>
+          </table>
+        </center>
+        <p>&nbsp;
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Теперь перейдем 
+          к теме, не менее интересной. Существуют два параметра, характеризующих 
+          скорость передачи данных при использовании IDE/ATA-жесткого диска. Внутренняя 
+          скорость передачи (internal transfer rate) характеризует скорость передачи 
+          непосредственно между магнитным носителем и внутренним буфером жесткого 
+          диска и определяется плотностью записи, скоростью вращения и т.д. Эти 
+          параметры зависят от конструкции диска, а не от типа интерфейса. С другой 
+          стороны, внешняя скорость передачи данных, то есть скорость передачи 
+          по каналу IDE, полностью зависит от используемого режима передачи данных. 
+          На заре использования дисков IDE/ATA скорость работы дисковой подсистемы 
+          определялась внутренней скоростью передачи данных, которая была заведомо 
+          меньше внешней. В настоящее время в связи с увеличением плотности записи 
+          (что позволяет снимать больше информации за один оборот диска) и частоты 
+          вращения на первый план выходит именно внешняя скорость передачи. Что 
+          же все-таки означают номера режимов и чем PIO отличается от DMA? </font> 
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Изначально общеупотребительным 
+          способом передачи данных через интерфейс IDE/ATA был протокол, называемый 
+          programmed I/O или PIO. Существует пять режимов PIO, различающихся максимальными 
+          скоростями пакетной передачи данных (burst transfer rates). Общеупотребительное 
+          английское название - PIO modes. </font>
+        <p>&nbsp; 
+        <center>
+          <table border=1 cellpadding=0 cellspacing=0 align="center" bordercolor="cc6600">
+            <tr bgcolor="ffcc99"> 
+              <th height="42"><font face="Arial, Helvetica, sans-serif" size="2">PIO 
+                mode</font></th>
+              <th height="42"> 
+                <p><font face="Arial, Helvetica, sans-serif" size="2">Максимальная 
+                  скорость<br>
+                  </font><font face="Arial, Helvetica, sans-serif" size="2">передачи 
+                  (МВ/сек)</font></p>
+              </th>
+              <th height="42"><font face="Arial, Helvetica, sans-serif" size="2">Поддерживается 
+                стандартами</font></th>
+            </tr>
+            <tr align=middle bgcolor="#FFFFFF"> 
+              <td> 
+                <div align="center"><font face="Arial, Helvetica, sans-serif" size="2">0</font></div>
+              </td>
+              <td> 
+                <div align="center"><font face="Arial, Helvetica, sans-serif" size="2">3.3</font></div>
+              </td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Всеми</font></td>
+            </tr>
+            <tr align=middle bgcolor="#FFFFFF"> 
+              <td> 
+                <div align="center"><font face="Arial, Helvetica, sans-serif" size="2">1</font></div>
+              </td>
+              <td> 
+                <div align="center"><font face="Arial, Helvetica, sans-serif" size="2">5.2</font></div>
+              </td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Всеми</font></td>
+            </tr>
+            <tr align=middle bgcolor="#FFFFFF"> 
+              <td> 
+                <div align="center"><font face="Arial, Helvetica, sans-serif" size="2">2</font></div>
+              </td>
+              <td> 
+                <div align="center"><font face="Arial, Helvetica, sans-serif" size="2">8.3</font></div>
+              </td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Всеми</font></td>
+            </tr>
+            <tr align=middle bgcolor="#FFFFFF"> 
+              <td> 
+                <div align="center"><font face="Arial, Helvetica, sans-serif" size="2">3</font></div>
+              </td>
+              <td> 
+                <div align="center"><font face="Arial, Helvetica, sans-serif" size="2">11.1</font></div>
+              </td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">ATA-2, Fast 
+                ATA, Fast ATA-2, ATA-3, ATAPI, Ultra ATA, EIDE</font></td>
+            </tr>
+            <tr align=middle bgcolor="#FFFFFF"> 
+              <td> 
+                <div align="center"><font face="Arial, Helvetica, sans-serif" size="2">4</font></div>
+              </td>
+              <td> 
+                <div align="center"><font face="Arial, Helvetica, sans-serif" size="2">16.6</font></div>
+              </td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">ATA-2, Fast 
+                ATA-2, ATA-3, ATAPI?, Ultra ATA, EIDE</font></td>
+            </tr>
+          </table>
+        </center>
+        <p>&nbsp;
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Естественно, речь 
+          идет о внешней скорости передачи данных и определяет скорость интерфейса, 
+          а не диска. Необходимо также учитывать (хотя сейчас это уже вряд ли 
+          актуально), что PIO mode 3 и 4 требуют использования шины VLB или PCI, 
+          так как шина ISA не может обеспечить скорость передачи данных больше 
+          10 МВ/сек. До появления режима DMA-33 максимальная скорость передачи 
+          данных у режимов PIO и DMA была одинаковой. Главным недостатком режимов 
+          PIO является то, что передачей данных управляет процессор, что существенно 
+          увеличивает его загрузку. Зато эти режимы не требуют специальных драйверов 
+          и идеально подходят для однозадачных операционных систем. Похоже, однако, 
+          что это вымирающий видЕ </font> 
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Direct Memory Access 
+          (DMA) - прямой доступ к памяти - собирательное название протоколов, 
+          позволяющих периферийному устройству передавать информацию непосредственно 
+          в системную память без участия центрального процессора. Современные 
+          жесткие диски используют эту возможность в сочетании с возможностью 
+          перехватывать управление шиной и самостоятельно управлять передачей 
+          информации (bus mastering подробно обсуждался в серии статей по шинам). 
+          Существует несколько режимов DMA (DMA modes), которые приведены в таблице. 
+          Стоит отметить, что так называемые single word режимы в настоящее время 
+          не используются и приведены только для сравнения.</font>
+        <p>&nbsp; 
+        <center>
+          <table border=1 cellpadding=0 cellspacing=0 align="center" bordercolor="cc6600">
+            <tr bgcolor="ffcc99"> 
+              <th><font face="Arial, Helvetica, sans-serif" size="2">DMA mode</font></th>
+              <th><font face="Arial, Helvetica, sans-serif" size="2">Максимальная 
+                скорость <br>
+                передачи (МВ/сек)</font></th>
+              <th><font face="Arial, Helvetica, sans-serif" size="2">Поддерживается 
+                стандартами</font></th>
+            </tr>
+            <tr align=middle bgcolor="#FFFFFF"> 
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Single word 
+                0</font></td>
+              <td> 
+                <div align="center"><font face="Arial, Helvetica, sans-serif" size="2">2.1</font></div>
+              </td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Всеми</font></td>
+            </tr>
+            <tr align=middle bgcolor="#FFFFFF"> 
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Single word 
+                1</font></td>
+              <td> 
+                <div align="center"><font face="Arial, Helvetica, sans-serif" size="2">4.2</font></div>
+              </td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Всеми</font></td>
+            </tr>
+            <tr align=middle bgcolor="#FFFFFF"> 
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Single word 
+                2</font></td>
+              <td> 
+                <div align="center"><font face="Arial, Helvetica, sans-serif" size="2">8.3</font></div>
+              </td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Всеми</font></td>
+            </tr>
+            <tr align=middle bgcolor="#FFFFFF"> 
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Multiword 
+                0</font></td>
+              <td> 
+                <div align="center"><font face="Arial, Helvetica, sans-serif" size="2">4.2</font></div>
+              </td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Всеми</font></td>
+            </tr>
+            <tr align=middle bgcolor="#FFFFFF"> 
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Multiword 
+                1</font></td>
+              <td> 
+                <div align="center"><font face="Arial, Helvetica, sans-serif" size="2">13.3</font></div>
+              </td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">ATA-2, Fast 
+                ATA, Fast ATA-2, ATA-3, Ultra ATA, EIDE</font></td>
+            </tr>
+            <tr align=middle bgcolor="#FFFFFF"> 
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Multiword 
+                2</font></td>
+              <td> 
+                <div align="center"><font face="Arial, Helvetica, sans-serif" size="2">16.6</font></div>
+              </td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">ATA-2, Fast 
+                ATA-2, ATA-3, Ultra ATA, EIDE</font></td>
+            </tr>
+            <tr align=middle bgcolor="#FFFFFF"> 
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Multiword 
+                3 (DMA-33)</font></td>
+              <td> 
+                <div align="center"><font face="Arial, Helvetica, sans-serif" size="2">33.3 
+                  (66)</font></div>
+              </td>
+              <td><font face="Arial, Helvetica, sans-serif" size="2">Ultra ATA(АТА/66)</font></td>
+            </tr>
+          </table>
+        </center>
+        <p>&nbsp;
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Еще одной забавной 
+          вещью, связанной с интерфейсом IDE/ATA, является 32-разрядный доступ 
+          к диску. Как уже отмечалось выше, интерфейс IDE/ATA был и остается 16-битным. 
+          Резонный вопрос: А почему тогда при отключении драйверов 32-разрядного 
+          доступа к диску в Windows скорость работы оного диска падает? Не менее 
+          резонный ответ: Во-первых, как работает Windows - отдельный разговор. 
+          А во-вторых, шина PCI, на которой в настоящий момент располагаются IDE 
+          host-контроллеры, 32-разрядная. Поэтому 16-битная передача по этой шине 
+          есть зряшнее расходование пропускной способности. В нормальных условиях 
+          host-контроллер формирует из двух 16-битных пакетов один 32-битный и 
+          пересылает его дальше по шине PCI (повторяю, я не берусь объяснять, 
+          как с диском работает Windows). </font> 
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Выше встречался 
+          термин - режим block transfer. На самом деле это всего-навсего режим, 
+          позволяющий передавать несколько команд чтения/записи за одно прерывание. 
+          Современные IDE/ATA диски позволяют передавать 16-&gt;32 сектора за 
+          "одно прерывание". Поскольку прерывания генерируются реже, снижается 
+          загрузка процессора и уменьшается доля команд в общем объеме передаваемых 
+          данных. </font> 
+        <p><font face="Arial, Helvetica, sans-serif" size="2">К каждому каналу 
+          IDE может быть подключено одно или два устройства. В современных компьютерах, 
+          как правило, устанавливается два канала IDE (что соответствует спецификации 
+          EIDE), хотя теоретически возможно установить до 4-х (!), что позволяет 
+          подключать 8 IDE устройств. Все каналы IDE являются равноправными. Использование 
+          системных ресурсов каналами приведено в таблице. </font>
+        <p>&nbsp; 
+        <center>
+          <table border=1 cellpadding=0 cellspacing=0 align="center" bordercolor="cc6600">
+            <tr bgcolor="ffcc99"> 
+              <th width="64"><font face="Arial, Helvetica, sans-serif" size="2">Канал</font></th>
+              <th width="39"><font face="Arial, Helvetica, sans-serif" size="2">IRQ</font></th>
+              <th width="144"><font face="Arial, Helvetica, sans-serif" size="2">I/O 
+                Addresses</font></th>
+              <th width="486"><font face="Arial, Helvetica, sans-serif" size="2">Поддержка 
+                и возможные проблемы при использовании</font></th>
+            </tr>
+            <tr align=middle bgcolor="#FFFFFF"> 
+              <td width="64"><font face="Arial, Helvetica, sans-serif" size="2">Primary</font></td>
+              <td width="39"><font face="Arial, Helvetica, sans-serif" size="2">14</font></td>
+              <td width="144"><font face="Arial, Helvetica, sans-serif" size="2">1F0-1F7h 
+                и 3F6-3F7h</font></td>
+              <td width="486"><font face="Arial, Helvetica, sans-serif" size="2">Используется 
+                во всех компьютерах с интерфейсом IDE/ATA</font></td>
+            </tr>
+            <tr align=middle bgcolor="#FFFFFF"> 
+              <td width="64"><font face="Arial, Helvetica, sans-serif" size="2">Secondary</font></td>
+              <td width="39"><font face="Arial, Helvetica, sans-serif" size="2">15 
+                (10)</font></td>
+              <td width="144"><font face="Arial, Helvetica, sans-serif" size="2">170-177h 
+                и 376-377h</font></td>
+              <td width="486"><font face="Arial, Helvetica, sans-serif" size="2">Широко 
+                распространен, присутствует практически во всех современных компьютерах.</font></td>
+            </tr>
+            <tr align=middle bgcolor="#FFFFFF"> 
+              <td width="64"><font face="Arial, Helvetica, sans-serif" size="2">Tertiary</font></td>
+              <td width="39"><font face="Arial, Helvetica, sans-serif" size="2">11(12)</font></td>
+              <td width="144"><font face="Arial, Helvetica, sans-serif" size="2">1E8-1Efh 
+                и 3EE-3Efh</font></td>
+              <td width="486"><font face="Arial, Helvetica, sans-serif" size="2">Используется 
+                редко. Возможны проблемы с софтом</font></td>
+            </tr>
+            <tr align=middle bgcolor="#FFFFFF"> 
+              <td width="64"><font face="Arial, Helvetica, sans-serif" size="2">Quaternary</font></td>
+              <td width="39"><font face="Arial, Helvetica, sans-serif" size="2">10(11)</font></td>
+              <td width="144"><font face="Arial, Helvetica, sans-serif" size="2">168-16Fh 
+                и 36E-36Fh</font></td>
+              <td width="486"><font face="Arial, Helvetica, sans-serif" size="2">Крайне 
+                редко используется. Весьма вероятны проблемы с софтом</font></td>
+            </tr>
+          </table>
+        </center>
+        <p>&nbsp;
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Ресурсы, используемые 
+          3-м и 4-м каналами , могут конфликтовать с другими устройствами (так, 
+          IRQ 12 используется мышью PS/2, IRQ 10 - обычно занят сетевой картой). 
+          </font> 
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Как было сказано 
+          выше, каждый канал IDE/AТА интерфейса поддерживает подключение двух 
+          устройств - master и slave. Конфигурация обычно задается перемычкой 
+          на задней стенке устройства. Кроме этих двух позиций там обычно присутствует 
+          и третья - cable select. Что же будет, если установить перемычку в это 
+          положение? Оказывается, для работы устройств в положении перемычки cable 
+          select требуется специальный Y-образный шлейф, центральный разъем которого 
+          подключается к системной плате. Крайние разъемы такого кабеля неравноправны 
+          - устройство, подключенное к одному разъему, автоматически становится 
+          master, к другому - slave (аналогично флопам А и В). При этом перемычки 
+          на обоих устройствах должны стоять в положении cable select. Основная 
+          проблема такой конфигурации в том, что она экзотична, хотя и является 
+          стандартной, и не всеми поддерживается, поэтому и Y-образный шлейф найти 
+          достаточно трудно (я, например, его не видел, да и вообще не совсем 
+          понятно, зачем это нужно). </font> 
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Если не принимать 
+          во внимание эту экзотику, при конфигурировании IDE/ATA устройств необходимо 
+          помнить следующее: </font> 
+        <ul>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Каждый канал 
+            в каждый момент времени может обрабатывать только один запрос к одному 
+            устройству. Следующий запрос, пусть даже к другому устройству, будет 
+            ожидать завершения текущего. Разные каналы при этом могут работать 
+            независимо. Поэтому не стоит подключать два активно используемых устройства 
+            (например, два жестких диска), к одному каналу. В идеале каждое IDE-устройство 
+            стоит подключать к отдельному каналу (в этом, пожалуй, заключается 
+            основное преимущество SCSI). </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Практически все 
+            современные чипсеты поддерживают возможность использования различных 
+            режимов передачи данных для устройств, подключенных к одному каналу. 
+            Однако злоупотреблять этим все-таки не стоит. Два устройства, существенно 
+            различающихся по скорости, лучше все-таки разнести по разным каналам. 
+            </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Не рекомендуется 
+            подключать к одному каналу жесткий диск и ATAPI-устройство (например, 
+            CD-ROM). Как было сказано выше, протокол ATAPI использует другую систему 
+            команд, и, кроме того, даже самые быстрые ATAPI-устройства много медленнее 
+            жесткого диска, что может замедлить работу последнего. </font></li>
+        </ul>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Все вышесказанное, 
+          естественно, не является аксиомой, а лишь рекомендациями, основанными 
+          на здравом смысле и собственном опыте. Более того, тот же здравый смысл 
+          и опыт подсказывают, что если взять 4 IDE-устройства, то они на исправной 
+          плате будут работать всегда в любых сочетаниях и при минимуме усилий 
+          со стороны пользователя (см. выше, главное, чтобы они попарно были совместимы). 
+          И это одно из главных преимуществ IDE перед SCSI. <br>
+          </font> 
+        <p>&nbsp;</p><hr>
+        <h4 class="abzac"><font face="Arial, Helvetica, sans-serif">ПОДРОБНОСТИ 
+          ИНТЕРФЕЙСА IDE<br>
+          <i><font size="2">Copyright &copy; 1996-2001 Sergey E. Bogomolov </font></i></font></h4>
+        <p class="abzac"><font face="Arial, Helvetica, sans-serif" size="2">ATA 
+          (Advanced Technology Attachment), также называемый IDE (Integrated Drive 
+          Electronics) - стандарт на интерфейс между компьютером (контроллером) 
+          и накопителем на жестких магнитных дисках (дисководом, HDD), включая 
+          <a href="#mech">физический уровень</a> (разъёмы, кабели), электрические 
+          и логические характеристики сигналов, регистры устройства, <a href="#featset">команды</a> 
+          и <a href="#prot">протоколы</a>. Включает ATAPI (AT Attachment interface 
+          with Packet Interface). Для описания ATAPI команд предлагается обращаться 
+          к стандартам SCSI. </font></p>
+        <p class="abzac"><font face="Arial, Helvetica, sans-serif" size="2">Имеет 
+          также множество маркетинговых названий: EIDE (ATA-2 и Enhanced BIOS), 
+          FASTATA (урезанный ATA-2), FASTATA-2 (просто ATA-2), UltraDMA (ATA-4 
+          в режиме UDMA mode 3), UltraATA/33 (ATA-4), UltraATA/66 (ATA-5), UltraATA/100 
+          (ATA-6) и др. </font></p>
+        <p class="abzac"><font face="Arial, Helvetica, sans-serif" size="2">Первоначально 
+          представлял собой AT-совместимый дисковый контроллер, встроенный в дисковод 
+          и подсоединённый упрощённой 16-битной шиной ISA (в девичестве AT bus). 
+          Простейший контроллер представлял дешифратор адреса, остальные сигналы 
+          передавались "как есть", причём на оба устройства сразу. По мере развития 
+          всё больше и больше напоминает SCSI (терминаторы, очередь команд, ATAPI). 
+          </font></p>
+        <p class="abzac"><font face="Arial, Helvetica, sans-serif" size="2"> Поддерживается 
+          2 дисковода (master - 0, slave - 1) на канал (host adapter). Номер дисковода 
+          определяется джамперами на дисководе и/или специальным кабелем. Современные 
+          чипсеты поддерживают 2 канала (primary, secondary), можно также использовать 
+          дополнительные контроллеры. В старых чипсетах оба канала разделяли некоторые 
+          сигналы (от одного пина в микросхеме шли 2 проводка на 2 канала :). 
+          Каждый канал может обрабатывать только одну команду одномоментно. Следующая 
+          команда (даже к другому устройству) будет ждать (в ATA-4 появились наложения 
+          - overlap - команд и очереди в устройстве, должны поддерживаться обоими 
+          устройствами). В некоторых ситуациях хост должен переключаться в режим 
+          более медленного устройства даже при обращении к быстрому (например, 
+          при записи в регистры). Поэтому желательно ставить на каждый канал только 
+          одно устройство, причём в крайний разъём (иначе не будет работать UDMA) 
+          и конфигурировать как master, т.к. slave не может определить наличие 
+          master устройства, а команда диагностики не сгенерирует прерывания. 
+          </font></p>
+        <h2 class="abzac"><font face="Arial, Helvetica, sans-serif" size="2"><a name="standards">Стандарты</a></font></h2>
+        <p class="abzac"><font face="Arial, Helvetica, sans-serif" size="2">Стандарты 
+          принимаются Technical Committee T13 National Committee on information 
+          Technology Standards (NCITS), уполномоченным ANSI. Ранее назывался ASC 
+          (Accredited Standards Committee) X3T10. </font></p>
+        <ul class="abzac">
+          <li><font face="Arial, Helvetica, sans-serif" size="2">ATA (IDE, ATA-1). 
+            AT Attachment Interface. ANSI X3.221-1994. 1994 (сейчас отменён). 
+            Интегрированный 16-битный шинный интерфейс для обмена информацией 
+            между контроллером и дисководом. LBA и передача нескольких секторов 
+            на одно прерывание уже есть! </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">ATA-2 (ATA Interface 
+            with Extensions, ANSI X3.279-1996). 1996 (сейчас отменён). Добавлены: 
+            увеличение идентификационной информации выдаваемой дисководом (в основном 
+            тайминги новых режимов), загрузка микрокода, новые режимы - PIO3 (11.1 
+            MB/сек), PIO4 (16.6 МБ/сек), DMA Multiword 1 (13.3 МБ/сек), DMA Multiword 
+            2 (16.6 МБ/сек). </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">ATA-3 (ANSI X3.298-1997 
+            AT Attachment - 3 Interface). 1997. Добавлен SMART, режим безопасности 
+            (блокировка доступа до ввода пароля), LBA теперь обязателен, удалены 
+            устаревшие возможности (8-битный режим и некоторые команды, singleword 
+            DMA). Добавлен разъём, совместимый с PCMCIA. Появились терминаторы 
+            и другие средства, увеличивающие надёжность передачи. Только теперь 
+            стандарт можно считать зрелым (устройства сообщают поддерживаемую 
+            версию и набор функций). </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">ATA/ATAPI-4 (ANSI 
+            NCITS 317-1998 AT Attachment - 4 with Packet Interface Extension). 
+            1998. Добавлены: ATAPI, Ultra DMA (33 МБ/сек), CRC-16, наложение (overlap) 
+            команд и очереди команд, HPA (SET MAX ADDRESS), кабель с 80 проводниками 
+            (разъем остался 40-контактным). </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">ATA/ATAPI-5 (ANSI 
+            NCITS 340-2000 AT Attachment - 5 with Packet Interface). 2000. Добавлены 
+            режимы передачи со скоростью 44 МБ/сек и 66 МБ/сек (кабель с 80 проводами 
+            обязателен), команды CFA. Отказ от совместимости с ATA-1. </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">ATA/ATAPI-6. 
+            Официально не принят (июнь 2001, rev 1c). Добавлены: увеличение скорости 
+            до 100 МБ/сек (UDMA 5), увеличение адресного пространства LBA с 28 
+            до 48 бит, увеличение числа секторов в одной команде с 256 до 64K, 
+            управление шумом, команды чтения/записи потока (AV), удалена адресация 
+            CHS. Отказ от совместимости с ATA-2. </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">NCITS TR-21 BIOS 
+            Enhanced Disk Drive Specification. Увеличение адресного пространства, 
+            поддерживаемого BIOS до 16*10**18 байт. </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">ANSI NCITS 346-2001 
+            Protected Area Run Time Interface Extension Services. Расширение интерфейса 
+            BIOS для доступа к адресному пространству, скрытому командой SETMAX 
+            (проблема лимита 130 GB). </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">ANSI NCITS 347-2001 
+            BIOS Enhanced Disk Drive Services. Дальнейшее расширение расширенного 
+            в TR-21 интерфейса BIOS INT13. </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">BIOS Enhanced 
+            Disk Drive Services - 2. Не дозрел даже до проекта. </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Address Offset 
+            Reserved Area Boot Method. Официально не принят. </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Serial ATA</font></li>
+        </ul>
+        <h2><font face="Arial, Helvetica, sans-serif" size="2"><a name="mech">Физический 
+          уровень (разъёмы, кабели)</a></font></h2>
+        <p class="abzac"><font face="Arial, Helvetica, sans-serif" size="2">Сигнальный 
+          разъём - 40 контактов в 2 ряда (чётный и нечетный. 20й контакт - ключ 
+          (контакт на разъёме устройства удаляется, отверстие на разъёме кабеля 
+          затыкается). Кабель - 40 проводов. Требуется 80 проводной кабель для 
+          режима UDMA3 и выше (провода заземления между сигнальными). Наличие 
+          улучшенного кабеля определяется автоматически. Точнее, должно определяться 
+          автоматически, но описание таково, что в это не верится, особенно при 
+          наличии старого устройства на том же канале в режиме slave. 1й провод 
+          - красный. Длина кабеля - от 25 до 46 см (крайний разъём для хоста голубого 
+          цвета и два разъёма для дисководов чёрного и серого цветов). Режим UDMA 
+          требует терминаторов с обеих сторон кабеля. </font></p>
+        <p class="abzac"><font face="Arial, Helvetica, sans-serif" size="2"> Стандарт 
+          определяет также разъём питания - 4 контакта (+12V, возврат +12V, возврат 
+          +5V, +5V). </font></p>
+        <p class="abzac"><font face="Arial, Helvetica, sans-serif" size="2">Экзотические 
+          разъёмы: прямое соединение (без кабеля); сборки сигнального разъёма 
+          с джамперами и разъёмами питания; 50-контактный (совместимый со старыми 
+          44-контактными) разъём для устройств 2 1/2 дюйма, совмещающий сигнальные 
+          проводники с кабелем питания и выбором устройства; 68-контактный разъём, 
+          совместимый с PCMCIA устройствами; разъём CompactFlash. </font></p>
+        <h2><font face="Arial, Helvetica, sans-serif" size="2"><a name="prot">Протоколы 
+          обмена данными</a></font></h2>
+        <p class="abzac"><font face="Arial, Helvetica, sans-serif" size="2"> Данные 
+          пишутся/читаются секторами (512 байт, 256 слов) или блоками. Базовый 
+          протокол обмена данными - PIO (programmed I/O), включая блочный режим 
+          (только одно прерывание на весь блок). Блок может состоять из нескольких 
+          секторов. Процессор лично "пропихивает" каждый байт/слово через регистр 
+          данных. </font></p>
+        <ul class="abzac">
+          <font face="Arial, Helvetica, sans-serif" size="2">Режимы (mode) определяют 
+          скорость обмена: </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">0 (3.3 MB/sec)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">1 (5.2 MB/sec)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">2 (8.3 MB/sec)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">3 (11.1 MB/sec)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">4 (16.7 MB/sec)</font></li>
+        </ul>
+        <p class="abzac"><font face="Arial, Helvetica, sans-serif" size="2"> Более 
+          "щадящий" для процессора режим - DMA (Direct Memory Access). В сочетании 
+          с перехватом управления шиной (bus mastering, должна быть поддержка 
+          в BIOS и чипсете) позволяет дисководу обмениваться с памятью напрямую, 
+          что разгружает процессор, но требует специального драйвера для каждого 
+          чипсета. Может быть однословный (single word) - упразднён в ATA-3, многословный 
+          (multiword) и Ultra DMA (double edge clocking, стробирование, CRC-16). 
+          Для режима UDMA 3 и выше требуется кабель с 80 проводами. </font></p>
+        <ul class="abzac">
+          <font face="Arial, Helvetica, sans-serif" size="2">Режимы (mode) определяют 
+          скорость обмена: </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">single word 0 
+            (2.08 MB/sec)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">single word 1 
+            (4.16 MB/sec)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">single word 2 
+            (8.33 MB/sec)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">multiword 0 (4.2 
+            MB/sec)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">multiword 1 (13.3 
+            MB/sec)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">multiword 2 (16.7 
+            MB/sec)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">ultra 0 (16.7 
+            MB/sec)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">ultra 1 (25 MB/sec)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">ultra 2 (33.3 
+            MB/sec)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">ultra 3 (44.4 
+            MB/sec)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">ultra 4 (66.7 
+            MB/sec)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">ultra 5 (100 
+            MB/sec)</font></li>
+        </ul>
+        <p class="abzac"><font face="Arial, Helvetica, sans-serif" size="2">Под 
+          32-битным доступом к диску имеется ввиду блокирование 2 16-битных слов 
+          при передаче от процессора к дисководу по шине PCI (шина ATA в любом 
+          случае имеет ширину 16 бит). </font></p>
+        <h2 class="abzac"><font face="Arial, Helvetica, sans-serif" size="2"><a name="featset">Наборы 
+          команд</a> </font></h2>
+        <ul class="abzac">
+          <li><font face="Arial, Helvetica, sans-serif" size="2">чтение/запись/верификация 
+            до 256 секторов (PIO, блочный PIO, DMA/UDMA, из буфера, с повтором, 
+            с ECC), сбросить кеш, позиционирование головок</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">набор команд 
+            с 48-битной адресацией LBA (сброс кеша, чтение/запись PIO/DMA/многоблочный-PIO/DMA-с-очередью, 
+            чтение/установка максимального адреса блока), счетчик секторов в этих 
+            командах - двухбайтныйю Команды имеют суффикс EXT. </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">наложение/совмещение 
+            (overlap) команд - позволяет устройству освободить шину до завершения 
+            выполнения команды, чтобы хост мог параллельно использовать второе 
+            устройство. Могут совмещаться команды чтения/записи с постановкой 
+            в очередь, пакетные команды. Передача данных может происходить немедленно 
+            (если устройство имеет данные "на руках") или при получении команды 
+            SERVICE. Появились в ATA-4. </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">очередь команд 
+            - позволяет хосту выдавать несколько параллельных команд к одному 
+            устройству. В очереди могут быть команды чтения/записи. Каждая команда 
+            должна иметь уникальную метку от 0 до 31. Максимальная глубина очереди 
+            определяется устройством (но не более 32). Передача данных может происходить 
+            немедленно (если устройство имеет данные "на руках") или при получении 
+            команды SERVICE (шина до тех пор освобождается). Появились в ATA-4. 
+            </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">сервисные команды 
+            (идентификация устройства, установить число секторов и головок для 
+            текущего режима трансляции адресов, диагностика, загрузка микрокода, 
+            рекалибровка, сброс)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">установка параметров 
+            (разрешение кеширование записи, протокол и режим передачи данных, 
+            уровень APM, уровень шума, разрешение автоматического назначения плохих 
+            секторов (отменено), разрешение повторов (отменено), число ECC байт 
+            (отменено), использование ECC (отменено), разрешение предварительного 
+            чтения, размер сегмента кеша (отменено), запрещение возврата к значениям 
+            по умолчание при программном сбросе, потребляемый ток) </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Host Protected 
+            Area - позволяет резервировать часть устройства, устанавливая максимальный 
+            адрес блока (SET MAX ADDRESS, SET MAX ADDRESS EXT для 48-битной адресации) 
+            и защищая всё что поверх его паролем, а также узнать реальную ёмкость 
+            устройства (READ NATIVE MAX ADDRESS [EXT]). Предназначено для использования 
+            в BIOS, причем однократно после включения (RAM to HDD). Используется 
+            также, если устройство слишком велико для BIOS. Установленный максимальный 
+            адрес может сохраняться после выключения питания или сбрасываться. 
+            Появились в ATA-4. </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Device Configuration 
+            Overlay - позволяет отключать некоторые возможности устройства (режимы 
+            multiword DMA, режимы Ultra DMA, 48-битную адресацию, наличие команды 
+            SET MAX ADDRESS, команды управления шумом, очереди команд, команды 
+            безопасности, SMART) и изменять его ёмкость (в сторону уменьшения, 
+            конечно ;). Влияет также на результат команд IDENTIFY DEVICE, READ 
+            NATIVE MAX ADDRESS [EXT]. Имеются подкоманды возврата к "естественному" 
+            состоянию и блокировка изменений до следующего включения питания (сброс 
+            не снимает блокировку), а также возможность посмотреть "естественное" 
+            состояние. Появились в ATA-6. </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">управление энергосбережением 
+            (режимы: ACTIVE, IDLE, STANDBY, SLEEP). В режиме SLEEP интерфейс неактивен 
+            до сброса (наименьшее потребление энергии). Устройство может переходить 
+            в режим STANDBY по истечение установленного интервала неактивности 
+            (меньшее потребление энергии, чем в режиме IDLE). </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">APM (Advanced 
+            Power Management) - позволяет задать уровень сбережения энергии (соответственно, 
+            производительности) от 1 до 254. Появились в ATA-4. </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">управление сменными 
+            носителями - два набора команд (выброс носителя, блокировка/разблокировка 
+            дверцы, распознавание смены носителя)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">парольная защита 
+            (пользовательский и мастер пароли - 32 байта; в режиме HIGH мастер 
+            пароль позволяет снять защиту, в режиме MAX - стереть данные). Предусматривается 
+            блокировка изменения пароля и попыток подбора. После установки пользовательского 
+            пароля и перезагрузки устройство переходит в защищенный режим и не 
+            дает доступа к данным без пароля. Появились в ATA-3. </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">SMART - дисковод 
+            самостоятельно отслеживает своё состояние и пытается предсказать сбои 
+            в работе (разрешить/запретить; проверить состояние; запуск упрощенного 
+            (около минуты) или полного (десятки минут) самотестирования в фоновом 
+            режиме (off line mode) - может быть пауза при приеме следующей команды 
+            до 2 секунд - или непосредственно (captive mode), прочитать SMART-способности, 
+            чтение/запись журналов). В упрощенном журнале ошибок хранится общее 
+            число ошибок за время жизни устройства, для последних 5 ошибочных 
+            команд и их 5 предшественников сохраняются параметры и время в миллисекундах 
+            от включения (гм, до 40 дней), для самих ошибочных команд сохраняются 
+            содержимое регистров. Расширенный журнал ошибок может хранить до 255 
+            последних ошибок. Журнал самотестирования. Журналы изготовителя. Журналы 
+            хоста (хост может в них писать). Производитель устанавливает набор 
+            атрибутов надежности и их граничные значения. Есть команда позволяющая 
+            проверить не превышены ли границы. Появились в ATA-3. Была команда 
+            чтения значений атрибутов и границ, но потом исчезла. </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">ATAPI (сброс, 
+            идентификация пакетного устройства, выполнить пакет команд). ATAPI-устройствам 
+            запрещено исполнять команды чтения/записи секторов (обычных и DMA) 
+            и идентификацию устройства. Пакет команд описывается в стандарте SCSI 
+            (SCSI Primary Commands -2, SPC-2). Пакет может быть поставлен в очередь, 
+            а шина освобождена. В этом случае, завершение передачи данных происходит 
+            при выполнении команды SERVICE. Данные, ассоциированные с пакетом 
+            могут передаваться по протоколу PIO, DMA или Ultra DMA. Появились 
+            в ATA-4. </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">управление уровнем 
+            издаваемого шума (256 уровней шума/производительности). Появились 
+            в ATA-6. </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">набор команд 
+            для CompactFlash Association (CFA). Команды записи без очистки, очистка, 
+            8-битная передача данных без DMA (вот же мичуринцы), узнать число 
+            циклов записи для данного сектора. Появились в ATA-4. </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">сквозная передача 
+            команд MediaCard (разновидность flash-памяти). В настоящее время определены 
+            SD Card ATA Extension и Smart Media ATA Extension (и MMC?). </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">потоковые команды 
+            - AV (конфигурация потока, чтение/запись PIO/DMA, чтение журнала ошибок 
+            и производительности) - позволяют считать/записать непрерывный интервал 
+            блоков за указанное время при допустимости потери данных (пропуски, 
+            ошибки). Используется только 48-битная LBA-адресация. Устройство устанавливает 
+            минимальный размер потока. Можно определить 8 потоков. Появились в 
+            ATA-6. </font></li>
+        </ul>
+        <h2 class="abzac"><font face="Arial, Helvetica, sans-serif" size="2"><a name="address">Адресация 
+          секторов и геометрия диска</a> </font></h2>
+        <p class="abzac"><font face="Arial, Helvetica, sans-serif" size="2">Реальная 
+          геометрия диска известна только его производителю. Любая информация, 
+          которую диск предоставляет о своей геометрии, виртуальна и может оказаться 
+          другой при следующем обращении (кстати, есть команда ATA, устанавливающая 
+          текущую геометрию). Для современного дисковода, имеющего различное количество 
+          секторов на дорожку в разных зонах диска, её в принципе невозможно задать 
+          в понятиях - число цилиндров, число головок и число секторов на дорожке. 
+          Все эти понятия виртуальны и оставлены для совместимости со старыми 
+          программами/устройствами. Виртуальная геометрия используется для трансляции 
+          виртуального CHS-адреса в реальное местоположение сектора на диске (а 
+          может во флэш памяти, где нет ни головок, ни секторов). </font></p>
+        <p class="abzac"><font face="Arial, Helvetica, sans-serif" size="2"> Адресация 
+          CHS (cylinder, head, sector). Удалена из стандарта ATA-6. Номер цилиндра 
+          - 16 бит (от 0 до 65535). Номер головки - 4 бита (от 0 до 15). Номер 
+          сектора - 8 бит (от 1 до 255). Максимально возможная емкость - 136.9 
+          GB. Диск предоставляет по команде "IDENTIFY DEVICE" две CHS-геометрии 
+          (и, соответственно, две схемы трансляции адресов): начальную (defaultCHS, 
+          physical в /proc/ide/hda/geometry, RawCHS в hdparm -i) и текущую (CurCHS 
+          и CurSects в hdparm -i). Хотя надежнее посмотреть самому в /proc/ide/hdX/identify. 
+          Текущая геометрия устанавливается командой ATA "Initialize device parameters" 
+          (только число головок и число секторов на дорожку, число цилиндров вычисляется 
+          дисководом) и используется для пересчета в реальный адрес. Устройство 
+          может отказаться устанавливать указанную геометрию. Число текущих цилиндров 
+          определяется как результат деления min (числа LBA-блоков, 16514064) 
+          на число заявленных головок и секторов, но не более 65535. В ATA-3 вместо 
+          16514064 используется 16515072. Ни одна из них не отражает реальную 
+          геометрию диска. Для дисков больших 8.4 GB начальная геометрия выдается 
+          как 16383/16/63, соответственно, размер диска не может быть вычислен 
+          из его геометрии (ATA-3). Для меньших дисков начальная геометрия не 
+          должна превышать 16383/16/63. Согласно ATA-4, диск более 8.4 ГБ не обязан 
+          поддерживать CHS-трансляцию. Желательно, чтобы число секторов на дорожке 
+          в текущей трансляции не превышало 63 (иначе могут быть проблемы со старым 
+          BIOS). Также для совместимости со старым BIOS, если число цилиндров 
+          начальной геометрии более 8192, то число головок желательно устанавливать 
+          равным 15 (ATA-5). На число цилиндров начальной геометрии может повлиять 
+          команда SET MAX ADDRESS CHS (число головок и секторов не изменяется), 
+          но не более 16383. После чего пересчитывается число текущих цилиндров 
+          и число текущих блоков (число головок и секторов не изменяется) и блоков 
+          LBA. Команда SET MAX ADDRESS LBA устанавливает число блоков LBA, не 
+          меняет число начальных/текущих головок и секторов. Число начальных цилиндров 
+          устанавливается в 16383 (если число блоков LBA больше 16514064) или 
+          в min( 65535, число блоков LBA/число начальных секторов/число начальных 
+          головок) (если больше). Аналогично вычисляется число текущих цилиндров. 
+          Число текущих блоков в режиме CHS определяется как произведение C*H*S. 
+          Команда READ NATIVE MAX ADDRESS выдает начальную геометрию (емкость 
+          диска может отличаться в CHS и LBA режимах). </font></p>
+        <p class="abzac"><font face="Arial, Helvetica, sans-serif" size="2">Некоторые 
+          модели дисков имеют специальные джампера или программы (Maxtor), позволяющие 
+          задать или ограничить defaultCHS геометрию. Например, установить число 
+          цилиндров равным 4092 или число головок равным 15, чтобы обойти ошибки 
+          в старых BIOS. Соответственно, BIOS будет видеть только часть диска. 
+          Полную ёмкость диска надо будет получать другими способами. </font></p>
+        <p class="abzac"><font face="Arial, Helvetica, sans-serif" size="2">Адресация 
+          LBA (Linear Block Addressing). Задаётся номер сектора, начиная с нуля 
+          - 28 бит. Максимально возможная емкость - 137.4 GB. LBA-адрес можно 
+          рассчитать как c*H*S + h*S + (s-1). Firmware старых дисков (все диски 
+          до 500 MB и некоторые большей ёмкости) не умеет использовать адресацию 
+          LBA. Является обязательным режимом начиная с ATA-3 и режимом по умолчанию, 
+          если число секторов превышает 16515072. Команда "IDENTIFY DEVICE" возвращает 
+          возможность LBA-адресации и общее число секторов в режиме LBA (/sbin/hdparm 
+          -i: LBAcapacity). Для дисков больших 137.4 GB возвращается 2^28-1 сектор. 
+          С помощью команды SET MAX ADDRESS можно установить максимальный номер 
+          блока. С помощью команды READ NATIVE MAX ADDRESS можно узнать настоящий 
+          размер диска. Используется для резервирования верхней части диска и 
+          обхода проблемы со старым BIOS. </font></p>
+        <p class="abzac"><font face="Arial, Helvetica, sans-serif" size="2">Адресация 
+          LBA 48 бит. Используется отдельный набор команд ATA. Команда "IDENTIFY 
+          DEVICE" возвращает возможность 48-битной LBA-адресации и общее число 
+          секторов в режиме LBA48. Аналогично старому LBA-режиму имеются команды 
+          SET MAX ADDRESS EXT и READ NATIVE MAX ADDRESS EXT. </font></p>
+        <h2><font face="Arial, Helvetica, sans-serif" size="2"><a name="identify">Получение 
+          информации о характеристиках дисковода</a></font></h2>
+        <p class="abzac"><font face="Arial, Helvetica, sans-serif" size="2">Команда 
+          "Identify drive" позволяет получить разнообразную информацию об устройстве 
+          (256 слов): </font> 
+        <ul class="abzac">
+          <li><font face="Arial, Helvetica, sans-serif" size="2">ATA/ATAPI</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">сменный носитель 
+            или нет</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">число цилиндров 
+            (16 бит) в режиме трансляции адресов по умолчанию (до ATA-5)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">число головок 
+            (16 бит) (до ATA-5)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">число секторов 
+            на дорожке (16 бит) (до ATA-5)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">серийный номер 
+            (20 символов) (комбинация модель/серийный номер должна быть уникальна 
+            для каждого устройства данного производителя)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">тип и размер 
+            буфера (в секторах)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">версия firmware 
+            (8 байт)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">модель (40 символов)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">максимальное 
+            число секторов за одну команду/прерывание в многосекторном режиме 
+            PIO</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">есть ли поддержка 
+            LBA</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">есть ли поддержка 
+            DMA</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">число цилиндров 
+            (16 бит), головок (16 бит) и секторов на дорожку (16 бит) и секторов 
+            (32 бита, д.б. равно C*H*S, не может быть больше числа секторов в 
+            режиме LBA) в текущем режиме трансляции адресов. Отменен в ATA-6. 
+            </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">текущее число 
+            секторов за одну команду</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">число секторов 
+            в режиме LBA (не зависит от текущей CHS-геометрии) (ограничивается 
+            SET MAX ADDRESS) </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">поддерживаемые 
+            и текущие режимы singleword DMA</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">поддерживаемые 
+            и текущие режимы multiword DMA</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">поддерживаемые 
+            и текущие режимы PIO</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">максимальная 
+            глубина очереди команд (до 32)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">номер версии 
+            (может быть несколько) и ревизию стандарта - начиная с ATA-3 (IBM-DHEA-38451 
+            - ATA-4; ST330630A - ATA-5; HP CD-Writer Plus 8100 - до ATA-3, PIO3, 
+            mDMA1) </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">какие наборы 
+            функций реализованы и какие включены сейчас</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">поддерживаемые 
+            и текущие режимы Ultra DMA</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">текущий уровень 
+            APM</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">текущий уровень 
+            шума</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">число секторов 
+            в режиме 48-битного LBA (ограничивается SET MAX ADDRESS EXT) </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">текущий уровень 
+            безопасности (High/Maximum)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">серийный номер 
+            сменного носителя (40 байт номер и 20 байт изготовитель)</font></li>
+        </ul>
+        <p class="abzac"><font face="Arial, Helvetica, sans-serif" size="2">ATAPI-устройства 
+          имеют аналогичную команду "IDENTIFY PACKET DEVICE", которая позволяет 
+          получить примерно такую же информацию об устройстве с учетом особенностей 
+          ATAPI: </font> 
+        <ul class="abzac">
+          <li><font face="Arial, Helvetica, sans-serif" size="2">тип устройства 
+            (прямого доступа, последовательного доступа, принтер, процессор, CD-ROM, 
+            сканер, RAID и др.)</font></li>
+        </ul>
+        <p></p>
+        <h2><font face="Arial, Helvetica, sans-serif" size="2"><a name="priv">Личное 
+          мнение</a></font></h2>
+        <p class="abzac"><font face="Arial, Helvetica, sans-serif" size="2">История 
+          развития истандарта ATA производит тяжелое впечатление (мягко говоря). 
+          Просто интересно: почему в интерфейсе SCSI (принятом гораздо раньше 
+          первого ATA) сразу додумались до 32-битной LBA адресации (и 15 лет с 
+          этим живут), а разработчики ATA уже 10 лет издеваются надо всеми ежегодно 
+          преодолевая очередной барьер емкости HDD - 528 MB, 2 GB, 4 GB, 8 GB, 
+          33 GB, теперь вот 134 GB? Одно слово "developed by the ad hoc working 
+          group" (сляпано из подручных материалов). Остальные изменения делаются 
+          аналогично. Например, сначала из стандарта удаляется 8-битный обмен, 
+          а потом он опять вводится, но только для "хороших парней" из CFA. В 
+          результате, получился не стандарт, а полный бардак. </font></p>
+        <p class="abzac"><font face="Arial, Helvetica, sans-serif" size="2">P.S. 
+          А сигналы замечательно описаны :) </font></p>
+        <h2 class="abzac"><font face="Arial, Helvetica, sans-serif" size="2"><a name="links">Ссылки</a></font></h2>
+        <ul class="abzac">
+          <li><font face="Arial, Helvetica, sans-serif" size="2"><a href="http://www.t13.org">Technical 
+            Committee T13 AT Attachment</a> ( здесь можно взять проекты и устаревшие 
+            стандарты) </font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2"><a href="http://www.win.tue.nl/~aeb/linux/Large-Disk.html">Large 
+            Disk HOWTO</a> (Andries Brouwer, aeb@cwi.nl)</font></li>
+          <li><font face="Arial, Helvetica, sans-serif" size="2"><a href="http://www.ixbt.com/storage/ide-till-ata100.html">История 
+            развития IDE вплоть до ATA100</a></font></li>
+        </ul>
+        <hr>
+        <p>&nbsp;</p>
+        </blockquote>
+    </td>
+  </tr>
+  <tr> 
+    <td width="160" background="../images/grad_hor.gif" class="LeftMenu" valign="top" bgcolor="#FFFFFF"><img src="../images/grad_htb.gif" width="160" height="15"></td>
+    <td class="LeftMenu" valign="middle" bgcolor="#FFFFFF" width="10"><img src="../images/tube_crs.gif" width="14" height="19"></td>
+    <td background="../images/grad_tub.gif" colspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="160" background="../images/grad_hor.gif" class="LeftMenu" valign="top" bgcolor="#FFFFFF" height="30">&nbsp;</td>
+    <td background="../images/tube_ver.gif" class="LeftMenu" valign="top" bgcolor="#FFFFFF" width="10" height="30">&nbsp;</td>
+    <td bgcolor="#FFFFFF" colspan="2" valign="middle" height="30"> 
+      <div align="right">
+        <p><b><font face="Arial, Helvetica, sans-serif"><span class="LeftMenu"><a href="../recovery/1_first.htm">Восстановление</a>&nbsp;&nbsp; 
+          </span></font></b><span class="LeftMenu"><b><font face="Arial, Helvetica, sans-serif"><a href="../index.htm">Справочная</a>&nbsp;&nbsp;</font></b> 
+          <b><font face="Arial, Helvetica, sans-serif"><a href="../programs/index.htm">Программы</a>&nbsp;&nbsp;</font></b> 
+          <b><font face="Arial, Helvetica, sans-serif"><a href="../links/index.htm">Ссылки</a>&nbsp;&nbsp; 
+          <a href="../help/index.htm">Помощь</a></font></b></span></p>
+      </div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,60 @@
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄİTest background informationŞÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ş Running under: MS DOS ver. 7.10
+ş CPU: Intel Pentium at 166MHz
+ş BIOS: Award Modular BIOS v4.51PGM
+   Version : AP5T R1.80 Aug.06.1998    AOpen Inc.
+   ID      : 08/06/1998-i430TX-00000000C-00
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄİHddSpeed v2.0 ResultsŞÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ş Hard Disk 0: IDE Primary/Master
+ş Model: WDC AC24300L
+ş Serial Number: WD-WM4113906721      Firmware Revision: 14.10R11
+ş Size:
+    BIOS: 4102 MBytes
+    IDE Default: 4112 MBytes
+ş Geometry:
+    BIOS: 523 Cylinders, 255 Heads, 63 Sectors, Using LBA translation
+    IDE Default: 8912 Cylinders, 15 Heads, 63 Sectors
+ş Supported Features:
+   [û] DMA Transfer
+   [û] LBA
+   [û] Block Mode (Max=16,Current=16)
+   [û] Power Management
+   [û] S.M.A.R.T. (Status: Ok)
+ş Maximal Supported Modes: PIO4, DMA2, UltraDMA2
+ş Buffer: Type 3 (Dual ported multi-sector buffer with a read caching)
+    IDE Size: 256 Kb
+    Effective Size: Not Determined
+ş Disk Rotation Speed: 5400 RPM
+
+ş Average Seek Time: 9.4 ms
+ş Maximal Seek Time: 18.8 ms
+ş Track-To-Track Seek Time: 2.3 ms
+ş Average Access Time: 15.9 ms
+
+                              Read (MBytes/sec.) Write (MBytes/sec.)
+ş Linear Speed At Track    1:   10.1               Not Tested     
+ş Linear Speed At Track  521:   5.9                Not Tested     
+
+ş Average Linear Speed:         8.8                Not Tested     
+ş Min. Linear Speed:            5.9                Not Tested     
+ş Max. Linear Speed:            10.1               Not Tested     
+
+ş Max. Cache Read Speed: 15.8 MBytes/sec. (64K block)
+ş Random Read Speed: 1.6 MBytes/sec.
+
+ş Disk Speed Index: 563
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄİTests Summary TableŞÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÂÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÂÄÄÄÂÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÂÄÄÄÄÄ¿
+³Vendor/Model       ³Total³Average³Maximal³Average³TTT³Average³  Max.  ³ IDX ³
+³                   ³Size,³ Seek  ³ Seek  ³Access ³   ³Linear ³ Cache  ³     ³
+³                   ³Cache³ Time  ³ Time  ³ Time  ³   ³ Speed ³  Read  ³     ³
+³                   ³Size ³  ms.  ³  ms.  ³  ms.  ³ms.³MB/sec.³ MB/sec.³     ³
+ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄ´
+³WDC AC24300L       ³4.0GB³  9.4  ³ 18.8  ³ 15.9  ³2.3³ R=8.8 ³  15.8  ³ 563 ³
+³                   ³256KB³       ³       ³       ³   ³       ³        ³     ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÁÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÁÄÄÄÁÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÁÄÄÄÄÄÙ
+

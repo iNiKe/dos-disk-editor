@@ -1,0 +1,1082 @@
+<html>
+<head>
+<title>Восстановление информации - Сравнение FAT и ntfs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<link rel="stylesheet" href="../sStyles.css" type="text/css">
+<script language="JavaScript">
+<!--
+function MM_preloadimages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadimages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v3.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : args[i+1];
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    if ((nbArr = document[grpName]) != null)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = args[i+1];
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+<link rel="stylesheet" href="../sStyles.css" type="text/css">
+</head>
+
+<body bgcolor="#FFCC99" text="#663300" link="#CC6600" alink="#CC6600" vlink="#CC6600" onLoad="MM_preloadimages('../images/recv3.gif','../images/recv2.gif','../images/info3.gif','../images/info2.gif','../images/prog3.gif','../images/prog2.gif','../images/link3.gif','../images/link2.gif','../images/help3.gif','../images/help2.gif')">
+<table width="99%" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td rowspan="2" bgcolor="#FFFFFF" width="160"> 
+      <div align="center"><a href="../www.iatp.ru"><img src="../images/iatp.gif" width="156" height="104" border="0"></a></div>
+    </td>
+    <td rowspan="2" bgcolor="#FFFFFF" width="10" background="../images/tube_ver.gif">&nbsp;</td>
+    <td height="62" bgcolor="#FFFFFF" background="../images/grad_ver.gif" valign="top" align="center" rowspan="2" width="112"> 
+      <div align="right"><img src="../images/hdd.gif" width="71" height="105"></div>
+    </td>
+    <td bgcolor="#FFCC99" background="../images/grad_ver.gif" width="680" height="62"> 
+      <div align="right"><img src="../images/title.gif" width="423" height="70"></div>
+    </td>
+  </tr>
+  <tr> 
+    <td bgcolor="#FFFFFF" height="41" width="680"> 
+      <div align="right"><font face="Arial, Helvetica, sans-serif"><a href="../recovery/1_first.htm" onClick="MM_nbGroup('down','group1','Recov','../images/recv3.gif',1)" onMouseOver="MM_nbGroup('over','Recov','../images/recv2.gif','../images/recv3.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="Recov" src="../images/recv1.gif" border="0" onLoad=""></a><a href="../index.htm" onClick="MM_nbGroup('down','group1','info','../images/info3.gif',1)" onMouseOver="MM_nbGroup('over','info','../images/info2.gif','../images/info3.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="info" src="../images/info1.gif" border="0" onLoad=""></a><a href="../programs/index.htm" onClick="MM_nbGroup('down','group1','progs','../images/prog3.gif',1)" onMouseOver="MM_nbGroup('over','progs','../images/prog2.gif','../images/prog3.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="progs" src="../images/prog1.gif" border="0" onLoad=""></a><a href="../links/index.htm" onClick="MM_nbGroup('down','group1','links','../images/link3.gif',1)" onMouseOver="MM_nbGroup('over','links','../images/link2.gif','../images/link3.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="links" src="../images/link1.gif" border="0" onLoad=""></a><a href="../help/index.htm" onClick="MM_nbGroup('down','group1','help','../images/help3.gif',1)" onMouseOver="MM_nbGroup('over','help','../images/help2.gif','../images/help3.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="help" src="../images/help1.gif" border="0" onLoad=""></a></font></div>
+    </td>
+  </tr>
+  <tr> 
+    <td width="160" height="12" class="LeftMenu" valign="top" bgcolor="#FFFFFF"><img src="../images/grad_htt.gif" width="160" height="19"></td>
+    <td background="../images/grad_htt.gif" class="LeftMenu" valign="top" width="10" height="12"><img src="../images/tube_crs.gif" width="14" height="19"></td>
+    <td background="../images/grad_tub.gif" colspan="2" valign="top" height="12">&nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td width="160" background="../images/grad_hor.gif" class="LeftMenu" valign="top" bgcolor="#FFFFFF">
+      <table width="98%" border="0">
+        <tr> 
+          <td background="../images/grad_hor.gif" height="40" class="LeftMenu" valign="middle" bgcolor="#FFFFFF"> 
+            <p><font face="Arial, Helvetica, sans-serif"><a href="index.htm">Разделы 
+              жесткого диска</a></font><a href="../index.htm"><font face="Arial, Helvetica, sans-serif"> 
+              </font></a><font face="Arial, Helvetica, sans-serif"> </font></p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="40" class="LeftMenu" valign="middle"><font face="Arial, Helvetica, sans-serif"><b><a href="1_file_sys.htm">Общее 
+            описание файловых систем</a> </b> </font></td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="40" class="LeftMenu" valign="middle"><font face="Arial, Helvetica, sans-serif"><a href="2_fat32.htm">FAT-32</a></font></td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="40" class="LeftMenu" valign="middle"><font face="Arial, Helvetica, sans-serif"><a href="3_ntfs.htm">ntfs</a></font></td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="40" class="LeftMenu" valign="middle">Сравнение 
+            FAT и ntfs</td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="20" class="LeftMenu" valign="middle"> 
+            <hr>
+          </td>
+        </tr>
+        <tr> 
+          <td width="20%" background="../images/grad_hor.gif" height="40" class="LeftMenu" valign="middle"><a href="5_hdd.htm">Анатомия 
+            жесткого диска</a></td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="40" class="LeftMenu" valign="middle"><font face="Arial, Helvetica, sans-serif"><a href="6_raid.htm">RAID-массивы</a></font></td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="20" class="LeftMenu" valign="middle"> 
+            <hr>
+          </td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="40" class="LeftMenu" valign="middle"><a href="7_general.htm">Общее 
+            описание интерфейсов жестких дисков</a></td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="40" class="LeftMenu" valign="middle"><a href="8_ide.htm">Интерфейс 
+            IDE </a></td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="40" class="LeftMenu" valign="middle"><a href="9_ata_rags.htm">Сигналы 
+            интерфейса ATA и регистры ввода-вывода</a></td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="20" class="LeftMenu" valign="middle"> 
+            <hr>
+          </td>
+        </tr>
+        <tr> 
+          <td width="13%" background="../images/grad_hor.gif" height="40" class="LeftMenu" valign="middle"><a href="winnt_pswd.htm">Если 
+            утерян пароль администратора Win NT (Win 2000)</a></td>
+        </tr>
+      </table>
+    </td>
+    <td width="10" background="../images/tube_ver.gif" class="LeftMenu" valign="top" bgcolor="#FFFFFF">&nbsp;</td>
+    <td background="../images/hdd_bg.jpg" colspan="2" valign="top"> 
+      <blockquote> 
+        <p><font face="Arial, Helvetica, sans-serif"><br>
+          </font></p>
+        <h4><font face="Arial, Helvetica, sans-serif" size="3">СРАВНЕНИЕ FAT И 
+          ntfs</font><br>
+          <font face="Arial, Helvetica, sans-serif"><em><font size="2">(С) Александр 
+          Фролов, 2002, <a 
+href="http://www.frolov.pp.ru/">http://www.frolov.pp.ru/</a>, <a 
+href="http://www.datarecovery.ru/">http://www.datarecovery.ru/</a> </font></em></font> 
+        </h4>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">До возникновения 
+          операционной системы Microsoft Windows NT у пользователей персональных 
+          компьютеров редко возникала проблема выбора файловой системы. Все владельцы 
+          операционных систем (ОС) MS-DOS и Microsoft Windows применяли одну из 
+          разновидностей файловой системы с названием FAT (FAT-12, FAT-16 или 
+          FAT-32). </font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Теперь же ситуация 
+          изменилась. Устанавливая ОС Microsoft Windows NT/2000/XP, при форматировании 
+          диска Вам необходимо сделать выбор между тремя файловыми системами - 
+          FAT-16, FAT-32 или ntfs.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">В этой статье мы 
+          расскажем о внутреннем устройстве перечисленных файловых систем, рассмотрим 
+          присущие им недостатки и достоинства. Вооружившись этими знаниями, Вы 
+          сможете сделать осознанный выбор в пользу той или иной файловой системы 
+          для ОС Microsoft Windows.</font></p>
+        <h2><font face="Arial, Helvetica, sans-serif" size="2">Кратко о файловой 
+          системе FAT</font></h2>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Файловая система 
+          FAT появилась на заре развития персональных компьютеров и первоначально 
+          предназначалась для хранения файлов на дискетах.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Информация хранится 
+          на дисках и дискетах порциями, в секторах размером 512 байт. Все пространство 
+          дискеты разделялось на области фиксированной длины, называемые кластерами. 
+          Кластер может содержать один или больше секторов. </font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Каждый файл занимает 
+          один или несколько кластеров, возможно несмежных. Названия файлов и 
+          другая информация о файлах, такая как размер и дата создания, располагается 
+          в начальной области дискеты, выделенной для корневого каталога. </font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Помимо корневого 
+          каталога, в файловой системе FAT могут создаваться и другие каталоги. 
+          Вместе с корневым каталогом они образуют дерево каталогов, содержащих 
+          информацию о файлах и каталогах. Что же касается расположения кластеров 
+          файла на диске, то эта информация хранится в начальной области дискеты, 
+          называемой таблицей размещения файлов (File Allocation Table, FAT) .</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Для каждого кластера 
+          в таблице FAT есть своя индивидуальная ячейка, в которой хранится информация 
+          о том, как этот кластер используется. Таким образом, таблица размещения 
+          файлов - это массив, содержащий информацию о кластерах. Размер этого 
+          массива определяется общим количеством кластеров на диске.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">В каталоге хранится 
+          номер первого кластера, распределенного файлу или вложенному каталогу. 
+          Номера остальных кластеров можно найти при помощи таблицы размещения 
+          файлов FAT.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">При разработке формата 
+          таблицы FAT стояла задача экономии места, т.к. дискета имеет весьма 
+          небольшой объем (от 180 Кбайт до 2,44 Мбайт). Поэтому для хранения номеров 
+          кластера было отведено всего 12 двоичных разрядов. В результате таблицу 
+          FAT удалось упаковать так плотно, что она занимала всего один сектор 
+          дискеты.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Таблица FAT содержит 
+          критически важную информацию о расположении каталогов и файлов. Если 
+          в результате сбоя аппаратуры, программного обеспечения или вредоносного 
+          воздействия вирусов таблица FAT окажется поврежденной, доступ к файлам 
+          и каталогам будет потерян. Поэтому с целью подстраховки на диске обычно 
+          создаются две копии таблицы FAT.</font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Различные версии 
+          FAT</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">После появления 
+          жестких дисков большого объема (в те времена большими считались диски 
+          размером 10-20 Мбайт) количество кластеров увеличилось, и 12 разрядов 
+          стало недостаточно для хранения их номеров. Был разработан новый 16-разрядный 
+          формат таблицы размещения файлов, где для хранения номера одного кластера 
+          выделялось два байта. Старая файловая система, разработанная для дискет, 
+          стала называться FAT-12, а новая - FAT-16.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Увеличенная в размерах 
+          таблица FAT-16 перестала помещаться в одном секторе, однако при больших 
+          объемах диска этот недостаток не играл существенной роли. По-прежнему 
+          для страховки на диске хранилось две копии таблицы FAT.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Однако когда объем 
+          диска стал измеряться в сотнях Мбайт и даже в гигабайтах, файловая система 
+          FAT-16 опять стала неэффективной. Чтобы номера кластеров помещались 
+          в 16 разрядов, при форматировании дисков большого объема приходится 
+          увеличивать размер кластера до 16 Кбайт и даже больше. Это вызывало 
+          проблемы при необходимости хранения на диске большого количества маленьких 
+          файлов. Так как пространство для хранения файлов выделяется кластерами, 
+          даже для очень маленького файла приходится отводить слишком много дисковой 
+          памяти.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">В результате была 
+          предпринята еще одна, по всей видимости, последняя попытка усовершенствования 
+          файловой системы FAT - размер ячейки таблицы размещения файлов был увеличен 
+          до 32. Это позволило форматировать диски размером в сотни Мбайт и единицы 
+          Гбайт с использованием относительно небольшого размера кластера. Новая 
+          файловая система стала называться FAT-32.</font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Стандарт 8.3</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">До появления ОС 
+          Microsoft Windows 95 пользователи персональных компьютеров были вынуждены 
+          использовать для именования файлов весьма неудобный "стандарт 8.3", 
+          в котором имя файла должно было состоять из 8 символов плюс 3 символа 
+          расширения. Это ограничение накладывалось не только программным интерфейсом 
+          операционной системы MS-DOS, но и структурой записи каталога файловой 
+          системы FAT. </font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">После модификации 
+          структуры записей каталога ограничение на количество символов в имени 
+          файла было практически снято. Теперь длина имени файла может достигать 
+          255 символов, что, очевидно, достаточно в большинстве случаев. Однако 
+          такая модифицированная файловая система FAT стала несовместима с операционной 
+          системой MS-DOS, а также с работающей в ее среде оболочкой Microsoft 
+          Windows версий 3.1 и 3.11.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Более подробно о 
+          форматах внутренних структур FAT Вы можете прочитать в нашей статье 
+          "Восстановление данных в разделах FAT", опубликованных на этом сайте.</font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Ограничения файловой 
+          системы FAT</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Принимая решение 
+          об использовании файловой системы FAT для форматирования диска, следует 
+          учитывать присущие ей ограничения. Эти ограничения касаются, прежде 
+          всего, максимального размера диска FAT, а также максимального размера 
+          файла, расположенного на этом диске.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Максимальный размер 
+          логического диска FAT-16 составляет 4 Гбайт, что очень мало по современным 
+          понятиям. Компания Microsoft, однако, не рекомендует создавать диски 
+          FAT-16 размером более 200 Мбайт, т.к. при этом дисковое пространство 
+          будет использоваться очень неэффективно.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Теоретически максимальный 
+          размер диска FAT-32 может составлять 8 Тбайт, что должно хватить для 
+          развертывания любых современных приложений. Это значение получается 
+          путем перемножения максимального количества кластеров (268 435 445) 
+          на максимальный размер кластера, допустимый в FAT-32 (32 Кбайт).</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Однако на практике 
+          ситуация выглядит немного по-другому.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Из-за внутренних 
+          ограничений утилита ScanDisk в ОС Microsoft 95/98 не способна работать 
+          с дисками, превышающими по своему объему значение 127.53 Гбайт. Еще 
+          год назад такое ограничение не вызвало бы проблем, однако сегодня на 
+          рынке уже появились недорогие диски объемом 160 Гбайт, и скоро их объем 
+          будет еще больше.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Что же касается 
+          новых операционных систем Microsoft Windows 2000/XP, то они не способны 
+          создавать разделы FAT-32 с объемом, превышающим 32 Гбайт. Если Вам нужны 
+          разделы такого или большего объема, компания Microsoft предложит Вам 
+          использовать файловую систему ntfs.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Другое существенное 
+          ограничение FAT-32 накладывается на размер файлов - он не может превышать 
+          4 Гбайт. Это ограничение будет сказываться, например, при записи на 
+          диск видеофрагментов или при создании объемных файлов баз данных.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">В каталоге FAT-32 
+          может хранить не более 65534 файлов.</font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Недостатки FAT</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Помимо рассмотренных 
+          выше ограничений, файловой системе FAT присущи и другие недостатки. 
+          Наиболее существенными, по-видимому, является полное отсутствие средств 
+          разграничения доступа, а также возможность потери информации о размещении 
+          всех файлов после разрушения довольно компактной таблицы FAT и ее копии.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Загрузив компьютер 
+          с системной дискеты, злоумышленник легко получит доступ к любым файлам, 
+          хранящимся на дисках с файловой системой FAT. Ему не составит никакого 
+          труда скопировать затем эти файлы на устройство ZIP или какой-либо другой 
+          внешний носитель данных.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">При использовании 
+          FAT на дисках сервера невозможно обеспечить надежное и гибкое разграничение 
+          доступа пользователей к каталогам. Именно поэтому, а также в силу своей 
+          низкой устойчивостью к сбоям, FAT обычно не используется на серверах.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Наличие компактных 
+          таблиц размещения файлов FAT делает эту файловую систему уязвимой мишенью 
+          для компьютерных вирусов - достаточно уничтожить начальный фрагмент 
+          диска FAT, и почти все данные будут потеряны.</font></p>
+        <h2><font face="Arial, Helvetica, sans-serif" size="2">Файловая система 
+          ntfs</font></h2>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Современная файловая 
+          система ntfs, разработанная компанией Microsoft для своей операционной 
+          системы Microsoft Windows NT, лишена ограничений и недостатков FAT. 
+          С момента своего возникновения развивающаяся файловая система ntfs претерпела 
+          несколько усовершенствований, последние из которых (на момент создания 
+          этой статьи) были сделаны в ОС Microsoft Windows XP.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">В файловой системе 
+          ntfs все атрибуты файлов (имя, размер, расположение экстентов файла 
+          на диске и т.д.) хранятся в скрытом системном файле $MFT. На хранение 
+          информации о каждом файле (и каталоге) в $MFT отводится от одного до 
+          нескольких Кбайт. При большом количестве файлов, хранящихся на диске, 
+          объем файла $MFT может достигать десятков или даже сотен Мбайт. </font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Файлы небольшого 
+          размера (порядка сотен байт) хранятся непосредственно в $MFT, что существенно 
+          ускоряет доступ к ним.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Заметим, однако, 
+          что накладные расходы ntfs на хранение системной информации, хотя и 
+          превышают накладные расходы FAT, все же не очень велики по сравнению 
+          с объемом современных дисков. Из-за того, что файл $MFT обычно располагается 
+          ближе к середине диска, разрушение первых дорожек диска ntfs не приводит 
+          к таким фатальным последствиям, как разрушение начальных областей диска 
+          FAT.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Файловая система 
+          ntfs обладает многочисленными возможностями, отсутствующими в FAT. Они 
+          позволяют добиться намного большей гибкости, надежности и защищенности 
+          по сравнению с FAT.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Перечислим некоторые, 
+          наиболее интересные возможности ntfs современных версий.</font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Средства разграничения 
+          доступа</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Средства разграничения 
+          доступа ntfs достаточно гибкие и позволяют управлять доступом на уровне 
+          отдельных файлов и каталогов, предоставляя (или блокируя) доступ к ним 
+          отдельным пользователям или группам пользователей.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Хотя на первый взгляд 
+          может показаться, что средства разграничения доступа нужны только для 
+          файловых серверов, они потребуются и в том случае, если к компьютеру 
+          имеют доступ несколько пользователей.</font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Шифрование файлов</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Упомянутые выше 
+          средства разграничения доступа окажутся бесполезными, если физический 
+          диск ntfs попадет в руки злоумышленнику. С использованием современных 
+          утилит содержимое такого диска может быть без особого труда прочитано 
+          в среде любой операционной системе - DOS, Microsoft Windows или Linux.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">С целью обезопасить 
+          фалы пользователей от несанкционированного доступа, в операционных системах 
+          Microsoft Windows 2000/XP предусмотрено дополнительное шифрование файлов, 
+          хранящихся в разделах ntfs. И хотя стойкость такого шифрования, возможно, 
+          не слишком высока, она вполне достаточна в большинстве случаев.</font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Программный дисковый 
+          массив RAID</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Средствами ntfs 
+          можно создать так называемый программный массив RAID 1 (Mirrored set). 
+          Этот массив, составляемый из двух физических или логических дисков одинакового 
+          объема, позволяет дублировать (или, как еще говорят, "зеркалировать") 
+          файлы.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Такой массив может 
+          уберечь Ваши файлы в случае физической поломки одного из дисков, составляющих 
+          массив, поэтому часто применяется для увеличения надежности дисковой 
+          системы.</font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Наборы Volume Set</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Файловая система 
+          ntfs позволяет объединить в один логический том несколько разделов, 
+          расположенных на одном или нескольких физических дисках. Это может потребоваться, 
+          например, для хранения файлов баз данных большого размера, не помещающихся 
+          на одном физическом диске, или для создания каталога с суммарным объемом 
+          файлов, превышающим размеры физического диска.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Наборы, созданные 
+          из нескольких разделов или физических дисков, называются Volume Set 
+          (в терминологии ОС Microsoft Windows NT) или Spanned Volume (в терминологии 
+          ОС Windows 2000/XP).</font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Упаковка файлов</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Для экономии дискового 
+          пространства можно использовать способность ntfs упаковывать (сжимать) 
+          файлы. Помимо этого ntfs позволяет создавать так называемые разреженные 
+          (sparse) файлы, которые содержат области нулевых данных. Такие файлы 
+          могут иметь большой объем, но при этом занимать мало места на диске, 
+          так как фактически хранятся только значащие байты файла. </font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Заметим, что упаковка 
+          файлов приведет к некоторому замедлению работы. Это обстоятельство, 
+          однако, будет иметь значение далеко не всегда. Например, офисные документы 
+          можно упаковывать без заметного снижения скорости работы, а про файлы 
+          баз данных, к которым одновременно обращается большое количество пользователей, 
+          этого сказать нельзя. С учетом появления на рынке относительно недорогих 
+          дисков огромного объема средства упаковки нужно использовать только 
+          тогда, когда они действительно необходимы. Это, однако, относится и 
+          к другим возможностям ntfs.</font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Многопоточные файлы</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">При необходимости 
+          в одном файле, записанном на диске ntfs, можно хранить несколько потоков 
+          информации. Это позволяет, в частности, снабжать файлы документов дополнительной 
+          информацией, хранить в одном файле несколько версий документов (например, 
+          на разных языках), хранить в отдельных потоках одного файла программный 
+          код и данные и т.п.</font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Жесткие связи</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Жесткие связи (hard 
+          links) позволяют назначать для одного физического файла несколько разных 
+          имен, располагая эти имена (т.е. ссылки на файл) в разных каталогах. 
+          При удалении связи не происходит удаления самого файла. Только когда 
+          все связи файла будут уничтожены, тогда будет удален и сам файл.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Заметим, что подобные 
+          возможности характерны для файловых систем, применяемых в Unix-подобных 
+          ОС, например, в Linux, FreeBSD и т.д. </font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Точки переопределения</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Такие системные 
+          объекты ntfs, как точки переопределения (reparse points) позволяют переопределить 
+          любой файл или каталог. При этом, например, редко используемые переопределенные 
+          файлы или каталоги фактически могут храниться на магнитной ленте, загружаясь 
+          на диск только при необходимости. </font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Переходы</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Пользуясь переходами 
+          ntfs, можно смонтировать в каталог диска другой жесткий диск или компакт-диск. 
+          Эта возможность первоначально существовала в файловых системах Unix-подобных 
+          ОС.</font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Квотирование дискового 
+          пространства</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Файловая система 
+          ntfs, использованная в ОС Microsoft Windows 2000/XP, позволяет квотировать, 
+          или ограничивать дисковое пространство, предоставляемое в распоряжение 
+          пользователей. Такая возможность особенно полезна при создании файловых 
+          серверов.</font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Ведение журнала 
+          изменений</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">В процессе своей 
+          работы операционная система выполняет различные действия над файлами 
+          (создание, изменение, удаление). Все такие изменения сохраняются в специальном 
+          журнале, созданном на томе ntfs, и могут использоваться программами 
+          резервного копирования, системами индексации и т.п. Протоколирование 
+          изменений повышает надежность файловой системы, позволяя в ряде случаев 
+          продолжить работу после некритичных отказов операционной системы и оборудования. 
+          Хотя, конечно, большинство серьезных сбоев приводит к необходимости 
+          восстанавливать данные из резервной копии или с применением специальных 
+          утилит восстановления данных.</font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Ограничения ntfs</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Несмотря на обилие 
+          возможностей, файловой системе ntfs также присущи некоторые ограничения. 
+          Впрочем, в большинстве случаев они не играют существенной роли.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Максимальный размер 
+          логического диска ntfs составляет примерно 18 446 744 Тбайт, что, очевидно, 
+          достаточно для всех современных приложений, а также приложений, которые 
+          появятся в ближайшем будущем. Максимальный размер файла еще больше, 
+          так что это ограничение также несущественно.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Количество файлов, 
+          хранящихся в одном каталоге ntfs, ничем не ограничено, так что здесь 
+          тоже есть преимущество перед FAT.</font></p>
+        <h2><font face="Arial, Helvetica, sans-serif" size="2">Сравнение ntfs 
+          и FAT по скорости доступа к файлам</font></h2>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">С точки зрения перспективности, 
+          функциональных возможностей, безопасности и надежности ntfs намного 
+          опережает FAT. Однако сравнение производительности этих файловых систем 
+          не дает однозначного результата, так как производительность зависит 
+          от множества различных факторов.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Так как принципы 
+          работы и внутренние структуры FAT намного проще, чем ntfs, при работе 
+          с небольшими каталогами FAT будет, скорее всего, быстрее. Однако если 
+          содержимое каталога настолько мало, что он полностью помещается в одну 
+          или несколько записей файла $MFT, или напротив, если каталог очень большой, 
+          "победит" ntfs.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Пальма первенства, 
+          скорее всего, достанется ntfs при поиске несуществующих файлов или каталогов 
+          (т.к. при этом не потребуется полностью просматривать содержимое каталога), 
+          при обращении к файлам небольшого размера (объемом порядка сотен байт), 
+          а также в случае сильной фрагментации диска.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Для увеличения производительности 
+          ntfs можно увеличить размер кластера, однако это может привести к неэкономному 
+          использованию дискового пространства при хранении большого количества 
+          файлов, размер которых превышает 1-2 Кбайт и составляет десятки Кбайт. 
+          При увеличении размера кластера до 64 Кбайт можно получить максимальное 
+          повышение производительности, однако придется отказаться от упаковки 
+          файлов и применения утилит дефрагментации.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">При упаковке файлов, 
+          расположенных на дисках небольшого размера (порядка 4 Гбайт), производительность 
+          может возрасти, а при сжатии дисков большого размера - уменьшиться. 
+          В любом случае упаковка приведет к появлению дополнительной нагрузки 
+          на центральный процессор.</font></p>
+        <h2><font face="Arial, Helvetica, sans-serif" size="2">Так что же выбрать 
+          - FAT или ntfs?</font></h2>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Как видите, ntfs 
+          имеет многочисленные преимущества перед FAT, а ее ограничения в большинстве 
+          случаев несущественны. Если Вы стоите перед выбором файловой системы, 
+          рассмотрите в первую очередь возможность использования ntfs, и только 
+          потом - FAT.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Какие могут быть 
+          препятствия, затрудняющие замену FAT на ntfs?</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Наиболее серьезное 
+          препятствие - необходимость использования ОС Microsoft Windows NT/2000/XP. 
+          Для нормальной работы этой ОС требуется как минимум 64 Мбайт оперативной 
+          памяти и процессор с тактовой частотой не ниже 200-300 Мгц. Впрочем, 
+          этим требованиям не удовлетворяют лишь очень старые компьютеры, не способные 
+          работать под управлением ОС Microsoft Windows современных версий.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Если же Ваш компьютер 
+          может работать в среде Microsoft Windows 2000/XP, и у Вас нет ни одного 
+          прикладного приложения, рассчитанного исключительно на ОС Microsoft 
+          Windows 95/98/ME, мы рекомендуем Вам при первой же возможности перейти 
+          к новой операционной системе, заменив при этом FAT на ntfs. </font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">При этом Вы также 
+          получите заметное увеличение надежности работы, т.к. после установки 
+          всех необходимых пакетов исправлений (Service Pack), а также корректных 
+          версий драйверов периферийных устройств, ОС Microsoft Windows 2000/XP 
+          будет работать очень стабильно.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">В некоторых случаях 
+          приходится совмещать в рамках одного физического диска несколько файловых 
+          систем. Например, если на Вашем компьютере установлено три операционные 
+          системы Microsoft Windows ME, Microsoft Windows XP и Linux, можно создать 
+          три файловые системы - FAT, ntfs и Ext2FS. Первая из них будет "видна" 
+          при работе в Microsoft Windows ME и Linux, вторая - только в Microsoft 
+          Windows XP, и третья - только в Linux (заметим, что в ОС LINUX существует 
+          также возможность доступа к разделам ntfs). </font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Но если Вы создаете 
+          сервер (файловый, базы данных или Web) на базе ОС Microsoft Window NT/2000/XP, 
+          то единственным разумным выбором будет ntfs. Только в этом случае удастся 
+          добиться необходимой стабильности, надежности и защищенности сервера.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Существует также 
+          общепринятое (и на наш взгляд, ошибочное) мнение, что домашним пользователям 
+          компьютеров не нужна ни ОС Microsoft Window NT/2000/XP, ни файловая 
+          система ntfs. </font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Конечно, если компьютер 
+          применяется исключительно для игр, из соображений совместимости лучше 
+          всего установить Microsoft Windows 98/ME и отформатировать диски в FAT. 
+          Однако если Вы работаете не только в офисе, но и дома, лучше использовать 
+          современные, профессиональные и надежные решения. Это позволит, в частности, 
+          организовать защиту от вторжения на Ваш компьютер через Интернет, ограничить 
+          доступ к каталогам и файлам с критичными данными, а также повысит шансы 
+          на успешное восстановление информации при возникновении различного рода 
+          сбоев.</font></p>
+        <hr>
+        <p><font face="Arial, Helvetica, sans-serif"><b><font size="2">СРАВНЕНИЕ 
+          ntfs И FAT: СКОРОСТЬ</font></b></font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">В этой статье я 
+          попытаюсь дать оценку быстродействию файловых систем, используемых в 
+          операционных системах Windows95/98/ME, а также WindowsNT/2000. Статья 
+          не содержит графиков и результатов тестирований, так как эти результаты 
+          слишком сильно зависят от случая, методик тестирования и конкретных 
+          систем, и не имеют почти никакой связи с реальным положением дел. В 
+          этом материале я вместо этого постараюсь описать общие тенденции и соображения, 
+          связанные с производительностью файловых систем. Прочитав данный материал, 
+          вы получите информацию для размышлений и сможете сами сделать выводы, 
+          понять, какая система будет быстрее в ваших условиях, и почему. Возможно, 
+          некоторые факты помогут вам также оптимизировать быстродействие своей 
+          машины с точки зрения файловых систем, подскажут какие-то решения, которые 
+          приведут к повышению скорости работы всего компьютера. В данном обзоре 
+          упоминаются три системы - FAT (далее FAT16), FAT32 и ntfs, так как основной 
+          вопрос, стоящий перед пользователями Windows2000 - это выбор между этими 
+          вариантами. Я приношу извинение пользователям других файловых систем, 
+          но проблема выбора между двумя, внешне совершенно равнозначными, вариантами 
+          со всей остротой стоит сейчас только в среде Windows2000. Я надеюсь, 
+          всё же, что изложенные соображения покажутся вам любопытными, и вы сможете 
+          сделать какие-то выводы и о тех системах, с которыми вам приходится 
+          работать.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Данная статья состоит 
+          из множества разделов, каждый из которых посвящен какому-то одному вопросу 
+          быстродействия. Многие из этих разделов в определенных местах тесно 
+          переплетаются между собой. Тем не менее, чтобы не превращать статью 
+          в кашу, в соответствующем разделе я буду писать только о том, что имеет 
+          отношение к обсуждаемый в данный момент теме, и ни о чем более. Если 
+          вы не нашли каких-то важных фактов в тексте - не спешите удивляться: 
+          скорее всего, вы встретите их позже. Прошу вас также не делать никаких 
+          поспешных выводов о недостатках и преимуществах той или иной системы, 
+          так как противоречий и подводных камней в этих рассуждениях очень и 
+          очень много. В конце я попытаюсь собрать воедино всё, что можно сказать 
+          о быстродействии систем в реальных условиях.<br>
+          &nbsp;</font></p>
+        <h2><font face="Arial, Helvetica, sans-serif" size="2">Теория</font></h2>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Самое фундаментальное 
+          свойство любой файловой системы, влияющее на быстродействие всех дисковых 
+          операций - структура организации и хранения информации, т.е. то, как, 
+          собственно, устроена сама файловая система. Первый раздел - попытка 
+          анализа именно этого аспекта работы, т.е. физической работы со структурами 
+          и данными файловой системы. Теоретические рассуждения, в принципе, могут 
+          быть пропущены - те, кто интересуется лишь чисто практическими аспектами 
+          быстродействия файловых систем, могут обратиться сразу ко второй части 
+          статьи.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Для начала хотелось 
+          бы заметить, что любая файловая система так или иначе хранит файлы. 
+          Доступ к данным файлов - основная и неотъемлемая часть работы с файловой 
+          системой, и поэтому прежде всего нужно сказать пару слов об этом. Любая 
+          файловая система хранит данные файлов в неких объемах - секторах, которые 
+          используются аппаратурой и драйвером как самая маленькая единица полезной 
+          информации диска. Размер сектора в подавляющем числе современных систем 
+          составляет 512 байт, и все файловые системы просто читают эту информацию 
+          и передают её без какой либо обработки приложениям. Есть ли тут какие-то 
+          исключения? Практически нет. Если файл хранится в сжатом или закодированном 
+          виде - как это возможно, к примеру, в системе ntfs - то, конечно, на 
+          восстановление или расшифровку информации тратится время и ресурсы процессора. 
+          В остальных случаях чтение и запись самих данных файла осуществляется 
+          с одинаковой скоростью, какую файловую систему вы не использовали бы.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Обратим внимание 
+          на основные процессы, осуществляемые системой для доступа к файлам:</font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Поиск данных файла</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Выяснение того, 
+          в каких областях диска хранится тот или иной фрагмент файла - процесс, 
+          который имеет принципиально разное воплощение в различных файловых системах. 
+          Имейте в виду, что это лишь поиск информации о местоположении файла 
+          - доступ к самим данным, фрагментированы они или нет, здесь уже не рассматривается, 
+          так как этот процесс совершенно одинаков для всех систем. Речь идет 
+          о тех "лишних" действиях, которые приходится выполнять системе перед 
+          доступом к реальным данным файлов.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2"><strong>На что влияет 
+          этот параметр</strong>: на скорость навигации по файлу (доступ к произвольному 
+          фрагменту файла). Любая работа с большими файлами данных и документов, 
+          если их размер - несколько мегабайт и более. Этот параметр показывает, 
+          насколько сильно <em>сама файловая система</em>&nbsp; страдает от фрагментации 
+          файлов.</font></p>
+        <ul>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">ntfs способна 
+            обеспечить быстрый поиск фрагментов, поскольку вся информация хранится 
+            в нескольких очень компактных записях (типичный размер - несколько 
+            килобайт). Если файл очень сильно фрагментирован (содержит большое 
+            число фрагментов) - ntfs придется использовать много записей, что 
+            часто заставит хранить их в разных местах. Лишние движения головок 
+            при поиске этих данных, в таком случае, приведут к сильному замедлению 
+            процесса поиска данных о местоположении файла. </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">FAT32, из-за 
+            большой области самой таблицы размещения будет испытывать огромные 
+            трудности, если фрагменты файла разбросаны по всему диску. Дело в 
+            том, что FAT (File Allocation Table, таблица размещения файлов) представляет 
+            собой мини-образ диска, куда включен каждый его кластер. Для доступа 
+            к фрагменту файла в системе FAT16 и FAT32 приходится обращаться к 
+            соответствующей частичке FAT. Если файл, к примеру, расположен в трех 
+            фрагментах - в начале диска, в середине, и в конце - то в системе 
+            FAT нам придется обратиться к фрагменту FAT также в его начале, в 
+            середине и в конце. В системе FAT16, где максимальный размер области 
+            FAT составляет 128 Кбайт, это не составит проблемы - вся область FAT 
+            просто хранится в памяти, или же считывается с диска целиком за один 
+            проход и буферизируется. FAT32 же, напротив, имеет типичный размер 
+            области FAT порядка сотен килобайт, а на больших дисках - даже несколько 
+            мегабайт. Если файл расположен в разных частях диска - это вынуждает 
+            систему совершать движения головок винчестера столько раз, сколько 
+            групп фрагментов в разных областях имеет файл, а это очень и очень 
+            сильно замедляет процесс поиска фрагментов файла. </font></li>
+        </ul>
+        <p><font face="Arial, Helvetica, sans-serif" size="2"><strong>Вывод:</strong> 
+          Абсолютный лидер - FAT16, он никогда не заставит систему делать лишние 
+          дисковые операции для данной цели. Затем идет ntfs - эта система также 
+          не требует чтения лишней информации, по крайней мере, до того момента, 
+          пока файл имеет разумное число фрагментов. FAT32 испытывает огромные 
+          трудности, вплоть до чтения лишних сотен килобайт из области FAT, если 
+          файл разбросан по разным областям диска. Работа с внушительными по размеру 
+          файлами на FAT32 в любом случае сопряжена с огромными трудностями - 
+          понять, в каком месте на диске расположен тот или иной фрагмент файла, 
+          можно лишь изучив всю последовательность кластеров файла с самого начала, 
+          обрабатывая за один раз один кластер (через каждые 4 Кбайт файла в типичной 
+          системе). Стоит отметить, что если файл фрагментирован, но лежит компактной 
+          кучей фрагментов - FAT32 всё же не испытывает больших трудностей, так 
+          как физический доступ к области FAT будет также компактен и буферизован.</font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Поиск свободного 
+          места</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Данная операция 
+          производится в том случае, если файл нужно создать с нуля или скопировать 
+          на диск. Поиск места под физические данные файла зависит от того, как 
+          хранится информация о занятых участках диска.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2"><strong>На что влияет 
+          этот параметр:</strong> на скорость создания файлов, особенно больших. 
+          Сохранение или создание в реальном времени больших мультимедийных файлов 
+          (.wav, к примеру), копирование больших объемов информации, т.д. Этот 
+          параметр показывает, насколько быстро система сможет найти место для 
+          записи на диск новых данных, и какие операции ей придется для этого 
+          проделать.</font></p>
+        <ul>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Для определения 
+            того, свободен ли данный кластер или нет, системы на основе FAT должны 
+            просмотреть одну запись FAT, соответствующую этому кластеру. Размер 
+            одной записи FAT16 составляет 16 бит, одной записи FAT32 - 32 бита. 
+            Для поиска свободного места на диске может потребоваться просмотреть 
+            почти всего FAT - это 128 Кбайт (максимум) для FAT16 и до нескольких 
+            мегабайт (!) - в FAT32. Для того, чтобы не превращать поиск свободного 
+            места в катастрофу (для FAT32), операционной системе приходится идти 
+            на различные ухищрения. </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">ntfs имеет битовую 
+            карту свободного места, одному кластеру соответствует 1 бит. Для поиска 
+            свободного места на диске приходится оценивать объемы в десятки раз 
+            меньшие, чем в системах FAT и FAT32. </font></li>
+        </ul>
+        <p><font face="Arial, Helvetica, sans-serif" size="2"><strong>Вывод:</strong> 
+          ntfs имеет наиболее эффективную систему нахождения свободного места. 
+          Стоит отметить, что действовать "в лоб" на FAT16 или FAT32 очень медленно, 
+          поэтому для нахождения свободного места в этих системах применяются 
+          различные методы оптимизации, в результате чего и там достигается приемлемая 
+          скорость. (Одно можно сказать наверняка - поиск свободного места при 
+          работе в DOS на FAT32 - катастрофический по скорости процесс, поскольку 
+          никакая оптимизация невозможна без поддержки хоть сколь серьезной операционной 
+          системы).</font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Работа с каталогами 
+          и файлами</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Каждая файловая 
+          система выполняет элементарные операции с файлами - доступ, удаление, 
+          создание, перемещение и т.д. Скорость работы этих операций зависит от 
+          принципов организации хранения данных об отдельных файлах и от устройства 
+          структур каталогов.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2"><strong>На что влияет 
+          этот параметр:</strong> на скорость осуществления любых операций с файлом, 
+          в том числе - на скорость любой операции доступа к файлу, особенно - 
+          в каталогах с большим числом файлов (тысячи).</font></p>
+        <ul>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">FAT16 и FAT32 
+            имеют очень компактные каталоги, размер каждой записи которых предельно 
+            мал. Более того, из-за сложившейся исторически системы хранения длинных 
+            имен файлов (более 11 символов), в каталогах систем FAT используется 
+            не очень эффективная и на первый взгляд неудачная, но зато очень экономная 
+            структура хранения этих самих длинных имен файлов. Работа с каталогами 
+            FAT производится достаточно быстро, так как в подавляющем числе случаев 
+            каталог (файл данных каталога) не фрагментирован и находится на диске 
+            в одном месте.<br>
+            Единственная проблема, которая может существенно понизить скорость 
+            работы каталогов FAT - большое количество файлов в одном каталоге 
+            (порядка тысячи или более). Система хранения данных - линейный массив 
+            - не позволяет организовать эффективный поиск файлов в таком каталоге, 
+            и для нахождения данного файла приходится перебирать большой объем 
+            данных (в среднем - половину файла каталога). </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">ntfs использует 
+            гораздо более эффективный способ адресации - бинарное дерево, о принципе 
+            работы которого можно прочесть в другой статье (<a href="good_15.html">Структура 
+            ntfs</a>). Эта организация позволяет эффективно работать с каталогами 
+            любого размера - каталогам ntfs не страшно увеличение количества файлов 
+            в одном каталоге и до десятков тысяч.<br>
+            Стоит заметить, однако, что сам каталог ntfs представляет собой <em>гораздо</em>&nbsp; 
+            менее компактную структуру, нежели каталог FAT - это связано с гораздо 
+            большим (в несколько раз) размером одной записи каталога. Данное обстоятельство 
+            приводит к тому, что каталоги на томе ntfs в подавляющем числе случаев 
+            сильно фрагментированы. Размер типичного каталога на FAT-е укладывается 
+            в один кластер, тогда как сотня файлов (и даже меньше) в каталоге 
+            на ntfs уже приводит к размеру файла каталога, превышающему типичный 
+            размер одного кластера. Это, в свою очередь, почти гарантирует фрагментацию 
+            файла каталога, что, к сожалению, довольно часто сводит на нет все 
+            преимущества гораздо более эффективной организации самих данных. </font></li>
+        </ul>
+        <p><font face="Arial, Helvetica, sans-serif" size="2"><strong>Вывод:</strong> 
+          структура каталогов на ntfs теоретически гораздо эффективнее, но при 
+          размере каталога в несколько сотен файлов это практически не имеет значения. 
+          Фрагментация каталогов ntfs, однако, уверенно наступает уже при таком 
+          размере каталога. Для малых и средних каталогов ntfs, как это не печально, 
+          имеет на практике меньшее быстродействие.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Преимущества каталогов 
+          ntfs становятся реальными и неоспоримыми только в том случае, если в 
+          одно каталоге присутствуют тысячи файлов - в этом случае быстродействие 
+          компенсирует фрагментированность самого каталога и трудности с физическим 
+          обращением к данным (в первый раз - далее каталог кэшируется). Напряженная 
+          работа с каталогами, содержащими порядка тысячи и более файлов, проходит 
+          на ntfs буквально в несколько раз быстрее, а иногда выигрыш в скорости 
+          по сравнению с FAT и FAT32 достигает десятков раз.<br>
+          &nbsp;</font></p>
+        <h2><font face="Arial, Helvetica, sans-serif" size="2">Практика</font></h2>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">К сожалению, как 
+          это часто бывает во всевозможных компьютерных вопросах, практика не 
+          очень хорошо согласуется с теорией. ntfs, имеющая, казалось бы, очевидные 
+          преимущества в структуре, показывает не настолько уж фантастические 
+          результаты, как можно было бы ожидать. Какие еще соображения влияют 
+          на быстродействие файловой системы? Каждый из рассматриваемых далее 
+          вопросов вносит свой вклад в итоговое быстродействие. Помните, однако, 
+          что реальное быстродействие - результат действия сразу всех факторов, 
+          поэтому и в этой части статьи не стоит делать поспешных выводов.</font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Объем оперативной 
+          памяти (кэширование)</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Очень многие данные 
+          современных файловых систем кэшируются или буферизируются в памяти компьютера, 
+          что позволяет избежать лишних операций физического чтения данных с диска. 
+          Для нормальной (высокопроизводительной) работы системы в кэше приходится 
+          хранить следующие типы информации:</font></p>
+        <ul>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Данные о физическом 
+            местоположении всех открытых файлов. Это, прежде всего, позволит обращаться 
+            к системным файлам и библиотекам, доступ к которым идет буквально 
+            постоянно, без чтения служебной (не относящейся к самим файлам) информации 
+            с диска. Это же относится к тем файлам, которые исполняются в данный 
+            момент - т.е. к выполняемым модулям (.exe и .dll) активных процессов 
+            в системе. В эту категорию попадают также файлы системы, с которыми 
+            производится работа (прежде всего реестр и виртуальная память, различные 
+            .ini файлы, а также файлы документов и приложений). </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Наиболее часто 
+            используемые каталоги. К таковым можно отнести рабочий стол, меню 
+            "пуск", системные каталоги, каталоги кэша интернета, и т.п. </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Данные о свободном 
+            месте диска - т.е. та информация, которая позволит найти место для 
+            сохранения на диск новых данных. </font></li>
+        </ul>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">В случае, если этот 
+          базовый объем информации не будет доступен прямо в оперативной памяти, 
+          системе придется совершать множество ненужных операций еще до того, 
+          как она начнет работу с реальными данными. Что входит в эти объемы в 
+          разных файловых системах? Или, вопрос в более практической плоскости 
+          - каким объемом свободной оперативной памяти надо располагать, чтобы 
+          эффективно работать с той или иной файловой системой?</font></p>
+        <ul>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">FAT16 имеет очень 
+            мало данных, отвечающих за организацию файловой системы. Из служебных 
+            областей можно выделить только саму область FAT, которая не может 
+            превышать 128 Кбайт (!) - эта область отвечает и за поиск фрагментов 
+            файлов, и за поиск свободного места на томе. Каталоги системы FAT 
+            также очень компактны. Общий объем памяти, необходимый для предельно 
+            эффективной работы с FAT-ом, может колебаться от сотни килобайт и 
+            до мегабайта-другого - при условии огромного числа и размера каталогов, 
+            с которыми ведется работа. </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">FAT32 отличается 
+            от FAT16 лишь тем, что сама область FAT может иметь более внушительные 
+            размеры. На томах порядка 5 - 10 Гбайт область FAT может занимать 
+            объем в несколько Мбайт, и это уже очень внушительный объем, надежно 
+            кэшировать который не представляется возможным. Тем не менее, область 
+            FAT, а вернее те фрагменты, которые отвечают за местоположение рабочих 
+            файлов, в подавляющем большинстве систем находятся в памяти машины 
+            - на это расходуется порядка нескольких Мбайт оперативной памяти. 
+            </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">ntfs, к сожалению, 
+            имеет гораздо большие требования к памяти, необходимой для работы 
+            системы. Прежде всего, кэширование сильно затрудняет большие размеры 
+            каталогов. Размер одних только каталогов, с которыми активно ведет 
+            работу система, может запросто доходить до нескольких Мбайт и даже 
+            десятков Мбайт! Добавьте к этому необходимость кэшировать карту свободного 
+            места тома (сотни Кбайт) и записи MFT для файлов, с которыми осуществляется 
+            работа (в типичной системе - по 1 Кбайт на каждый файл). К счастью, 
+            ntfs имеет удачную систему хранения данных, которая не приводит к 
+            увеличению каких-либо фиксированных областей при увеличении объема 
+            диска. Количество данных, с которым оперирует система на основе ntfs, 
+            практически не зависит от объема тома, и основной вклад в объемы данных, 
+            которые необходимо кэшировать, вносят каталоги. Тем не менее, уже 
+            этого вполне достаточно для того, чтобы только <em>минимальный&nbsp;</em> 
+            объем данных, необходимых для кэширования базовых областей ntfs, доходил 
+            до 5 - 8 Мбайт. </font></li>
+        </ul>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">К сожалению, можно 
+          с уверенностью сказать: ntfs теряет огромное количество своего теоретического 
+          быстродействия из-за недостаточного кэширования. На системах, имеющих 
+          <strong>менее 64 Мбайт памяти</strong>, ntfs просто <em>не может</em>&nbsp; 
+          оказаться быстрее FAT16 или FAT32. Единственное исключение из этого 
+          правила - диски FAT32, имеющие объем десятки Гбайт (я бы лично серьезно 
+          опасался дисков FAT32 объемом свыше, скажем, 30 Гбайт). В остальных 
+          же случаях - системы с менее чем 64 мегабайтами памяти просто обязаны 
+          работать с FAT32 быстрее.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Типичный в настоящее 
+          время объем памяти в <strong>64 Мбайта</strong>, к сожалению, также 
+          не дает возможности организовать эффективную работу с ntfs. На малых 
+          и средних дисках (до 10 Гбайт) в типичных системах FAT32 будет работать, 
+          пожалуй, немного быстрее. Единственное, что можно сказать по поводу 
+          быстродействия систем с таким объемом оперативной памяти - системы, 
+          работающие с FAT32, будут гораздо сильнее страдать от фрагментации, 
+          чем системы на ntfs. Но если хотя бы изредка дефрагментировать диски, 
+          то FAT32, с точки зрения быстродействия, является предпочтительным вариантом. 
+          Многие люди, тем не менее, выбирают в таких системах ntfs - просто из-за 
+          того, что это даст некоторые довольно важные преимущества, тогда как 
+          типичная потеря быстродействия не очень велика.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Системы с <strong>более 
+          чем 64 Мбайтами</strong>, а особенно - со 128 Мбайт и более памяти, 
+          смогут уверенно кэшировать абсолютно всё, что необходимо для работы 
+          систем, и вот на таких компьютерах ntfs, скорее всего, покажет более 
+          высокое быстродействие из-за более продуманной организации данных.</font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Быстродействие 
+          накопителя</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Влияют ли физические 
+          параметры жесткого диска на быстродействие файловой системы? Да, хоть 
+          и не сильно, но влияют. Можно выделить следующие параметры физической 
+          дисковой системы, которые по-разному влияют на разные типы файловых 
+          систем:</font></p>
+        <ul>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Время случайного 
+            доступа (random seek time). К сожалению, для доступа к системным областям 
+            на типичном диске более сложной файловой системы (ntfs) приходится 
+            совершать, в среднем, больше движений головками диска, чем в более 
+            простых системах (FAT16 и FAT32). Гораздо большая фрагментация каталогов, 
+            возможность фрагментации системных областей - всё это делает диски 
+            ntfs гораздо более чувствительными к скорости считывания произвольных 
+            (случайных) областей диска. По этой причине использовать ntfs на медленных 
+            (старых) дисках не рекомендуется, так как высокое (худшее) время поиска 
+            дорожки дает еще один плюс в пользу систем FAT. </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Наличие Bus Mastering. 
+            Bus Mastering - специальный режим работы драйвера и контроллера, при 
+            использовании которого обмен с диском производится без участия процессора. 
+            Стоит отметить, что система запаздывающего кэширования ntfs сможет 
+            действовать гораздо более эффективно при наличии Bus Mastering, т.к. 
+            ntfs производит отложенную запись гораздо большего числа данных. Системы 
+            без Bus Mastering в настоящее время встречаются достаточно редко (обычно 
+            это накопители или контроллеры, работающие в режиме PIO3 или PIO4), 
+            и если вы работаете с таким диском - то, скорее всего, ntfs потеряет 
+            еще пару очков быстродействия, особенно при операциях модификации 
+            каталогов (например, активная работа в интернете - работа с кэшем 
+            интернета). </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Кэширование как 
+            чтения, так и записи на уровне жестких дисков (объем буфера HDD - 
+            от 128 Кбайт до 1-2 Мбайт в современных дорогих дисках) - фактор, 
+            который будет более полезен системам на основе FAT. ntfs из соображений 
+            надежности хранения информации осуществляет модификацию системных 
+            областей с флагом "не кэшировать запись", поэтому быстродействие системы 
+            ntfs слабо зависит от возможности кэширования самого HDD. Системы 
+            FAT, напротив, получат некоторый плюс от кэширования записи на физическом 
+            уровне. Стоит отметить, что, вообще говоря, всерьез принимать в расчет 
+            размер буфера HDD при оценке быстродействия тех или иных файловых 
+            систем не стоит. </font></li>
+        </ul>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Подводя краткий 
+          итог влиянию быстродействия диска и контроллера на быстродействия системы 
+          в целом, можно сказать так: ntfs страдает от медленных дисков гораздо 
+          сильнее, чем FAT.</font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Размер кластера</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Хотелось бы сказать 
+          пару слов о размере кластера - тот параметр, который в файловых системах 
+          FAT32 и ntfs можно задавать при форматировании практически произвольно. 
+          Прежде всего, надо сказать, что больший размер кластера - это <em>практически 
+          всегда</em>&nbsp; большее быстродействие. Размер кластера на томе ntfs, 
+          однако, имеет меньшее влияние на быстродействие, чем размер кластера 
+          для системы FAT32.</font></p>
+        <ul>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Типичный размер 
+            кластера для ntfs - 4 Кбайта. Стоит отметить, что с большим размером 
+            кластера отключается встроенная в файловую систему возможность сжатия 
+            индивидуальных файлов, а также перестает работать встроенный API дефрагментации 
+            - т.е. подавляющее число дефрагментаторов, в том числе встроенный 
+            в Windows 2000, будут неспособны дефрагментировать этот диск. SpeedDisk, 
+            впрочем, сможет - он работает не через это API. Оптимальным с точки 
+            зрения быстродействия, по крайней мере, для средних и больших файлов, 
+            считается (самой Microsoft) размер 16 Кбайт. Увеличивать размер далее 
+            неразумно из-за слишком больших расходов на неэффективность хранения 
+            данных и из-за мизерного дальнейшего увеличения быстродействия. Если 
+            вы хотите повысить быстродействие ntfs ценой потери возможности сжатия 
+            - задумайтесь о форматировании диска с размером кластера, большим 
+            чем 4 Кбайта. Но имейте в виду, что это даст довольно скромный прирост 
+            быстродействия, который часто не стоит даже уменьшения эффективности 
+            размещения файлов на диске. </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Быстродействие 
+            системы FAT32, напротив, можно довольно существенно повысить, увеличив 
+            размер кластера. Если в ntfs размер кластера почти не влияет на размер 
+            и характер данных системных областей, то в системе FAT увеличивая 
+            кластер в два раза, мы сокращаем область FAT в те же два раза. Вспомните, 
+            что в типичной системе FAT32 эта очень важная для быстродействия область 
+            занимает несколько Мбайт. Сокращение области FAT в несколько раз даст 
+            заметное увеличение быстродействия, так как объем системных данных 
+            файловой системы сильно сократиться - уменьшается и время, затрачиваемое 
+            на чтение данных о расположении файлов, и объем оперативной памяти, 
+            необходимый для буферизирования этой информации. Типичный объем кластера 
+            для систем FAT32 составляет тоже 4 Кбайт, и увеличение его до 8 или 
+            даже до 16 Кбайт - особенно для больших (десяток и более гигабайт) 
+            дисков - достаточно разумный шаг. </font></li>
+        </ul>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">Другие соображения</font></h3>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">ntfs является достаточно 
+          сложной системой, поэтому, в отличие от FAT16 и FAT32, имеются и другие 
+          факторы, которые могут привести к существенному замедлению работы ntfs:</font></p>
+        <ul>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Диск ntfs был 
+            получен преобразованием раздела FAT16 или FAT32 (команда convert). 
+            Данная процедура в большинстве случаев представляет собой тяжелый 
+            случай для быстродействия, так как структура служебных областей ntfs, 
+            скорее всего, получится очень фрагментированной. Если есть возможность 
+            - избегайте преобразования других систем в ntfs, так как это приведет 
+            к созданию очень неудачного диска, которому не поможет даже типичный 
+            (неспециализированный) дефрагментатор, типа Diskeeper-а или встроенного 
+            в Windows 2000. </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Активная работа 
+            с диском, заполненным более чем на 80% - 90%, представляет собой катастрофический 
+            для быстродействия ntfs случай, так как фрагментация файлов и, самое 
+            главное, служебных областей, будет расти фантастически быстро. Если 
+            ваш диск используется в таком режиме - FAT32 будет более удачным выбором 
+            при любых других условиях.<br>
+            &nbsp; </font></li>
+        </ul>
+        <h2><font face="Arial, Helvetica, sans-serif" size="2">Выводы</font></h2>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">В данной заключительной 
+          части "одной строчкой" собраны ключевые особенности быстродействия этих 
+          трех файловых систем.</font></p>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">FAT - плюсы:</font></h3>
+        <ul>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Для эффективной 
+            работы требуется немного оперативной памяти. </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Быстрая работа 
+            с малыми и средними каталогами. </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Диск совершает 
+            в среднем меньшее количество движений головок (в сравнении с ntfs). 
+            </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Эффективная работа 
+            на медленных дисках. </font></li>
+        </ul>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">FAT - минусы:</font></h3>
+        <ul>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Катастрофическая 
+            потеря быстродействия с увеличением фрагментации, особенно для больших 
+            дисков (только FAT32). </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Сложности с произвольным 
+            доступом к большим (скажем, 10% и более от размера диска) файлам. 
+            </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Очень медленная 
+            работа с каталогами, содержащими большое количество файлов. </font></li>
+        </ul>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">ntfs - плюсы:</font></h3>
+        <ul>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Фрагментация 
+            файлов не имеет практически никаких последствий для самой файловой 
+            системы - работа фрагментированной системы ухудшается только с точки 
+            зрения доступа к самим данным файлов. </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Сложность структуры 
+            каталогов и число файлов в одном каталоге также не чинит особых препятствий 
+            быстродействию. </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Быстрый доступ 
+            к произвольному фрагменту файла (например, редактирование больших 
+            .wav файлов). </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Очень быстрый 
+            доступ к маленьким файлам (несколько сотен байт) - весь файл находится 
+            в том же месте, где и системные данные (запись MFT). </font></li>
+        </ul>
+        <h3><font face="Arial, Helvetica, sans-serif" size="2">ntfs - минусы:</font></h3>
+        <ul>
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Существенные 
+            требования к памяти системы (64 Мбайт - абсолютный минимум, лучше 
+            - больше). </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Медленные диски 
+            и контроллеры без Bus Mastering сильно снижают быстродействие ntfs. 
+            </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Работа с каталогами 
+            средних размеров затруднена тем, что они почти всегда фрагментированы. 
+            </font> 
+          <li><font face="Arial, Helvetica, sans-serif" size="2">Диск, долго работающий 
+            в заполненном на 80% - 90% состоянии, будет показывать крайне низкое 
+            быстродействие. </font></li>
+        </ul>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Хотелось бы еще 
+          раз подчеркнуть, что на практике основной фактор, от которого зависит 
+          быстродействие файловой системы - это, как ни странно, объем памяти 
+          машины. Системы с памятью 64-96 Мбайт - некий рубеж, на котором быстродействие 
+          ntfs и FAT32 примерно эквивалентно. Обратите внимание также на сложность 
+          организации данных на вашей машине. Если вы не используете ничего, кроме 
+          простейших приложений и самой операционной системы - может случиться 
+          так, что FAT32 сможет показать более высокое быстродействие и на машинах 
+          с большим количеством памяти.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">ntfs - система, 
+          которая закладывалась на будущее, и это будущее для большинства реальных 
+          применений сегодняшнего дня еще, к сожалению, видимо не наступило. На 
+          данный момент ntfs обеспечивает стабильное и равнодушное к целому ряду 
+          факторов, но, пожалуй, всё же невысокое - на типичной "игровой" домашней 
+          системе - быстродействие. Основное преимущество ntfs с точки зрения 
+          быстродействия заключается в том, что этой системе безразличны такие 
+          параметры, как сложность каталогов (число файлов в одном каталоге), 
+          размер диска, фрагментация и т.д. В системах FAT же, напротив, каждый 
+          из этих факторов приведет к существенному снижению скорости работы.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Только в сложных 
+          высокопроизводительных системах - например, на графических станциях 
+          или просто на серьезных офисных компьютерах с тысячами документов, или, 
+          тем более, на файл-серверах - преимущества структуры ntfs смогут дать 
+          реальный выигрыш быстродействия, который порой заметен невооруженным 
+          глазом. Пользователям, не имеющим большие диски, забитые информацией, 
+          и не пользующимся сложными программами, не стоит ждать от ntfs чудес 
+          скорости - с точки зрения быстродействия на простых домашних системах 
+          гораздо лучше покажет себя FAT32. </font> 
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <h4>&nbsp; </h4>
+        </blockquote>
+    </td>
+  </tr>
+  <tr> 
+    <td width="160" background="../images/grad_hor.gif" class="LeftMenu" valign="top" bgcolor="#FFFFFF"><img src="../images/grad_htb.gif" width="160" height="15"></td>
+    <td class="LeftMenu" valign="middle" bgcolor="#FFFFFF" width="10"><img src="../images/tube_crs.gif" width="14" height="19"></td>
+    <td background="../images/grad_tub.gif" colspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="160" background="../images/grad_hor.gif" class="LeftMenu" valign="top" bgcolor="#FFFFFF" height="30">&nbsp;</td>
+    <td background="../images/tube_ver.gif" class="LeftMenu" valign="top" bgcolor="#FFFFFF" width="10" height="30">&nbsp;</td>
+    <td bgcolor="#FFFFFF" colspan="2" valign="middle" height="30"> 
+      <div align="right">
+        <p><b><font face="Arial, Helvetica, sans-serif"><span class="LeftMenu"><a href="../recovery/1_first.htm">Восстановление</a>&nbsp;&nbsp; 
+          </span></font></b><span class="LeftMenu"><b><font face="Arial, Helvetica, sans-serif"><a href="../index.htm">Справочная</a>&nbsp;&nbsp;</font></b> 
+          <b><font face="Arial, Helvetica, sans-serif"><a href="../programs/index.htm">Программы</a>&nbsp;&nbsp;</font></b> 
+          <b><font face="Arial, Helvetica, sans-serif"><a href="../links/index.htm">Ссылки</a>&nbsp;&nbsp; 
+          <a href="../help/index.htm">Помощь</a></font></b></span></p>
+      </div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,162 @@
+.mstheme {
+	nav-banner-image: url(acdbnr.gif); separator-image: url(acdrule.gif); list-image-1: url(acdbull1.gif); list-image-2: url(acdbull2.gif); list-image-3: url(acdbull3.gif); navbutton-horiz-pushed: url(acdhbs.gif); navbutton-horiz-normal: url(acdhb.gif); navbutton-horiz-hovered: url(acdhbh.gif); navbutton-vert-pushed: url(acdvbs.gif); navbutton-vert-normal: url(acdvb.gif); navbutton-vert-hovered: url(acdvbh.gif); navbutton-home-normal: url(acdhome.gif); navbutton-home-hovered: url(acdhomeh.gif); navbutton-home-pushed: url(acdhome.gif); navbutton-up-normal: url(acdup.gif); navbutton-up-hovered: url(acduph.gif); navbutton-up-pushed: url(acdup.gif); navbutton-prev-normal: url(acdprev.gif); navbutton-prev-hovered: url(acdprevh.gif); navbutton-prev-pushed: url(acdprev.gif); navbutton-next-normal: url(acdnext.gif); navbutton-next-hovered: url(acdnexth.gif); navbutton-next-pushed: url(acdnext.gif)
+}
+.mstheme-bannertxt {
+	FONT-SIZE: 6px; COLOR: rgb(0,51,204); FONT-FAMILY: Verdana, Arial, Helvetica
+}
+.mstheme-horiz-navtxt {
+	FONT-SIZE: 2px; COLOR: rgb(0,0,0); FONT-FAMILY: Verdana, Arial, Helvetica
+}
+.mstheme-vert-navtxt {
+	FONT-SIZE: 2px; COLOR: rgb(0,0,0); FONT-FAMILY: Verdana, Arial, Helvetica
+}
+.mstheme-navtxthome {
+	FONT-SIZE: 1px; COLOR: rgb(0,0,0); FONT-FAMILY: Verdana, Arial, Helvetica
+}
+.mstheme-navtxtup {
+	FONT-SIZE: 1px; COLOR: rgb(0,0,0); FONT-FAMILY: Verdana, Arial, Helvetica
+}
+.mstheme-navtxtprev {
+	FONT-SIZE: 1px; COLOR: rgb(0,0,0); FONT-FAMILY: Verdana, Arial, Helvetica
+}
+.mstheme-navtxtnext {
+	FONT-SIZE: 1px; COLOR: rgb(0,0,0); FONT-FAMILY: Verdana, Arial, Helvetica
+}
+UL {
+	LIST-STYLE-IMAGE: url(acdbull1.gif)
+}
+UL UL {
+	LIST-STYLE-IMAGE: url(acdbull2.gif)
+}
+UL UL UL {
+	LIST-STYLE-IMAGE: url(acdbull3.gif)
+}
+A:link {
+	COLOR: rgb(0,51,204)
+}
+A:visited {
+	COLOR: rgb(153,51,153)
+}
+A:active {
+	COLOR: rgb(255,153,0)
+}
+BODY {
+	COLOR: rgb(0,0,0); BACKGROUND-COLOR: rgb(255,255,204)
+}
+H1 {
+	COLOR: rgb(0,51,204)
+}
+H2 {
+	COLOR: rgb(0,51,204)
+}
+MARQUEE {
+	COLOR: rgb(0,51,204)
+}
+H3 {
+	COLOR: rgb(0,51,204)
+}
+H4 {
+	COLOR: rgb(0,51,204)
+}
+H5 {
+	COLOR: rgb(0,51,204)
+}
+H6 {
+	COLOR: rgb(0,51,204)
+}
+BUTTON {
+	BORDER-LEFT-COLOR: rgb(102,153,255); BORDER-BOTTOM-COLOR: rgb(102,153,255); COLOR: white; BORDER-TOP-COLOR: rgb(102,153,255); BACKGROUND-COLOR: rgb(0,51,204); BORDER-RIGHT-COLOR: rgb(102,153,255)
+}
+LABEL {
+	COLOR: rgb(0,0,0)
+}
+.MSTHEME-LABEL {
+	COLOR: rgb(0,0,0)
+}
+TEXTAREA {
+	BORDER-LEFT-COLOR: rgb(51,51,204); BORDER-BOTTOM-COLOR: rgb(51,51,204); COLOR: black; BORDER-TOP-COLOR: rgb(51,51,204); BORDER-RIGHT-COLOR: rgb(51,51,204)
+}
+FIELDSET {
+	BORDER-LEFT-COLOR: rgb(51,51,204); BORDER-BOTTOM-COLOR: rgb(51,51,204); COLOR: black; BORDER-TOP-COLOR: rgb(51,51,204); BORDER-RIGHT-COLOR: rgb(51,51,204)
+}
+LEGEND {
+	COLOR: rgb(0,51,204)
+}
+SELECT {
+	BORDER-LEFT-COLOR: rgb(51,51,204); BORDER-BOTTOM-COLOR: rgb(51,51,204); COLOR: black; BORDER-TOP-COLOR: rgb(51,51,204); BORDER-RIGHT-COLOR: rgb(51,51,204)
+}
+TABLE {
+	BORDER-LEFT-COLOR: rgb(51,51,204); BORDER-BOTTOM-COLOR: rgb(51,51,204); COLOR: rgb(0,0,0); BORDER-TOP-COLOR: rgb(51,51,204); BORDER-RIGHT-COLOR: rgb(51,51,204); table-border-color-light: rgb(102,153,255); table-border-color-dark: rgb(51,51,204)
+}
+CAPTION {
+	COLOR: rgb(0,51,204)
+}
+TH {
+	COLOR: rgb(0,0,0)
+}
+HR {
+	COLOR: rgb(0,51,204)
+}
+TD {
+	BORDER-LEFT-COLOR: rgb(51,51,204); BORDER-BOTTOM-COLOR: rgb(51,51,204); BORDER-TOP-COLOR: rgb(51,51,204); BORDER-RIGHT-COLOR: rgb(51,51,204)
+}
+.mstheme {
+	navbutton-background-color: rgb(255,255,255); top-bar-button: url(cdglb.gif)
+}
+.mstheme-topbar-font {
+	FONT-SIZE: 1px; COLOR: rgb(0,0,0); FONT-FAMILY: Verdana, Arial, Helvetica
+}
+BODY {
+	BACKGROUND-IMAGE: url(cdbkgnd.jpg); FONT-FAMILY: Verdana, Arial, Helvetica
+}
+H1 {
+	FONT-WEIGHT: normal; FONT-SIZE: 24pt; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica
+}
+H2 {
+	FONT-WEIGHT: normal; FONT-SIZE: 18pt; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica
+}
+H3 {
+	FONT-WEIGHT: normal; FONT-SIZE: 14pt; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica
+}
+H4 {
+	FONT-WEIGHT: normal; FONT-SIZE: 12pt; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica
+}
+H5 {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica
+}
+H6 {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica
+}
+BUTTON {
+	BORDER-RIGHT: 1pt solid; BORDER-TOP: 1pt solid; FONT-SIZE: 8pt; BORDER-LEFT: 1pt solid; BORDER-BOTTOM: 1pt solid; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica
+}
+LABEL {
+	FONT-SIZE: 8pt; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica
+}
+.MSTHEME-LABEL {
+	FONT-SIZE: 8pt; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica
+}
+TEXTAREA {
+	FONT-SIZE: 8pt; BORDER-TOP-STYLE: solid; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica; BORDER-RIGHT-STYLE: solid; BORDER-LEFT-STYLE: solid; BORDER-BOTTOM-STYLE: solid
+}
+FIELDSET {
+	BORDER-RIGHT: 1pt solid; BORDER-TOP: 1pt solid; FONT-SIZE: 8pt; BORDER-LEFT: 1pt solid; BORDER-BOTTOM: 1pt solid; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica
+}
+LEGEND {
+	FONT-SIZE: 8pt; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica
+}
+SELECT {
+	FONT-SIZE: 8pt; BORDER-TOP-STYLE: solid; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica; BORDER-RIGHT-STYLE: solid; BORDER-LEFT-STYLE: solid; BORDER-BOTTOM-STYLE: solid
+}
+TABLE {
+	FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica
+}
+CAPTION {
+	FONT-SIZE: 14pt; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica
+}
+TH {
+	FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica
+}
+MARQUEE {
+	FONT-SIZE: 14pt; FONT-FAMILY: Verdana, Arial, Helvetica
+}

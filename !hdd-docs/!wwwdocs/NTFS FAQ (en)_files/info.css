@@ -1,0 +1,120 @@
+BODY {
+	MARGIN: 10px 32px; COLOR: #000; BACKGROUND-COLOR: #ffc
+}
+BODY.ntfsdoc {
+	BACKGROUND-POSITION: 2px 8px; BACKGROUND-ATTACHMENT: fixed; BACKGROUND-IMAGE: url(ntfsdoc.png); BACKGROUND-REPEAT: no-repeat
+}
+BODY.ldmdoc {
+	BACKGROUND-POSITION: 2px 8px; BACKGROUND-ATTACHMENT: fixed; BACKGROUND-IMAGE: url(ldmdoc.png); BACKGROUND-REPEAT: no-repeat
+}
+A {
+	TEXT-DECORATION: underline
+}
+A:link {
+	COLOR: #000; BACKGROUND-COLOR: transparent
+}
+A:visited {
+	COLOR: #000; BACKGROUND-COLOR: transparent
+}
+A:active {
+	COLOR: #000; BACKGROUND-COLOR: transparent
+}
+A:hover {
+	COLOR: #fff; BACKGROUND-COLOR: #069
+}
+A.heading:hover {
+	COLOR: #fff; BACKGROUND-COLOR: #069
+}
+A.grey:hover {
+	COLOR: #fff; BACKGROUND-COLOR: #069
+}
+A.contact {
+	FONT: 75% serif; COLOR: #cc9; BACKGROUND-COLOR: transparent
+}
+TD.copyright {
+	FONT: 75% serif; COLOR: #cc9; BACKGROUND-COLOR: transparent
+}
+A.grey {
+	COLOR: #aa8; BACKGROUND-COLOR: transparent
+}
+A.na {
+	COLOR: #f00; BACKGROUND-COLOR: transparent
+}
+H1 {
+	COLOR: #069; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+H2 {
+	COLOR: #069; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+H3 {
+	COLOR: #069; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+H4 {
+	COLOR: #069; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+A.heading {
+	COLOR: #069; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+H1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+TABLE {
+	TEXT-ALIGN: left
+}
+TH {
+	TEXT-ALIGN: left
+}
+TD {
+	TEXT-ALIGN: left
+}
+TH {
+	BORDER-RIGHT: #999 0px solid; PADDING-RIGHT: 5px; PADDING-LEFT: 5px; BORDER-BOTTOM: #999 0px solid
+}
+TD {
+	BORDER-RIGHT: #999 0px solid; PADDING-RIGHT: 5px; PADDING-LEFT: 5px; BORDER-BOTTOM: #999 0px solid
+}
+TABLE {
+	BORDER-TOP: #999 0px solid; BORDER-LEFT: #999 0px solid
+}
+TABLE.highlight {
+	BACKGROUND-COLOR: #ffd
+}
+DT {
+	FONT-WEIGHT: bold; PADDING-TOP: 0.5em
+}
+P {
+	TEXT-ALIGN: justify; max-width: 570px
+}
+DD {
+	TEXT-ALIGN: justify; max-width: 570px
+}
+BLOCKQUOTE {
+	TEXT-ALIGN: justify; max-width: 570px
+}
+DD.wide {
+	max-width: 9999px
+}
+LI {
+	TEXT-ALIGN: justify; max-width: 510px
+}
+P.quote {
+	PADDING-LEFT: 2em; max-width: 510px
+}
+.command {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; BORDER-LEFT: black 1px solid; COLOR: #000; BORDER-BOTTOM: black 1px solid; FONT-FAMILY: monospace; BACKGROUND-COLOR: #ddd; max-width: 9999px
+}
+PRE.command {
+	PADDING-RIGHT: 2em; PADDING-LEFT: 0em; PADDING-BOTTOM: 0em; PADDING-TOP: 1em
+}
+TABLE.command {
+	PADDING-RIGHT: 2em; PADDING-LEFT: 0em; PADDING-BOTTOM: 0em; PADDING-TOP: 0em
+}
+HR {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px; BACKGROUND-COLOR: #069
+}
+TR.odd {
+	BACKGROUND-COLOR: #dff
+}
+TR.even {
+	BACKGROUND-COLOR: #ffd
+}

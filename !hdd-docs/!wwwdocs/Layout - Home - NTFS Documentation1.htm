@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0055)http://linux-ntfs.sourceforge.net/ntfs/help/layout.html -->
+<!-- http://linux-ntfs.sourceforge.net/ntfs/help/layout.html --><HTML 
+lang=en><HEAD><TITLE>Layout - Home - NTFS Documentation</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<META content="NTFS Documentation" name=description><LINK 
+href="Layout - Home - NTFS Documentation1_files/ntfsdoc.css" type=text/css 
+rel=stylesheet><LINK href="../style/ntfsicon.png" type=image/png rel=icon><LINK 
+title="NTFS Documentation" href="../index.html" type=text/html rel=start><LINK 
+href="license.html" rel=next><LINK href="changelog.html" rel=previous><LINK 
+href="../index.html" rel=contents>
+<META content="MSHTML 6.00.2800.1400" name=GENERATOR></HEAD>
+<BODY>
+<TABLE class=toolbar cellSpacing=0 summary="" border=0>
+  <TBODY>
+  <TR>
+    <TD class=toolbar>
+      <DIV class=toolbar><A class=toolbar accessKey=1 
+      href="http://linux-ntfs.sourceforge.net/ntfs/index.html">Home</A></DIV></TD>
+    <TD class=toolbar>
+      <DIV class=toolbar><A class=toolbar accessKey=2 
+      href="http://linux-ntfs.sourceforge.net/ntfs/files/index.html">Files</A></DIV></TD>
+    <TD class=toolbar>
+      <DIV class=toolbar><A class=toolbar accessKey=3 
+      href="http://linux-ntfs.sourceforge.net/ntfs/attributes/index.html">Attributes</A></DIV></TD>
+    <TD class=toolbar>
+      <DIV class=toolbar><A class=toolbar accessKey=4 
+      href="http://linux-ntfs.sourceforge.net/ntfs/concepts/index.html">Concepts</A></DIV></TD>
+    <TD class=toolbar><A class=toolbar accessKey=5 
+      href="http://linux-ntfs.sourceforge.net/ntfs/help/glossary.html">Glossary</A></TD></TR></TBODY></TABLE>
+<H1>Home - Layout</H1><A class=prevnext accessKey=, 
+href="http://linux-ntfs.sourceforge.net/ntfs/help/changelog.html">Previous</A> 
+<A class=prevnext accessKey=. 
+href="http://linux-ntfs.sourceforge.net/ntfs/help/license.html">Next</A> 
+<H2>Overview</H2>
+<P>A freshly formatted NTFS volume will look like:</P>
+<TABLE cellSpacing=0 width="100%" summary="" border=1>
+  <TBODY>
+  <TR>
+    <TD width="6%">B<BR>O<BR>O<BR>T</TD>
+    <TD width="6%">M<BR>F<BR>T</TD>
+    <TD width="41%">
+      <CENTER>Free Space</CENTER></TD>
+    <TD width="6%">More<BR>Meta<BR>data</TD>
+    <TD width="41%">
+      <CENTER>Free Space</CENTER></TD></TR></TBODY></TABLE>
+<H2>Notes</H2>
+<H3>Other information</H3>
+<P>Everything is a file in NTFS. The index to these files is the Master File 
+Table (MFT). The MFT lists the Boot Sector file ($Boot), located at the 
+beginning of the disk. $Boot also lists where to find the MFT. The MFT also 
+lists itself.</P>
+<P>Located in the centre of the disk, we find some more Metadata files. The 
+interesting ones are: $MFTMirr and $LogFile. The MFT Mirror is an exact copy of 
+the first 4 records of the MFT. If the MFT is damaged, then the volume could be 
+recovered by finding the mirror. The LogFile is journal of all the events 
+waiting to be written to disk. If the machine crashes, then the LogFile is used 
+to return the disk to a sensible state.</P>
+<P>Hidden at the end of the volume, is a copy of the boot sector (cluster 0). 
+The only Metadata file that makes reference to it is $Bitmap, and that only says 
+that the cluster is in use.</P>
+<H3>MFT Zone</H3>
+<P>To prevent the MFT becoming fragmented, Windows maintains a buffer around it. 
+No new files will be created in this buffer region until the other disk space is 
+used up. The buffer size is configurable and can be 12.5%, 25%, 37.5% or 50% of 
+the disk. Each time the rest of the disk becomes full, the buffer size is 
+halved. </P><PRE>    MFT Zone Reservation IS NOT STORED ON DISK
+    MFT Zone (reserved space for MFT)
+      1 = 12.5%
+      2 = 25.0%
+      3 = 37.5%
+      4 = 50.0%
+      Where is this stored on disk?
+      volume?  mft?  boot?
+      This is the 'system files' space at
+      the beginning of the disk.
+      NtfsMftZoneReservation
+
+    link in to mft and bitmap
+    </PRE>
+<UL>
+  <LI>cluster size 512 bytes, 1k, 2k, 4k, 8k, 16k, 32k, 64k 
+  <LI>very flexible, all the system files can be relocated, except $Boot 
+  <LI>supports streams named data streams 
+  <LI>attributes for a file can span several MFT records not necessarily 
+  contiguous or in order 
+  <LI>everything is an attribute, including the data 
+  <LI>filenames stored in Unicode 
+  <LI>journalling file system 
+  <LI>compression 
+  <LI>security 
+  <LI>hard links 
+  <LI>encryption 
+  <LI>LCNs vs VCNs </LI></UL><BR><A class=contact 
+href="http://linux-ntfs.sourceforge.net/ntfs/help/license.html">Copyright 
+(C)</A> <A class=contact 
+href="http://validator.w3.org/check?uri=http://linux-ntfs.sourceforge.net/ntfs/help/layout.html">Validate 
+HTML</A> <A class=contact 
+href="http://jigsaw.w3.org/css-validator/validator?uri=http://linux-ntfs.sourceforge.net/ntfs/help/layout.html">Validate 
+CSS</A> <IMG height=1 alt=SourceForge 
+src="Layout - Home - NTFS Documentation1_files/sflogo.png" width=1 border=0> 
+</BODY></HTML>

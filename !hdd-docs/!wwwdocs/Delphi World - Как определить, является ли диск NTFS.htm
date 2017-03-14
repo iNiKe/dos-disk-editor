@@ -1,0 +1,145 @@
+<!-- {********************************************************} -->
+<!-- {                    Delphi World ©                      } -->
+<!-- {             Выпуск 2002 - 2004                         } -->
+<!-- {             Автор проекта:   ___Nikolay                } -->
+<!-- {             E-mail: delphiworld@mail.ru                } -->
+<!-- {             http://delphiworld.narod.ru                } -->
+<!-- {********************************************************} -->
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="ru">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="author" content="___Nikolay; mailto:delphiworld@mail.ru; http://delphiworld.narod.ru">
+<meta Name="keywords" Content="delphi, delfi, borland, bds, дельфи, делфи, дэльфи, дэлфи, programming, example, программирование, исходные коды, code, исходники, source, sources, сорцы, сорсы, soft, programs, программы, hacker, hack, hacking, xakep, хакинг, хакер, хак, and, how, delphiworld, базы данных, графика, игры, интернет, сети, компоненты, классы, мультимедиа, ос, железо, программа, интерфейс, рабочий стол, синтаксис, технологии, файловая система">
+<meta Name="description" Content="Delphi World - это проект, являющийся сборником статей и малодокументированных возможностей  по программированию в среде Delphi">
+<meta HTTP-EQUIV="Expires" content="Mon, 01 Jan 2000 00:00:00 GMT">
+<title>Delphi World - Как определить, является ли диск NTFS</title>
+<link rel="stylesheet" href="css.css" type="text/css">
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+
+<body leftmargin=0 topmargin=0 rightmargin=0 bottommargin=0>
+ 
+<table class=whitetable width="100%" cellspacing="0" cellpadding="0">
+  <tr height=135>
+    <td width="100%" background="images/bg_title.jpg"><img border="0" alt="Delphi World - это проект, являющийся сборником статей и малодокументированных возможностей  по программированию в среде Delphi. Здесь вы найдёте работы по следующим категориям: delphi, delfi, borland, bds, дельфи, делфи, дэльфи, дэлфи, programming, example, программирование, исходные коды, code, исходники, source, sources, сорцы, сорсы, soft, programs, программы, and, how, delphiworld, базы данных, графика, игры, интернет, сети, компоненты, классы, мультимедиа, ос, железо, программа, интерфейс, рабочий стол, синтаксис, технологии, файловая система..." src="images/title.jpg" width="354" height="136"></td>
+  </tr>
+  <tr height=50>
+    <td width="100%">
+      <table width="90%" cellspacing="10" cellpadding="0" class="article">
+        <tr>
+          <td width="90%">
+
+<!-- begin -->
+<b>
+Как определить, является ли диск NTFS
+</b>
+
+<!--begin of Rambler's Top100 code -->
+<a href="http://top100.rambler.ru/top100/">
+<img src="http://counter.rambler.ru/top100.cnt?483925" alt="" width=1 height=1 border=0></a>
+<!--end of Top100 code-->
+<hr><br>
+
+<p align=right>
+Автор: <a target="_blank" href="http://www.swissdelphicenter.ch">http://www.swissdelphicenter.ch</a>
+</p>
+
+<PRE>
+<B>uses</B>
+  ComObj;
+
+<B>function</B> IsNTFS(AFileName: <B>string</B>): Boolean;
+<B>var</B>
+  fso, drv: OleVariant;
+<B>begin</B>
+  IsNTFS := False;
+  fso := CreateOleObject('Scripting.FileSystemObject');
+  drv := fso.GetDrive(fso.GetDriveName(AFileName));
+  IsNTFS := drv.FileSystem = 'NTFS'
+<B>end</B>;
+
+<B>procedure</B> TForm1.Button1Click(Sender: TObject);
+<B>begin</B>
+  <B>if</B> IsNTFS('X:\Temp\File.doc') <B>then</B>
+    ShowMessage('File is on NTFS File System')
+  <B>else</B>
+    ShowMessage('File is not on NTFS File System')
+<B>end</B>;</PRE>
+
+<!-- end -->
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+<tr height=11>
+    <td width="100%" background="images/bottom_line.jpg"></td>
+  </tr>
+  <tr>    
+    <td width="100%" align=center>Проект <a href="http://delphiworld.narod.ru" title="Перейти на сайт проекта">Delphi World</a> © Выпуск 2002
+      - 2004 <br> Автор проекта: <a href="mailto:delphiworld@mail.ru" title="Отправить статью или интересную работу">___Nikolay</a>
+<br><br>
+
+<!--begin of Top100 logo-->
+<a href="http://top100.rambler.ru/top100/">
+<img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-blue3.gif" alt="Rambler's Top100" width=88 height=31 border=0></a>
+<!--end of Top100 logo -->
+
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript"><!--
+d=document;a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3"><!--
+js=13//--></script><script language="JavaScript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=574272"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=574272;t=230;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=88></a>')
+if(js>11)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=574272"><img
+src="http://top.list.ru/counter?js=na;id=574272;t=230"
+border=0 height=31 width=88
+alt="Рейтинг@Mail.ru"></a></noscript><script language="JavaScript"><!--
+if(js>11)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+<br>
+
+<font size=1 color=white>
+<a target="_top" href="http://w.extreme-dm.com/?login=delphiwo">
+<img STYLE="filter:Alpha(Opacity=0, FinishOpacity=0, Style=3, StartX=X, StartY=Y, FinishX=X, FinishY=Y)"
+ src="http://w1.extreme-dm.com/i.gif" height=38
+border=0 width=41 alt=""></a><script language="javascript1.2"><!--
+EXs=screen;EXw=EXs.width;navigator.appName!="Netscape"?
+EXb=EXs.colorDepth:EXb=EXs.pixelDepth;//-->
+</script><script language="javascript"><!--
+EXd=document;EXw?"":EXw="na";EXb?"":EXb="na";
+EXd.write("<img src=\"http://w0.extreme-dm.com",
+"/0.gif?tag=delphiwo&j=y&srw="+EXw+"&srb="+EXb+"&",
+"l="+escape(EXd.referrer)+"\" height=1 width=1>");//-->
+</script><noscript><img height=1 width=1 alt=""
+src="http://w0.extreme-dm.com/0.gif?tag=delphiwo&j=n"></noscript>
+</font>
+
+<br><br>
+
+</td>
+  </tr>
+</table>
+<br> 
+ 
+</body>
+</html>
+<!-- ><!-- "><!-- '><!-- --></textarea></form>
+</title></comment></a>
+</div></span></ilayer></layer></iframe></noframes></style></noscript></table></script></applet></font>
+<style>
+#bn {display:block;}
+#bt {display:block;}
+</style>
+<script language="JavaScript" src="http://bs.yandex.ru/show/163?ncid=0%0A61%0A139&ycid=0%0A4%0A49%0A277"></script>
+<!-- mailto:spm111@yandex.ru -->

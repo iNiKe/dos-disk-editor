@@ -1,0 +1,636 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0034)http://hdd.kulichki.com/anatomy/1/ -->
+<HTML><HEAD><TITLE>:: HDD - Все о жестких дисках :: Что такое S.M.A.R.T.</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1251">
+<META content="Alexander Prudko" name=author>
+<META 
+content="S.M.A.R.T. (Self-Monitoring Analysis and Reporting Technolodgy) - технология самотестирования разработанная производителями HDD для обеспечения более высокой степени надежности хранения информации." 
+name=description>
+<META content=all name=robots>
+<META content="30 day" name=revisit-after>
+<META content="MSHTML 6.00.2800.1400" name=GENERATOR><LINK 
+href="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/style.css" 
+type=text/css rel=stylesheet></STYLE>
+<SCRIPT language=JavaScript>
+<!-- begin script
+function netie(net, ie) {
+  if ((navigator.appVersion.substring(0,3) >= net && navigator.appName == 'Netscape' && net != -1) || (navigator.appVersion.substring(0,3) >= ie && navigator.appName.substring(0,9) == 'Microsoft' && ie != -1))
+    return true;
+else return false;
+}
+//  end script -->
+</SCRIPT>
+</HEAD>
+<BODY leftMargin=0 
+background="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/bcg3.gif" 
+topMargin=5 marginwidth="0" marginheight="0">
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width=800 align=center 
+summary="" border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top align=middle><A href="http://hdd.kulichki.com/"><IMG 
+      alt="На главную" hspace=0 
+      src="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/l1.gif" 
+      align=top border=0><IMG alt="На главную" hspace=0 
+      src="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/l2.gif" 
+      align=top border=0><IMG alt="На главную" hspace=0 
+      src="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/l3.gif" 
+      align=top border=0><IMG alt="На главную" hspace=0 
+      src="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/l4.gif" 
+      align=top border=0><IMG alt="На главную" hspace=0 
+      src="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/l5.gif" 
+      align=top border=0><IMG alt="На главную" hspace=0 
+      src="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/l6.gif" 
+      align=top border=0><IMG alt="На главную" hspace=0 
+      src="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/l7.gif" 
+      align=top border=0><IMG alt="На главную" hspace=0 
+      src="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/l8.gif" 
+      align=top border=0><IMG alt="На главную" hspace=0 
+      src="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/l9.gif" 
+      align=top border=0><IMG alt="На главную" hspace=0 
+      src="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/l10.gif" 
+      align=top border=0></A> 
+      <TABLE height=20 cellSpacing=0 cellPadding=0 width=800 bgColor=#000000 
+      summary="" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=bottom align=middle><NOBR><A class=lien 
+            onmouseover="netie(-1,4)?this.style.color='#FF0000':null;" 
+            onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;" 
+            href="http://hdd.kulichki.com/">Главная</A> <SPAN 
+            class=divise>|</SPAN> <A class=lien 
+            onmouseover="netie(-1,4)?this.style.color='#FF0000':null;" 
+            onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;" 
+            href="http://hdd.kulichki.com/news/">Новости</A> <SPAN 
+            class=divise>|</SPAN> <A class=lien 
+            onmouseover="netie(-1,4)?this.style.color='#FF0000':null;" 
+            onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;" 
+            href="http://hdd.kulichki.com/anatomy/">Анатомия</A> <SPAN 
+            class=divise>|</SPAN> <A class=lien 
+            onmouseover="netie(-1,4)?this.style.color='#FF0000':null;" 
+            onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;" 
+            href="http://hdd.kulichki.com/service/">Обслуживание</A> <SPAN 
+            class=divise>|</SPAN> <A class=lien 
+            onmouseover="netie(-1,4)?this.style.color='#FF0000':null;" 
+            onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;" 
+            href="http://hdd.kulichki.com/recovery/">Восстановление&amp;Ремонт</A> 
+            <SPAN class=divise>|</SPAN> <A class=lien 
+            onmouseover="netie(-1,4)?this.style.color='#FF0000':null;" 
+            onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;" 
+            href="http://hdd.kulichki.com/">Guarding</A> <SPAN 
+            class=divise>|</SPAN> <A class=lien 
+            onmouseover="netie(-1,4)?this.style.color='#FF0000':null;" 
+            onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;" 
+            href="http://hdd.kulichki.com/soft/">Программы</A> <SPAN 
+            class=divise>|</SPAN> <A class=lien 
+            onmouseover="netie(-1,4)?this.style.color='#FF0000':null;" 
+            onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;" 
+            href="http://hdd.kulichki.com/brand/">Модели</A> <SPAN 
+            class=divise>|</SPAN> <A class=lien 
+            onmouseover="netie(-1,4)?this.style.color='#FF0000':null;" 
+            onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;" 
+            href="http://hdd.kulichki.com/forum">Форум</A> <SPAN 
+            class=divise>|</SPAN> <A class=lien 
+            onmouseover="netie(-1,4)?this.style.color='#FF0000':null;" 
+            onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;" 
+            href="http://hdd.kulichki.com/soft/link.shtml">Ссылки</A> 
+        </NOBR></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width=800 bgColor=#f2f2f1 border=0>
+        <TBODY>
+        <TR>
+          <TD 
+          style="BORDER-RIGHT: thin; BORDER-TOP: thin; BORDER-LEFT: thin; BORDER-BOTTOM: thin" 
+          vAlign=top width=180 
+          background="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/tbg.gif" 
+          height="100%">
+            <DIV class=panel_big_yellow>Рассылка</DIV>
+            <TABLE align=center>
+              <TBODY>
+              <TR>
+                <TD bgColor=#ffffff>
+                  <TABLE width="100%" bgColor=#3a6ea5>
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <DIV class=pwhite>
+                        <FORM action=http://subscribe.ru/member/quick method=get 
+                        target=_top>
+                        <DIV 
+                        class=pleftmargin>HDD:<BR>-обслуживание<BR>-анатомия<BR>-профилактика 
+                        поломок </DIV><INPUT type=hidden value=quick 
+                        name=action> <FONT size=2><INPUT type=hidden 
+                        value=comp.hard.hdd name=grp> <INPUT 
+                        style="FONT-SIZE: 9pt" size=16 value="Ваш e-mail" 
+                        name=email MAXLEN="100">&nbsp; <INPUT style="FONT-SIZE: 9pt" type=submit value="ok "> 
+                        </FONT></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></FORM>
+            <DIV class=pwhite>&nbsp;Подробно о рассылке <A 
+            style="COLOR: #ffffff" 
+            href="http://hdd.kulichki.com/archive/podpiska.shtml">»»</A></DIV>
+            <HR style="COLOR: #ffffff" noShade SIZE=1>
+
+            <DIV class=panel_big_yellow>Новости сайта</DIV>
+            <DIV class=pwhite>&nbsp;Новые материалы [5] <A 
+            style="COLOR: #ffffff" 
+            href="http://hdd.kulichki.com/index.php#nm">»»</A><BR><BR>&nbsp;Новые 
+            модели (15) <A style="COLOR: #ffffff" 
+            href="http://hdd.kulichki.com/index.php#">»»</A><BR><BR>&nbsp;Помощь 
+            сайту <A style="COLOR: #ffffff" 
+            href="http://hdd.kulichki.com/index.php#">»»</A><BR><BR>&nbsp;Новые 
+            программы (3) <A style="COLOR: #ffffff" 
+            href="http://hdd.kulichki.com/index.php#">»»</A><BR><BR>&nbsp;Новые 
+            ссылки (11) <A style="COLOR: #ffffff" 
+            href="http://hdd.kulichki.com/index.php#">»»</A> </DIV>
+            <HR style="COLOR: #ffffff" noShade SIZE=1>
+
+            <DIV class=panel_big_yellow>Поиск товаров и цен </DIV>
+            <FORM action=http://www.1price.ru/searchp1.php? method=get>
+            <TABLE width="90%" align=center>
+              <TBODY>
+              <TR>
+                <TD bgColor=#ffffff>
+                  <TABLE width="100%" bgColor=#3a6ea5>
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <DIV class=pwhite>
+                        <DIV class=pleftmargin>Чтобы узнать в каком магазине, и 
+                        по какой цене продается товар, введите, например - 
+                        "Seagate ST380021A"</DIV>
+                        <P 
+                        style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif" 
+                        color="black">&nbsp;<INPUT style="FONT-SIZE: 9pt" 
+                        size=16 name=keywords>&nbsp; <INPUT style="FONT-SIZE: 9pt" type=submit value=ok> 
+                        </P></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></FORM>
+            <HR style="COLOR: #ffffff" noShade SIZE=1>
+
+            <DIV class=panel_big_yellow>Голосование</DIV>
+            <DIV class=pwhite align=center>Какие жесткие диски самые 
+            <STRONG>надежные</STRONG>?</DIV>
+            <FORM action=http://hdd.kulichki.com/glas/voting.php>
+            <TABLE width=110 align=center>
+              <TBODY>
+              <TR>
+                <TD bgColor=#ffffff>
+                  <TABLE width="100%" bgColor=#3a6ea5>
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <DIV class=pwhite><INPUT type=radio value=0 name=mark> 
+                        Maxtor <BR><INPUT type=radio value=1 name=mark> Samsung 
+                        <BR><INPUT type=radio value=2 name=mark> Seagate 
+                        <BR><INPUT type=radio value=3 name=mark> WD <BR><INPUT 
+                        type=radio value=4 name=mark> IBM/Hitachi<BR><INPUT 
+                        type=radio value=5 name=mark> Fujitsu <BR><BR><INPUT type=submit value=Голосовать> 
+                    </DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></FORM>
+            <HR style="COLOR: #ffffff" noShade SIZE=1>
+
+            <DIV class=panel_big_yellow>Контакты</DIV>
+            <TABLE width=110 align=center>
+              <TBODY>
+              <TR>
+                <TD bgColor=#ffffff>
+                  <TABLE width=110 bgColor=#3a6ea5 alidn="left">
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <DIV class=pwhite>
+                        <DIV align=left><A class=lien 
+                        href="mailto:hdd@kulichki.com?subject=[admin]:">администратор</A><BR><A 
+                        class=lien 
+                        href="mailto:hdd@kulichki.com?subject=[read]:">редактор</A><BR><A 
+                        class=lien 
+                        href="mailto:hdd@kulichki.com?subject=[master]:">web-мастер</A></DIV></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <HR style="COLOR: #ffffff" noShade SIZE=1>
+
+          <TD vAlign=top width=620 height="100%">
+            <TABLE width=620 align=center>
+              <TBODY>
+              <TR>
+                <TD vAlign=center align=middle>
+                  <P style="FONT-SIZE: 11px"><A href="http://optima.h12.ru/" 
+                  target=_blank>Нужен свой сайт? Заходите! »»</A><BR><A 
+                  href="mailto:hdd@kulichki.com">Хотите сотрудничать? Пишите! 
+                  »»</A> </P></TD>
+                <TD vAlign=top align=right><A 
+                  href="http://www.kulichki.com/advert"><FONT 
+                  class=light_gray>Реклама в 
+                  Интернет</A>&nbsp;&nbsp;&nbsp;</FONT><A 
+                  href="http://kulichki.kulichki.net/entsikl/"><FONT 
+                  class=light_gray>Все Кулички</FONT></A><BR>
+                  <SCRIPT language=JavaScript><!--
+var rb1_login = "hdd";
+var rb1_random = Math.round(Math.random() * 100000);
+document.write('<iframe src="http://rotabanner.kulichki.net/cgi-bin/iframe/'+rb1_login+'?'+rb1_random +'" width=468 height=60 marginwidth=0 marginheight=0' +' scrolling=no frameborder=0><a '+ 'href="http://rotabanner.kulichki.net/cgi-bin/href/' + rb1_login+'?'+rb1_random +'" target=_top><img '+ 'src="http://rotabanner.kulichki.net/cgi-bin/banner/'+rb1_login+'?'+rb1_random +'" alt="Kulichki Networks" width=468 height=60 border=0 ismap></a></iframe>');
+//-->
+</SCRIPT>
+                  <NOSCRIPT><IFRAME 
+                  src="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/hdd"><a href=" target=_top><img src="http://rotabanner.kulichki.net/cgi-bin/banner/hdd?1001" alt="Kulichki Networks" width=468 height=60 border=0 ismap></a></iframe></IFRAME></NOSCRIPT></TD></TR></TBODY></TABLE>
+            <HR width="99%" noShade SIZE=1>
+
+            <TABLE width=600 align=center bgColor=#f2f2f1>
+              <TBODY>
+              <TR>
+                <TD style="TEXT-ALIGN: justify">
+                  <H5>Что такое S.M.A.R.T.</H5>
+                  <TABLE width="90%" align=center bgColor=#cccccc border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <DIV class=author align=left>Источник: <B><A 
+                        href="http://hdd.kulichki.com/">hdd.kulichki.com</A></B><BR>Автор: 
+                        <B>неизвестно</B><BR>Дата публикации: 
+                        <B>01.01.2004</B><BR></DIV></TD></TR></TBODY></TABLE><BR>
+                  <P>S.M.A.R.T. (Self-Monitoring Analysis and Reporting 
+                  Technolodgy) - технология самотестирования разработанная 
+                  производителями HDD для обеспечения более высокой степени 
+                  надежности хранения информации. Суть S.M.A.R.T. технологии 
+                  заключается в том, что сам винчестер отслеживает состояние 
+                  своей работоспособности и способен заранее предупредить 
+                  пользователя о своем предаварийном состоянии. </P>
+                  <P>Пользователь компьютера оснащенного S.M.A.R.T. HDD и 
+                  специальной программой S.M.A.R.T. диагностики будет заранее 
+                  знать о возможном предаварийном состоянии HDD и следовательно 
+                  сможет избежать потери данных хранящихся на винчестере. </P>
+                  <P>В настоящее время S.M.A.R.T. технологию поддерживают все 
+                  производители HDD: Seagate, Western Digital, Quantum, Fujitsu, 
+                  Maxtor, Samsung, Hitashi, IBM. </P>
+                  <P>Состояние работоспособности оценивается по нескольким 
+                  параметрам работы накопителя, которые называются атрибутами 
+                  надежности - attributes. Каждый атрибут имеет свой номер - ID 
+                  (идентификатор). Атрибутам надежности соответствуют параметры 
+                  работы накопителя, которые могут характеризовать его 
+                  естественный износ и предаварийное состояние: <BR><BR>- 
+                  количество старт/стопных циклов выполненых накопителем; <BR>- 
+                  количество оборотов совершенных шпиндельным двигателем; <BR>- 
+                  количество позиционирований совершенных головками 
+                  чтения/записи; <BR>- высота полета головки чтения/записи над 
+                  поверхностью диска; <BR>- скорость передачи данных с магнитных 
+                  поверхностей в кэш-буффер накопителя;<BR>- время выхода 
+                  накопителя в готовность; <BR>- подсчет переназначений 
+                  BAD-секторов; <BR>- подсчет совершенных накопителем ошибок 
+                  позиционирования; <BR>- подсчет случаев коррекции данных при 
+                  операциях чтение/запись; <BR>- подсчет повторных рекалибровок 
+                  накопителя и т.д. </P>
+                  <P>Например: <BR>
+                  <HR align=left width=200 SIZE=1>
+
+                  <P>Для накопителей <B>Western Digital </B><BR>ID 
+                  &nbsp;&nbsp;Контролируемый 
+                  параметр<BR><BR>1&nbsp;&nbsp;&nbsp;&nbsp; Read Error Rate 
+                  <BR>4 &nbsp;&nbsp;&nbsp;&nbsp;Start/Stop Count<BR>5 
+                  &nbsp;&nbsp;&nbsp;&nbsp;Relocated Sector Count<BR>10 
+                  &nbsp;&nbsp;Spin up Retry Count<BR>11 &nbsp;&nbsp;Drive 
+                  Calibration Retry Count<BR>199 ULTRA DMA CRC Error Rate<BR>200 
+                  Multi-zone Error Rate <BR><BR>
+                  <HR align=left width=200 SIZE=1>
+
+                  <P>Для накопителей <B>Fujitsu:</B> <BR>ID &nbsp;Контролируемый 
+                  параметр<BR><BR>1 &nbsp;&nbsp;&nbsp;Read error rate<BR>2 
+                  &nbsp;&nbsp;&nbsp;Throughput performance<BR>3 
+                  &nbsp;&nbsp;&nbsp;Spin up time<BR>4 &nbsp;&nbsp;&nbsp;Number 
+                  of times the spindle motor is activated<BR>5 
+                  &nbsp;&nbsp;&nbsp;Number of alternative sectors<BR>7 
+                  &nbsp;&nbsp;&nbsp;Seek error rate<BR>8 &nbsp;&nbsp;&nbsp;Seek 
+                  time performance<BR>9 &nbsp;&nbsp;&nbsp;Power-on time<BR>10 
+                  &nbsp;Number of retries made to activate the spindle 
+                  motor<BR>12 &nbsp;Number of power-on-power-off times<BR>199 
+                  Ultra ATA CRC Error Rate<BR>200 Write error rate<BR></P>
+                  <P></P>
+                  <P></P>
+                  <HR align=left width=200 SIZE=1>
+
+                  <P>Большинство S.M.A.R.T. HDD имеют от 3 до 15 <A 
+                  href="http://hdd.kulichki.com/anatomy/service/smart.shtml#q" 
+                  target=_blank>атрибутов</A> надежности. Максимально возможное 
+                  их количество 30. Состав и количество атрибутов надежности 
+                  определяются самими производителями индивидуально для каждого 
+                  типа HDD. </P>
+                  <P>Значения атрибутов надежности могут лежать в диапазоне от 1 
+                  до 253. Первоначально атрибуты имеют максимальные значения. По 
+                  мере износа винчестера или в случае возникновения 
+                  предаварийного состояния значения атрибутов надежности 
+                  уменьшаются. Следовательно, высокое значение атрибутов говорит 
+                  о низкой вероятности выхода накопителя из строя и, 
+                  соответственно, низкое значение атрибутов - о низкой 
+                  надежности накопителя и о высокой вероятности выхода его из 
+                  строя. Как правило, верхние границы атрибутов надежности имеют 
+                  значение 100 (IBM, Quantum, Fujitsu) или 253 (Samsung). Но 
+                  есть и исключения, так у HDD Western Digital моделей 
+                  WDAC34000, WDAC33100, WDAC31600 первый атрибут надежности 
+                  имеет максимальное значение 200, а остальные 100. </P>
+                  <P>Для каждого атрибута надежности разработчиками HDD 
+                  определяется пороговое значение - thresholds. Если хотя бы 
+                  одно из значений атрибутов меньше, чем соответствующее 
+                  пороговое значение, значит хранить данные на таком винчестере 
+                  становится опасно. </P>
+                  <P>Кроме порогового значения для каждого атрибута определен 
+                  дополнительный параметр pre-failure/advizory так-же 
+                  характеризующий предаварийное состояние накопителя. Возможны 
+                  три состояния накопителя, характеризуемые состоянием 
+                  pre-failure/advizory: <BR><BR>- pre-failure/advizory = 0, 
+                  характеризует высокий запас надежности накопителя, при условии 
+                  что значение атрибута надежности больше соответствующего 
+                  порогового значения; <BR>- pre-failure/advizory = 0, 
+                  характеризует низкий запас надежности накопителя, при условии 
+                  что значение атрибута надежности меньше соответствующего 
+                  порогового значения; <BR>- pre-failure/advizory = 1, 
+                  характеризует предаварийное состояние накопителя, при условии 
+                  что значение атрибута надежности меньше соответствующего 
+                  порогового значения. </P>
+                  <P>Все S.M.A.R.T. параметры - attributes, thresholds и 
+                  pre-failure/advizory хранятся в энергонезависимой памяти HDD. 
+                  </P><BR>
+                  <TABLE width="90%" align=center bgColor=#cccccc border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <DIV class=author align=left>Источник: <B><A 
+                        href="http://hdd.kulichki.com/">hdd.kulichki.com</A></B><BR>Автор: 
+                        <B>неизвестно</B><BR>Дата публикации: 
+                        <B>01.01.2004</B><BR></DIV></TD></TR></TBODY></TABLE><BR></TD></TR></TBODY></TABLE></TD><!-- DOWN MENU & COPY --></TR></TBODY></TABLE>
+      <TABLE height=25 cellSpacing=0 cellPadding=0 width=800 align=center 
+      bgColor=#000000 summary="" border=0>
+        <TBODY>
+        <TR>
+          <TD align=middle><NOBR><A class=lien 
+            onmouseover="netie(-1,4)?this.style.color='#FF0000':null;" 
+            onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;" 
+            href="http://hdd.kulichki.com/">Главная</A> <SPAN 
+            class=divise>|</SPAN> <A class=lien 
+            onmouseover="netie(-1,4)?this.style.color='#FF0000':null;" 
+            onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;" 
+            href="http://hdd.kulichki.com/news/">Новости</A> <SPAN 
+            class=divise>|</SPAN> <A class=lien 
+            onmouseover="netie(-1,4)?this.style.color='#FF0000':null;" 
+            onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;" 
+            href="http://hdd.kulichki.com/anatomy/">Анатомия</A> <SPAN 
+            class=divise>|</SPAN> <A class=lien 
+            onmouseover="netie(-1,4)?this.style.color='#FF0000':null;" 
+            onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;" 
+            href="http://hdd.kulichki.com/service/">Обслуживание</A> <SPAN 
+            class=divise>|</SPAN> <A class=lien 
+            onmouseover="netie(-1,4)?this.style.color='#FF0000':null;" 
+            onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;" 
+            href="http://hdd.kulichki.com/recovery/">Восстановление&amp;Ремонт</A> 
+            <SPAN class=divise>|</SPAN> <A class=lien 
+            onmouseover="netie(-1,4)?this.style.color='#FF0000':null;" 
+            onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;" 
+            href="http://hdd.kulichki.com/">Guarding</A> <SPAN 
+            class=divise>|</SPAN> <A class=lien 
+            onmouseover="netie(-1,4)?this.style.color='#FF0000':null;" 
+            onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;" 
+            href="http://hdd.kulichki.com/soft/">Программы</A> <SPAN 
+            class=divise>|</SPAN> <A class=lien 
+            onmouseover="netie(-1,4)?this.style.color='#FF0000':null;" 
+            onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;" 
+            href="http://hdd.kulichki.com/brand/">Модели</A> <SPAN 
+            class=divise>|</SPAN> <A class=lien 
+            onmouseover="netie(-1,4)?this.style.color='#FF0000':null;" 
+            onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;" 
+            href="http://hdd.kulichki.com/forum">Форум</A> <SPAN 
+            class=divise>|</SPAN> <A class=lien 
+            onmouseover="netie(-1,4)?this.style.color='#FF0000':null;" 
+            onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;" 
+            href="http://hdd.kulichki.com/soft/link.shtml">Ссылки</A> 
+        </NOBR></TD></TR></TBODY></TABLE>
+      <DIV class=pe_litle><FONT color=red>Уважаемый посетитель! </FONT><FONT 
+      color=green>Исключительно для блага сайта! Зайдите по любой ссылке (ссылки 
+      ниже) в каталог Begun, а оттуда на несколько сайтов. Я буду Вам очень 
+      благодарен. С уважением, администратор hdd.kulichki.com! </FONT></DIV>
+      <CENTER>
+      <TABLE cellSpacing=0 cellPadding=0 width=800 border=0>
+        <TBODY>
+        <TR bgColor=#77b94e>
+          <TD vAlign=bottom 
+          background="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/begun_logo.gif" 
+          bgColor=#77b94e>
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+                background="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/1">
+                  <TABLE style="CURSOR: hand" cellSpacing=0 cellPadding=1 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD 
+                      onclick="top.location.href='http://partner.begun.ru/comming.jsp?soid=3124964';return true;" 
+                      vAlign=bottom 
+                      background="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/1" 
+                      colSpan=2><SPAN 
+                        style="FONT-SIZE: 10px; COLOR: #e3e9f4; FONT-FAMILY: Verdana, Arial, sans-serif">Найди 
+                        на Бегуне:</SPAN></TD></TR>
+                    <FORM action=http://partner.begun.ru/comming.jsp 
+                    target=_blank><INPUT type=hidden value=3124962 name=oid> 
+                    <TR>
+                      <TD 
+                      background="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/1"><INPUT 
+                        style="FONT-SIZE: 10px; WIDTH: 106px; FONT-FAMILY: Verdana, Arial, sans-serif" 
+                        size=12 name=q> </TD>
+                      <TD 
+                      background="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/1"><INPUT 
+                        type=image height=18 alt="" width=18 
+                        src="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/begun_submit.gif" 
+                        align=middle border=0 name=image> 
+                  </TD></TR></FORM></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+          <TD bgColor=#ffffff><IMG height=100 
+            src="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/begun_line1.gif" 
+            width=14 border=0></TD>
+          <TD bgColor=#ffffff>
+            <TABLE cellSpacing=0 cellPadding=2 border=0>
+              <TBODY>
+              <TR>
+                <TD><A 
+                  href="http://partner.begun.ru/comming.jsp?soid=3124964&amp;grid=11" 
+                  target=_blank><IMG height=25 alt="Досуг и отдых" 
+                  src="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/kulichki" 
+                  width=25 border=0></A></TD>
+                <TD><A 
+                  style="FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #3366cc; FONT-FAMILY: Verdana, Arial, sans-serif" 
+                  href="http://partner.begun.ru/comming.jsp?soid=3124964&amp;grid=11" 
+                  target=_blank>Все для дома и офиса</A> 
+              <TR>
+                <TD><A 
+                  href="http://partner.begun.ru/comming.jsp?soid=3124964&amp;grid=3" 
+                  target=_blank><IMG height=25 alt="Компьютеры и оргтехника" 
+                  src="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/begun_ico3.gif" 
+                  width=25 border=0></A></TD>
+                <TD><A 
+                  style="FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #3366cc; FONT-FAMILY: Verdana, Arial, sans-serif" 
+                  href="http://partner.begun.ru/comming.jsp?soid=3124964&amp;grid=3" 
+                  target=_blank>Компьютеры и оргтехника</A></TD></TR>
+              <TR>
+                <TD><A 
+                  href="http://partner.begun.ru/comming.jsp?soid=3124964&amp;grid=7" 
+                  target=_blank><IMG height=25 alt=Связь 
+                  src="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/begun_ico7.gif" 
+                  width=25 border=0></A></TD>
+                <TD><A 
+                  style="FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #3366cc; FONT-FAMILY: Verdana, Arial, sans-serif" 
+                  href="http://partner.begun.ru/comming.jsp?soid=3124964&amp;grid=7" 
+                  target=_blank>Связь</A></TD></TR></TBODY></TABLE></TD>
+          <TD bgColor=#ffffff>
+            <TABLE height=100 cellSpacing=3 cellPadding=0 width=14 border=0>
+              <TBODY>
+              <TR>
+                <TD 
+                background="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/begun_line2.gif">
+                  <TABLE height=1 cellSpacing=0 cellPadding=0 width=7 
+                    border=0><TBODY>
+                    <TR>
+                      <TD></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+          <TD bgColor=#ffffff>
+            <TABLE cellSpacing=0 cellPadding=2 border=0>
+              <TBODY>
+              <TR>
+                <TD><A 
+                  href="http://partner.begun.ru/comming.jsp?soid=3124964&amp;grid=12" 
+                  target=_blank><IMG height=25 alt="Красота и здоровье" 
+                  src="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/begun_ico12.gif" 
+                  width=25 border=0></A></TD>
+                <TD><A 
+                  style="FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #3366cc; FONT-FAMILY: Verdana, Arial, sans-serif" 
+                  href="http://partner.begun.ru/comming.jsp?soid=3124964&amp;grid=12" 
+                  target=_blank>Красота и здоровье</A></TD></TR>
+              <TR>
+                <TD><A 
+                  href="http://partner.begun.ru/comming.jsp?soid=3124964&amp;grid=13" 
+                  target=_blank><IMG height=25 alt="Книги, музыка и видео" 
+                  src="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/begun_ico13.gif" 
+                  width=25 border=0></A></TD>
+                <TD><A 
+                  style="FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #3366cc; FONT-FAMILY: Verdana, Arial, sans-serif" 
+                  href="http://partner.begun.ru/comming.jsp?soid=3124964&amp;grid=13" 
+                  target=_blank>Книги, музыка и видео</A></TD></TR>
+              <TR>
+                <TD><A 
+                  href="http://partner.begun.ru/comming.jsp?soid=3124964&amp;grid=1" 
+                  target=_blank><IMG height=25 alt="Интернет-услуги и сервисы" 
+                  src="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/begun_ico1.gif" 
+                  width=25 border=0></A></TD>
+                <TD><A 
+                  style="FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #3366cc; FONT-FAMILY: Verdana, Arial, sans-serif" 
+                  href="http://partner.begun.ru/comming.jsp?soid=3124964&amp;grid=1" 
+                  target=_blank>Интернет-услуги и 
+          сервисы</A></TD></TR></TBODY></TABLE></TD>
+          <TD bgColor=#ffffff>
+            <TABLE height=100 cellSpacing=3 cellPadding=0 width=14 border=0>
+              <TBODY>
+              <TR>
+                <TD 
+                background="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/begun_line2.gif">
+                  <TABLE height=1 cellSpacing=0 cellPadding=0 width=7 
+                    border=0><TBODY>
+                    <TR>
+                      <TD></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+          <TD bgColor=#ffffff>
+            <TABLE cellSpacing=0 cellPadding=2 border=0>
+              <TBODY>
+              <TR>
+                <TD><A 
+                  style="FONT-SIZE: 10px; COLOR: #666666; FONT-FAMILY: Verdana, Arial, sans-serif" 
+                  href="http://partner.begun.ru/comming.jsp?soid=3124964" 
+                  target=_blank>Продаем 
+            целевых<BR>посетителей!</A></TD></TR></TBODY></TABLE></TD>
+          <TD bgColor=#77b94e>
+            <TABLE height=1 cellSpacing=0 cellPadding=0 width=7 border=0>
+              <TBODY>
+              <TR>
+                <TD></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></CENTER>
+      <P></P>
+      <DIV class=pe_litle>При перепечатке материалов сайта ссылка на 
+      первоисточник обязательна<BR>Разработка сайта - <A 
+      href="mailto:hdd@kulichki.com">Прудько Александр</A>. 2003-2004 </DIV><BR>
+      <CENTER><!-- Another Banner Network -->
+      <SCRIPT language=javascript type=text/javascript><!--
+bn_id='102437';
+bn_url='http://b468.abn.com.ua';
+bn_rnd=Math.round((Math.random()*10000000));
+bn_addurl='?t=468&w=468&h=60&id='+bn_id;
+if(window.screen) bn_addurl+='&c='+screen.colorDepth+'&cw='+screen.width;
+if(document.referrer) bn_addurl+='&ref='+escape(document.referrer);
+bn_addurl+='&tz='+(new Date()).getTimezoneOffset()+'&r='+bn_rnd;
+document.write('<iframe src="'+bn_url+'/iframe'+bn_addurl+'" width=468 height=60 frameborder=0 vspace=0 hspace=0 marginwidth=0 marginheight=0 scrolling=no><a href="'+bn_url+'/nsanchor'+bn_addurl+'" target=_top><img src="'+bn_url+'/nsimg'+bn_addurl+'" width="468" height="60" border=0 /></a></iframe>');
+//--></SCRIPT>
+      <NOSCRIPT><A href="http://b468.abn.com.ua/nsanchor?t=468&amp;id=102437" 
+      target=_top><IMG height=60 
+      src="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/nsimg.txt" 
+      width=468 border=0></A></NOSCRIPT> <!-- /Another Banner Network -->
+      <CENTER><BR>
+      <CENTER><!-- HotLog -->
+      <SCRIPT language=javascript>
+hotlog_js="1.0";
+hotlog_r=""+Math.random()+"&s=163190&im=133&r="+escape(document.referrer)+"&pg="+
+escape(window.location.href);
+document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");
+</SCRIPT>
+
+      <SCRIPT language=javascript1.1>
+hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</SCRIPT>
+
+      <SCRIPT language=javascript1.2>
+hotlog_js="1.2";
+hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+
+(((navigator.appName.substring(0,3)=="Mic"))?
+screen.colorDepth:screen.pixelDepth)</SCRIPT>
+
+      <SCRIPT language=javascript1.3>hotlog_js="1.3"</SCRIPT>
+
+      <SCRIPT language=javascript>hotlog_r+="&js="+hotlog_js;
+document.write("<a href='http://click.hotlog.ru/?163190' target='_top'><img "+
+" src='http://hit8.hotlog.ru/cgi-bin/hotlog/count?"+
+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</SCRIPT>
+      <NOSCRIPT><A href="http://click.hotlog.ru/?163190" target=_top><IMG 
+      height=31 alt=HotLog 
+      src="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/count.gif" 
+      width=88 border=0></A></NOSCRIPT> <!-- /HotLog --><!-- bigmir)net TOP 100 --><A 
+      href="http://www.bigmir.net/?cl=69721" target=_blank>
+      <SCRIPT language=javascript><!--
+bmQ='<img src=http://c.bigmir.net/?s69721&t12'
+bmD=document
+bmD.cookie="b=b"
+if(bmD.cookie)bmQ+='&c1'
+//--></SCRIPT>
+
+      <SCRIPT language=javascript1.2><!--
+bmS=screen;bmQ+='&d'+(bmS.colorDepth?bmS.colorDepth:bmS.pixelDepth)+"&r"+bmS.width;
+//--></SCRIPT>
+
+      <SCRIPT language=javascript><!--
+bmF = bmD.referrer.slice(7);
+((bmI=bmF.indexOf('/'))!=-1)?(bmF=bmF.substring(0,bmI)):(bmI=bmF.length);
+if(bmF!=window.location.href.substring(7,7+bmI))bmQ+='&f'+escape(bmD.referrer);
+bmD.write(bmQ+" border=0 width=88 height=31 alt='bigmir TOP100'>");
+//--></SCRIPT>
+      </A><!--Rating@Mail.ru COUNTER-->
+      <SCRIPT language=JavaScript type=text/javascript><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.1 type=text/javascript><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.2 type=text/javascript><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.3 type=text/javascript><!--
+js=13//--></SCRIPT>
+
+      <SCRIPT language=JavaScript type=text/javascript><!--
+d.write('<a href="http://top.mail.ru/jump?from=673317"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=673317;t=99;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=18 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></SCRIPT>
+      <NOSCRIPT><A href="http://top.mail.ru/jump?from=673317" target=_top><IMG 
+      height=18 alt=Рейтинг@Mail.ru 
+      src="HDD - Все о жестких дисках  Что такое S_M_A_R_T_files/counter.gif" 
+      width=88 border=0></A></NOSCRIPT>
+      <SCRIPT language=JavaScript type=text/javascript><!--
+if(11<js)d.write('--'+'>')//--></SCRIPT>
+<!--/COUNTER--> </CENTER></CENTER></CENTER>
+  <TR>
+    <TD></TD></TR></TBODY></TABLE></TR></TABLE></TD></TR></TABLE></BODY></HTML>

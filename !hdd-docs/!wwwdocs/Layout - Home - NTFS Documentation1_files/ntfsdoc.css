@@ -1,0 +1,105 @@
+BODY {
+	BACKGROUND: url(ntfsdoc.png) #ffc fixed no-repeat 2px 8px; MARGIN: 10px 32px; COLOR: #000
+}
+A {
+	TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #000; BACKGROUND-COLOR: transparent
+}
+A:visited {
+	COLOR: #000; BACKGROUND-COLOR: transparent
+}
+A:active {
+	COLOR: #000; BACKGROUND-COLOR: transparent
+}
+A:hover {
+	COLOR: #fff; BACKGROUND-COLOR: #069
+}
+A.visible {
+	TEXT-DECORATION: underline
+}
+A.prevnext {
+	TEXT-DECORATION: underline
+}
+A.toolbar {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 2px; COLOR: #069; PADDING-TOP: 2px; BACKGROUND-COLOR: #cc9; TEXT-DECORATION: none
+}
+A.toolbar:hover {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 2px; COLOR: #eeb; PADDING-TOP: 2px; BACKGROUND-COLOR: #069; TEXT-DECORATION: none
+}
+DIV.toolbar {
+	PADDING-RIGHT: 30px
+}
+DIV.figure {
+	MARGIN-TOP: 2em; FONT: bold 50% normal
+}
+A.contact {
+	FONT: 75% serif; COLOR: #cc9; BACKGROUND-COLOR: transparent
+}
+H1 {
+	COLOR: #069; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+H2 {
+	COLOR: #069; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+H3 {
+	COLOR: #069; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+A.heading {
+	COLOR: #069; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+TABLE {
+	TEXT-ALIGN: left
+}
+TH {
+	TEXT-ALIGN: left
+}
+TD {
+	TEXT-ALIGN: left
+}
+TD.numeric {
+	TEXT-ALIGN: right
+}
+TH.numeric {
+	TEXT-ALIGN: right
+}
+A.numeric {
+	TEXT-ALIGN: right
+}
+TD.numeric {
+	FONT-FAMILY: monospace
+}
+A.numeric {
+	FONT-FAMILY: monospace
+}
+TH {
+	BORDER-RIGHT: #999 0px solid; PADDING-RIGHT: 5px; PADDING-LEFT: 5px; BORDER-BOTTOM: #999 0px solid
+}
+TD {
+	BORDER-RIGHT: #999 0px solid; PADDING-RIGHT: 5px; PADDING-LEFT: 5px; BORDER-BOTTOM: #999 0px solid
+}
+TABLE.toolbar {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 0px; BORDER-TOP: medium none; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; BORDER-LEFT: medium none; PADDING-TOP: 0px; BORDER-BOTTOM: medium none; BACKGROUND-COLOR: #ffc
+}
+TD.toolbar {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 0px; BORDER-TOP: medium none; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; BORDER-LEFT: medium none; PADDING-TOP: 0px; BORDER-BOTTOM: medium none; BACKGROUND-COLOR: #ffc
+}
+TABLE {
+	BORDER-TOP: #999 0px solid; BORDER-LEFT: #999 0px solid; BACKGROUND-COLOR: #ffd
+}
+DT {
+	FONT-WEIGHT: bold; PADDING-TOP: 0.5em
+}
+P {
+	TEXT-ALIGN: justify; max-width: 570px
+}
+DD {
+	TEXT-ALIGN: justify; max-width: 570px
+}
+LI {
+	TEXT-ALIGN: justify; max-width: 510px
+}
+P.quote {
+	PADDING-LEFT: 2em; max-width: 510px
+}

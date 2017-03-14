@@ -1,0 +1,216 @@
+Pattern Found at clus:118631
+ Content: 
+Unit DiskTool;
+(****************************************************************************
+ *                      Disk Toolkit Unit v1.01 beta 1                      *
+ ****************************************************************************
+ *          p   INT 13h                                                     *
+ * Drive IDE features                                                       *
+ *    p           (      H  )                                               *
+ *                                                                          *
+ *  *             :                                                         *
+ *                     "                         "                          *
+ *   Linux-  &                                                              *
+ *   A.R.G.-               Linux                                            *
+ *   FiDO    talks.asm, ru.hacker, netmail, etc.                            *
+ *   NiGhthAWk-     FiDO, Internet, BBS &   .                               *
+ *                 (2:5045/66)                                              *
+ *   ...                                                                    *
+ *                                                                          *
+ *                   :                                                      *
+ * FidoNet: 2:5045/66.45,Nikita Galaiko                                     *
+ * E-Mail: djnike@chat.ru                                                   *
+ ****************************************************************************
+ *                                                   Last Update: 22/07/Y2k *
+ ****************************************************************************
+ * (C) NiKe'Soft UnLtd.                                                     *
+ ****************************************************************************)
+
+{$A-,B-,D+,E+,F-,G+,I+,L+,N+,O-,P-,Q-,R-,S+,T-,V+,X+,Y+}
+
+  INTERFACE
+
+{$DEFINE UseIntCache}
+
+Uses Hex;
+
+const
+      MaxLongName       = 255;
+      DosSectorSize     = 512;
+      Boot_Signature    = $AA55;
+      FSector_Signature = $41615252; {"RRaA"}
+      FSinfo_Signature  = $61417272; {"rrAa"}
+
+      faReadOnly    = $01;
+      faHidden      = $02;
+      faSysFile     = $04;
+      faVolumeID    = $08;
+      faDirectory   = $10;
+      faArchive     = $20;
+      faAnyFile     = $3F;
+      faNone        = 0;
+      faUnused      = faVolumeID or faArchive or faSysFile or faHidden;
+      faExt         = faReadOnly or faHidden or faSysFile or faVolumeID;
+
+      BAD_MsDOS_chars : array[0..8] of char = ('*','+','?','<','>','|','"','/','\');
+
+      UnKnownFAT  =  0;
+      FAT12       =  1;
+      FAT16       =  2;
+      FAT32       =  3;
+
+      NoError     = 0;
+      DiskError   : byte = NoError;
+
+Type
+    PathStr = string[79];         { DOS File pathname string }
+    DirStr  = string[67];         { DOS Drive and directory string }
+    NameStr = string[8];          { DOS File name string }
+    ExtStr  = strin
+
+Pattern Found at clus:379805
+ Content: 
+Unit DiskTool;
+(****************************************************************************
+ *                      Disk Toolkit Unit v1.03                             *
+ ****************************************************************************
+ *          p   INT 13h                                                     *
+ * Drive IDE features                                                       *
+ *    p           (      H  )                                               *
+ *                                                                          *
+ *  *             :                                                         *
+ *                     "                         "                          *
+ *   Linux-  &                                                              *
+ *   A.R.G.-               Linux                                            *
+ *   FiDO    talks.asm, ru.hacker, netmail, etc.                            *
+ *   NiGhthAWk-     FiDO, Internet, BBS &   .                               *
+ *                 (2:5045/66)          ,    HDD, etc.                      *
+ *   ...                                                                    *
+ *                                                                          *
+ *                   :                                                      *
+ * FidoNet: 2:5045/66.45,Nikita Galaiko                                     *
+ * E-Mail: djnike@math.dvgu.ru                                              *
+ ****************************************************************************
+ *                                                  Last Update: 30/06/2001 *
+ ****************************************************************************
+ * (C) NiKe'Soft UnLtd.                                                     *
+ ****************************************************************************)
+
+{$A-,B-,D+,E+,F-,G+,I+,L+,N+,O-,P-,Q-,R-,S+,T-,V+,X+,Y+}
+
+  INTERFACE
+
+{$DEFINE UseIntCache}
+
+Uses Hex;
+
+const
+      MaxLongName       = 255;
+      DosSectorSize     = 512;
+      Boot_Signature    = $AA55;
+      FSector_Signature = $41615252; {"RRaA"}
+      FSinfo_Signature  = $61417272; {"rrAa"}
+
+      faReadOnly    = $01;
+      faHidden      = $02;
+      faSysFile     = $04;
+      faVolumeID    = $08;
+      faDirectory   = $10;
+      faArchive     = $20;
+      faAnyFile     = $3F;
+      faNone        = 0;
+      faUnused      = faVolumeID or faArchive or faSysFile or faHidden;
+      faExt         = faReadOnly or faHidden or faSysFile or faVolumeID;
+
+      BAD_MsDOS_chars : array[0..8] of char = ('*','+','?','<','>','|','"','/','\');
+
+      UnKnownFAT  =  0;
+      FAT12       =  1;
+      FAT16       =  2;
+      FAT32       =  3;
+
+      NoError     = 0;
+      DiskError   : byte = NoError;
+(*
+ 00h	BYTE	10h (size of packet)
+ 01h	BYTE	reserved (0)
+ 02h	WORD	number of blocks to transfer
+ 04h	DWORD	-> transfer buffer
+ 08h	QWORD	starting absolute block number
+*)
+type tTransferBlock = record
+       Size  
+
+Pattern Found at clus:380313
+ Content: 
+Unit DiskTool;
+(****************************************************************************
+ *                      Disk Toolkit Unit v1.03                             *
+ ****************************************************************************
+ *          p   INT 13h                                                     *
+ * Drive IDE features                                                       *
+ *    p           (      H  )                                               *
+ *                                                                          *
+ *  *             :                                                         *
+ *                     "                         "                          *
+ *   Linux-  &                                                              *
+ *   A.R.G.-               Linux                                            *
+ *   FiDO    talks.asm, ru.hacker, netmail, etc.                            *
+ *   NiGhthAWk-     FiDO, Internet, BBS &   .                               *
+ *                 (2:5045/66)          ,    HDD, etc.                      *
+ *   ...                                                                    *
+ *                                                                          *
+ *                   :                                                      *
+ * FidoNet: 2:5045/66.45,Nikita Galaiko                                     *
+ * E-Mail: djnike@math.dvgu.ru                                              *
+ ****************************************************************************
+ *                                                  Last Update: 30/06/2001 *
+ ****************************************************************************
+ * (C) NiKe'Soft UnLtd.                                                     *
+ ****************************************************************************)
+
+{$A-,B-,D+,E+,F-,G+,I+,L+,N+,O-,P-,Q-,R-,S+,T-,V+,X+,Y+}
+
+  INTERFACE
+
+{$DEFINE UseIntCache}
+
+Uses Hex;
+
+const
+      MaxLongName       = 255;
+      DosSectorSize     = 512;
+      Boot_Signature    = $AA55;
+      FSector_Signature = $41615252; {"RRaA"}
+      FSinfo_Signature  = $61417272; {"rrAa"}
+
+      faReadOnly    = $01;
+      faHidden      = $02;
+      faSysFile     = $04;
+      faVolumeID    = $08;
+      faDirectory   = $10;
+      faArchive     = $20;
+      faAnyFile     = $3F;
+      faNone        = 0;
+      faUnused      = faVolumeID or faArchive or faSysFile or faHidden;
+      faExt         = faReadOnly or faHidden or faSysFile or faVolumeID;
+
+      BAD_MsDOS_chars : array[0..8] of char = ('*','+','?','<','>','|','"','/','\');
+
+      UnKnownFAT  =  0;
+      FAT12       =  1;
+      FAT16       =  2;
+      FAT32       =  3;
+
+      NoError     = 0;
+      DiskError   : byte = NoError;
+(*
+ 00h	BYTE	10h (size of packet)
+ 01h	BYTE	reserved (0)
+ 02h	WORD	number of blocks to transfer
+ 04h	DWORD	-> transfer buffer
+ 08h	QWORD	starting absolute block number
+*)
+type tTransferBlock = record
+       Size  
+

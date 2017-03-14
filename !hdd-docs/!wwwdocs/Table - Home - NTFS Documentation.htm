@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0054)http://linux-ntfs.sourceforge.net/ntfs/help/table.html -->
+<!-- http://linux-ntfs.sourceforge.net/ntfs/help/table.html --><HTML 
+lang=en><HEAD><TITLE>Table - Home - NTFS Documentation</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<META content="NTFS Documentation" name=description><LINK 
+href="Table - Home - NTFS Documentation_files/ntfsdoc.css" type=text/css 
+rel=stylesheet><LINK href="../style/ntfsicon.png" type=image/png rel=icon><LINK 
+title="NTFS Documentation" href="../index.html" type=text/html rel=start><LINK 
+href="thanks.html" rel=next><LINK href="license.html" rel=previous><LINK 
+href="../index.html" rel=contents>
+<META content="MSHTML 6.00.2800.1400" name=GENERATOR></HEAD>
+<BODY>
+<TABLE class=toolbar cellSpacing=0 summary="" border=0>
+  <TBODY>
+  <TR>
+    <TD class=toolbar>
+      <DIV class=toolbar><A class=toolbar accessKey=1 
+      href="http://linux-ntfs.sourceforge.net/ntfs/index.html">Home</A></DIV></TD>
+    <TD class=toolbar>
+      <DIV class=toolbar><A class=toolbar accessKey=2 
+      href="http://linux-ntfs.sourceforge.net/ntfs/files/index.html">Files</A></DIV></TD>
+    <TD class=toolbar>
+      <DIV class=toolbar><A class=toolbar accessKey=3 
+      href="http://linux-ntfs.sourceforge.net/ntfs/attributes/index.html">Attributes</A></DIV></TD>
+    <TD class=toolbar>
+      <DIV class=toolbar><A class=toolbar accessKey=4 
+      href="http://linux-ntfs.sourceforge.net/ntfs/concepts/index.html">Concepts</A></DIV></TD>
+    <TD class=toolbar><A class=toolbar accessKey=5 
+      href="http://linux-ntfs.sourceforge.net/ntfs/help/glossary.html">Glossary</A></TD></TR></TBODY></TABLE>
+<H1>Home - Table</H1><A class=prevnext accessKey=, 
+href="http://linux-ntfs.sourceforge.net/ntfs/help/license.html">Previous</A> <A 
+class=prevnext accessKey=. 
+href="http://linux-ntfs.sourceforge.net/ntfs/help/thanks.html">Next</A> 
+<H2>Overview</H2>
+<P>The tables in this documentation aren't completely consistant. Below is a key 
+to the tables showing how various fields are represented. </P>
+<H2>Footnotes</H2>
+<P>Any table fields that have footnote marks, e.g. (a), (e), will have a fuller 
+description immediately below the table. </P>
+<H2>Size Fields</H2>
+<P>In NTFS not all fields are of a fixed size. Some depend on the value of 
+another field, some depend on the contents of the field. </P>
+<P>All the numbers in size fields are in decimal format. e.g. 12 (twelve), 42 
+(forty-two). </P>
+<TABLE cellSpacing=0 summary="" border=1>
+  <TBODY>
+  <TR>
+    <TH>Key</TH>
+    <TH>Name</TH>
+    <TH>Description</TH></TR>
+  <TR>
+    <TD vAlign=top>12</TD>
+    <TD vAlign=top>Fixed</TD>
+    <TD>This field is twelve bytes long. Its size is constant.</TD></TR>
+  <TR>
+    <TD vAlign=top>P8</TD>
+    <TD vAlign=top>Padding</TD>
+    <TD>P8 means pad the field to an 8 byte boundary. The size of this field 
+      could be 0&nbsp;-&nbsp;7&nbsp;bytes. P4 means 4 byte alignment, etc 
+  (a)</TD></TR>
+  <TR>
+    <TD vAlign=top>V</TD>
+    <TD vAlign=top>Variable</TD>
+    <TD>The length of this field depends on its contents. An example is a SID. 
+      To know its length, you must decode the structure.</TD></TR>
+  <TR>
+    <TD vAlign=top>S</TD>
+    <TD vAlign=top>X-Ref</TD>
+    <TD>A cross-reference shows that the size is defined elsewhere in the 
+      table. The size can be represented by any letter, except P or 
+  V.</TD></TR></TBODY></TABLE>
+<P>(a) Any padding of a fixed size will be displayed as a fixed size.</P>
+<H2>Indexes</H2>
+<P>Where a table represents an index, the key and data will be shown as below: 
+</P>
+<TABLE cellSpacing=0 summary="" border=1>
+  <TBODY>
+  <TR>
+    <TH class=numeric>Offset</TH>
+    <TH class=numeric>Size</TH>
+    <TH colSpan=2>Description</TH></TR>
+  <TR>
+    <TD class=numeric>0x00</TD>
+    <TD class=numeric>2</TD>
+    <TD colSpan=2>Offset to data</TD></TR>
+  <TR>
+    <TD class=numeric>0x02</TD>
+    <TD class=numeric>2</TD>
+    <TD colSpan=2>Size of data</TD></TR>
+  <TR>
+    <TD class=numeric>0x04</TD>
+    <TD class=numeric>4</TD>
+    <TD>Key</TD>
+    <TD>SID</TD></TR>
+  <TR>
+    <TD class=numeric>0x08</TD>
+    <TD class=numeric>4</TD>
+    <TD>Data</TD>
+    <TD>Owner Id</TD></TR>
+  <TR>
+    <TD class=numeric>0x0C</TD>
+    <TD class=numeric>4</TD>
+    <TD>Data</TD>
+    <TD>Hash</TD></TR></TBODY></TABLE>
+<H2>OS - Operating System</H2>
+<P>Note that the fields are not all used in exactly the same way. NT indicates 
+old fields whereas 2K and XP indicate new fields. </P>
+<TABLE cellSpacing=0 summary="" border=1>
+  <TBODY>
+  <TR>
+    <TH>OS</TH>
+    <TH class=numeric>NTFS</TH>
+    <TH>Description</TH></TR>
+  <TR>
+    <TD>blank</TD>
+    <TD class=numeric>all</TD>
+    <TD>Used by all versions of Windows</TD></TR>
+  <TR>
+    <TD>NT</TD>
+    <TD class=numeric>1.2</TD>
+    <TD>Only used in Windows NT</TD></TR>
+  <TR>
+    <TD>2K</TD>
+    <TD class=numeric>3.0</TD>
+    <TD>Windows 2000 and later</TD></TR>
+  <TR>
+    <TD>XP</TD>
+    <TD class=numeric>3.1</TD>
+    <TD>New to Windows XP</TD></TR></TBODY></TABLE><PRE>    repeating groups?
+    link padding8, padding and other table features to help/tables
+    consistant use of padding/alignment fields
+    </PRE><BR><A class=contact 
+href="http://linux-ntfs.sourceforge.net/ntfs/help/license.html">Copyright 
+(C)</A> <A class=contact 
+href="http://validator.w3.org/check?uri=http://linux-ntfs.sourceforge.net/ntfs/help/table.html">Validate 
+HTML</A> <A class=contact 
+href="http://jigsaw.w3.org/css-validator/validator?uri=http://linux-ntfs.sourceforge.net/ntfs/help/table.html">Validate 
+CSS</A> <IMG height=1 alt=SourceForge 
+src="Table - Home - NTFS Documentation_files/sflogo.png" width=1 border=0> 
+</BODY></HTML>

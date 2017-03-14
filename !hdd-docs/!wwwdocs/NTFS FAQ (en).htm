@@ -1,0 +1,1018 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0048)http://linux-ntfs.sourceforge.net/info/ntfs.html -->
+<!-- http://linux-ntfs.sourceforge.net/info/ntfs.html --><HTML 
+lang=en><HEAD><TITLE>NTFS FAQ (en)</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<META content="Linux NTFS Project" name=description>
+<META content="Linux NTFS FAQ HOWTO" name=keywords><LINK 
+href="NTFS FAQ (en)_files/info.css" type=text/css rel=stylesheet><LINK 
+href="../style/ntfsicon.png" type=image/png rel=icon>
+<META content="MSHTML 6.00.2800.1400" name=GENERATOR></HEAD>
+<BODY class=ntfsdoc><A name=top></A>
+<H2>NTFS FAQ (Frequently Asked Questions)</H2>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html"><IMG height=20 
+alt=English src="NTFS FAQ (en)_files/uk.png" width=30 border=0></A> <A 
+href="http://linux-ntfs.sourceforge.net/info/ntfs-it.html"><IMG height=20 
+alt=Italian src="NTFS FAQ (en)_files/italy.png" width=30 border=0></A> <A 
+href="http://linux-ntfs.sourceforge.net/info/ntfs-ja.html"><IMG height=20 
+alt=Japanese src="NTFS FAQ (en)_files/japan.png" width=30 border=0></A> <A 
+href="http://linux-ntfs.sourceforge.net/info/ntfs-vi.html"><IMG height=20 
+alt=Vietnamese src="NTFS FAQ (en)_files/vietnam.png" width=30 border=0></A> <A 
+href="http://linux-ntfs.sourceforge.net/info/ntfs-de.html"><IMG height=20 
+alt=German src="NTFS FAQ (en)_files/germany.png" width=30 border=0></A> <A 
+href="http://linux-ntfs.sourceforge.net/info/ntfs-zh.html"><IMG height=20 
+alt=Chinese src="NTFS FAQ (en)_files/china.png" width=30 border=0></A> <A 
+href="http://linux-ntfs.sourceforge.net/info/ntfs-fr.html"><IMG height=20 
+alt=French src="NTFS FAQ (en)_files/france.png" width=30 border=0></A> <!--
+    <a href="ntfs-es.html"><img width="30" height="20" border="0" alt="Spanish" src="../style/spain.png"></a>
+    --></P>
+<P>This FAQ is part of the <A href="http://linux-ntfs.sourceforge.net/">Linux 
+NTFS Project</A>.<BR>The latest version can be found online at<BR><A 
+href="http://linux-ntfs.sourceforge.net/info/ntfs.html">http://linux-ntfs.sourceforge.net/info/ntfs.html</A><BR></P>
+<P>If you have an NTFS question that isn't answered in this FAQ, or you have 
+comments about the FAQ, please email me: <IMG alt=email 
+src="NTFS FAQ (en)_files/emailntfs.png"> </P>
+<H2>Contents</H2>
+<H3>Key</H3>
+<P style="MARGIN-BOTTOM: 0px; MARGIN-LEFT: 2em"><IMG height=16 alt=** 
+src="NTFS FAQ (en)_files/blue.png" width=16>&nbsp;-&nbsp;Most frequently asked 
+questions<BR><IMG height=16 alt=!! src="NTFS FAQ (en)_files/green.png" 
+width=16>&nbsp;-&nbsp;Other interesting bits<BR><IMG height=16 alt=NB 
+src="NTFS FAQ (en)_files/red.png" width=16>&nbsp;-&nbsp;Note carefully </P>
+<DIV 
+style="BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; MARGIN-LEFT: 2em; BORDER-LEFT: black 1px solid; COLOR: #000; BORDER-BOTTOM: black 1px solid; BACKGROUND-COLOR: #ddd; max-width: 250px">&nbsp;<B>Commands</B> 
+or output</DIV>
+<H3>1. <A class=heading 
+href="http://linux-ntfs.sourceforge.net/info/ntfs.html#1.0">General NTFS 
+Questions</A></H3>
+<TABLE cellSpacing=0 summary="" border=0>
+  <TBODY>
+  <TR>
+    <TD width=16>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#1.1">1.1 
+      What is NTFS?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#1.2">1.2 Is 
+      NTFS better than FAT/FAT32?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#1.3">1.3 Do 
+      I have to use NTFS? (Or upgrade?)</A></TD></TR>
+  <TR>
+    <TD><IMG height=16 alt=!! src="NTFS FAQ (en)_files/green.png" width=16></TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#1.4">1.4 Is 
+      NTFS the same in every version of Windows?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#1.5">1.5 
+      What are NTFS's limits?</A></TD></TR></TBODY></TABLE>
+<H3>2. <A class=heading 
+href="http://linux-ntfs.sourceforge.net/info/ntfs.html#2.0">NTFS 
+Volumes</A></H3>
+<TABLE cellSpacing=0 summary="" border=0>
+  <TBODY>
+  <TR>
+    <TD width=16>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#2.1">2.1 How 
+      do I read an NTFS Volume from Windows 95/98/ME or DOS?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#2.2">2.2 How 
+      do I convert a FAT Volume to a NTFS Volume?</A></TD></TR>
+  <TR>
+    <TD><IMG height=16 alt=!! src="NTFS FAQ (en)_files/green.png" width=16></TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#2.3">2.3 How 
+      do I convert an NTFS Volume to a FAT Volume?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#2.4">2.4 How 
+      do I delete an NTFS Volume?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#2.5">2.5 How 
+      do I defragment an NTFS Volume?</A></TD></TR>
+  <TR>
+    <TD><IMG height=16 alt=** src="NTFS FAQ (en)_files/blue.png" width=16></TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#2.6">2.6 How 
+      do I resize an NTFS Volume?</A></TD></TR></TBODY></TABLE>
+<H3>3. <A class=heading 
+href="http://linux-ntfs.sourceforge.net/info/ntfs.html#3.0">Linux and 
+NTFS</A></H3>
+<TABLE cellSpacing=0 summary="" border=0>
+  <TBODY>
+  <TR>
+    <TD><IMG height=16 alt=!! src="NTFS FAQ (en)_files/green.png" width=16></TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#3.1">3.1 
+      Which versions of NTFS can Linux read?</A></TD></TR>
+  <TR>
+    <TD><IMG height=16 alt=** src="NTFS FAQ (en)_files/blue.png" width=16></TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#3.2">3.2 Can 
+      the Driver write to an NTFS volume, too?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#3.3">3.3 
+      What features of NTFS does Linux support?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#3.4">3.4 
+      What should I do if something goes wrong?</A></TD></TR>
+  <TR>
+    <TD><IMG height=16 alt=** src="NTFS FAQ (en)_files/blue.png" width=16></TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#3.5">3.5 How 
+      do I add NTFS support to Linux?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#3.6">3.6 
+      Which version is best?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#3.7">3.7 
+      What other tools are there?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#3.8">3.8 How 
+      was the Linux NTFS Driver written?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#3.9">3.9 Who 
+      do we thank?</A></TD></TR></TBODY></TABLE>
+<H3>4. <A class=heading 
+href="http://linux-ntfs.sourceforge.net/info/ntfs.html#4.0">Mounting NTFS 
+Volumes</A></H3>
+<TABLE cellSpacing=0 summary="" border=0>
+  <TBODY>
+  <TR>
+    <TD width=16>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#4.1">4.1 Can 
+      I mount an NTFS Volume?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#4.2">4.2 How 
+      safe is the NTFS Driver?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#4.3">4.3 
+      Which partition should I use?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#4.4">4.4 
+      Which version of the NTFS Driver do I have?</A></TD></TR>
+  <TR>
+    <TD><IMG height=16 alt=!! src="NTFS FAQ (en)_files/green.png" width=16></TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#4.5">4.5 How 
+      do I mount an NTFS Volume?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#4.6">4.6 
+      Common mount options.</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#4.7">4.7 
+      Mount options for the Original Driver.</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#4.8">4.8 
+      Mount options for the New Driver.</A></TD></TR>
+  <TR>
+    <TD><IMG height=16 alt=** src="NTFS FAQ (en)_files/blue.png" width=16></TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#4.9">4.9 How 
+      do I change the permissions of a mounted NTFS Volume?</A></TD></TR>
+  <TR>
+    <TD><IMG height=16 alt=!! src="NTFS FAQ (en)_files/green.png" width=16></TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#4.10">4.10 
+      How do I mount an NTFS Volume automatically?</A></TD></TR></TBODY></TABLE>
+<H3>5. <A class=heading 
+href="http://linux-ntfs.sourceforge.net/info/ntfs.html#5.0">Booting Operating 
+Systems on NTFS</A></H3>
+<TABLE cellSpacing=0 summary="" border=0>
+  <TBODY>
+  <TR>
+    <TD width=16>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#5.1">5.1 Can 
+      I boot Windows on an NTFS volume?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#5.2">5.2 How 
+      do I use lilo?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#5.3">5.3 How 
+      do I use grub?</A></TD></TR></TBODY></TABLE>
+<H3>6. <A class=heading 
+href="http://linux-ntfs.sourceforge.net/info/ntfs.html#6.0">Linux 
+Distributions</A></H3>
+<TABLE cellSpacing=0 summary="" border=0>
+  <TBODY>
+  <TR>
+    <TD width=16>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#6.1">6.1 
+      Which distributions support NTFS out of the box?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#6.2">6.2 Why 
+      don't RedHat support NTFS?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#6.3">6.3 Why 
+      does RedHat Linux lock up when accessing an NTFS Volume?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#6.4">6.4 Do 
+      any distributions install onto NTFS?</A></TD></TR></TBODY></TABLE>
+<H3>7. <A class=heading 
+href="http://linux-ntfs.sourceforge.net/info/ntfs.html#7.0">The New Linux NTFS 
+Driver</A></H3>
+<TABLE cellSpacing=0 summary="" border=0>
+  <TBODY>
+  <TR>
+    <TD width=16>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#7.1">7.1 
+      What is the new NTFS Driver?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#7.2">7.2 Do 
+      I have to use it?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#7.3">7.3 How 
+      do I use the new Driver?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#7.4">7.4 
+      What is a patch?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#7.5">7.5 
+      What if I still don't understand?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#7.6">7.6 
+      When will the new code be in the Linux Kernel?</A></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#7.7">7.7 
+      Can't we write a wrapper for Windows' driver?</A></TD></TR></TBODY></TABLE>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P>
+<HR>
+<!-- ............................................................. --><A 
+name=1.0></A>
+<H2>1. General NTFS Questions</H2><A name=1.1></A>
+<H3>1.1 What is NTFS?</H3>
+<P>NTFS is an abbreviation for New Technology Filesystem. <Q>NT</Q> because it 
+was originally used in Windows NT and a filesystem is just how the computer 
+stores files on disk. Different operating system, stores files in different 
+ways. </P>
+<P>NTFS is used by Windows NT, 2000 and XP. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=1.2></A>
+<H3>1.2 Is NTFS better than FAT/FAT32?</H3>
+<P>In brief, yes. It's far more robust, it supports Unicode filenames, proper 
+security, compression and encryption. Its main fault is that it can only be read 
+from Windows NT, 2000 or XP, i.e. you can't use a DOS boot disk and then read 
+your data. </P>
+<P>As always there are exceptions to this rule. Linux has has a driver for NTFS 
+since December 1997. Also there's a program to give DOS NTFS support (see <A 
+href="http://linux-ntfs.sourceforge.net/info/ntfs.html#2.1">Section 2.1</A> for 
+more details). </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=1.3></A>
+<H3>1.3 Do I have to use NTFS? (Or upgrade?)</H3>
+<P>No, you don't have to, though for most people it is a good idea. You probably 
+won't even notice the difference. The only catch, is that you cannot convert 
+back to FAT (see <A 
+href="http://linux-ntfs.sourceforge.net/info/ntfs.html#2.3">Section 2.3</A> for 
+more details). </P>
+<P><IMG height=16 alt=NB src="NTFS FAQ (en)_files/red.png" width=16> You can 
+install Windows NT on a FAT16 filesystem and Windows 2000 or XP on a FAT32 
+filesystem. Then you can upgrade to NTFS later. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=1.4></A>
+<H3>1.4 Is NTFS the same in every version of Windows?</H3>
+<P>No. They will look similar, but newer versions have extra features. For 
+example, Windows 2000 has quotas. </P>
+<TABLE class=highlight cellSpacing=0 summary="NTFS/Windows versions" border=1>
+  <TBODY>
+  <TR>
+    <TH>NTFS</TH>
+    <TH>Windows Version</TH></TR>
+  <TR>
+    <TD>v1.2</TD>
+    <TD>NT 3.51, NT 4</TD></TR>
+  <TR>
+    <TD>v3.0</TD>
+    <TD>2000</TD></TR>
+  <TR>
+    <TD>v3.1</TD>
+    <TD>XP</TD></TR></TBODY></TABLE>
+<P>Version 1.2 is sometimes known as 4.0.<BR>Versions 3.0 and 3.1 are sometimes 
+referred to as 5.0 and 5.1. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=1.5></A>
+<H3>1.5 What are NTFS's limits?</H3>
+<P>BIG. NTFS supports files up to 2<SUP>63</SUP> bytes in size. NTFS Volumes can 
+be up to 2<SUP>63</SUP> clusters and each cluster can be up to 64KiB long. This 
+gives NTFS an upper limit of approximately 500 trillion gigabytes. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P>
+<HR>
+<!-- ............................................................. --><A 
+name=2.0></A>
+<H2>2. NTFS Volumes</H2><A name=2.1></A>
+<H3>2.1 How do I read an NTFS Volume from Windows 95/98/ME or DOS?</H3>
+<P>Unfortunately, you can't. These versions of Windows can only understand FAT. 
+NTFS can only be read by Windows NT, 2000 and XP. </P>
+<P>However, with a little work, you can use a couple of utilities from <A 
+href="http://www.sysinternals.com/" 
+target=_blank>http://www.sysinternals.com/</A> "NTFS for Windows 98" and 
+"NTFSDOS" allow you to read NTFS from Windows 95, 98 and DOS. If you are 
+prepared to pay, they even have versions that will write to NTFS (N.B. It is 
+very expensive). </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=2.2></A>
+<H3>2.2 How do I convert a FAT Volume to a NTFS Volume?</H3>
+<P>Open a command window and type (replacing <Q>x:</Q> with the correct volume): 
+</P><PRE class=command>    <B>convert x: /fs:ntfs</B>
+    </PRE>
+<P>If the volume is in use, the conversion will happen when you next reboot. 
+</P>
+<P><IMG height=16 alt=NB src="NTFS FAQ (en)_files/red.png" width=16> The command 
+is not easily reversed. See the next FAQ. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=2.3></A>
+<H3>2.3 How do I convert an NTFS Volume to a FAT Volume?</H3>
+<P>The simple answer is, "You can't". There is an exception if you have money. 
+Partition Magic, available from <A href="http://www.powerquest.com/" 
+target=_blank>http://www.powerquest.com/</A> can convert between several 
+filesystems, including NTFS and FAT. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=2.4></A>
+<H3>2.4 How do I delete an NTFS Volume?</H3>
+<P>This depends on which Operating System you are using. </P>
+<P>DOS, Windows 95/98/ME: fdisk. Use a boot disk, or ask Windows to go to DOS 
+mode. Then run fdisk. If you have more than one disk, first select that. Then 
+you want to delete a non-DOS partition. Be very careful, your changes will be 
+committed immediately. </P>
+<P>Windows NT: Computer management. </P>
+<P>Windows 2000, XP: Logical Disk Manager. Start at the Control Panel, select 
+Administrative Tools, then Computer Management. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=2.5></A>
+<H3>2.5 How do I defragment an NTFS Volume?</H3>
+<P>After a volume has been in use for a while, after many writes to the disk, 
+the files can end up fragmented. That is not in one consecutive place on the 
+disk, but in many small pieces. This causes a slowdown when trying to access 
+these files. </P>
+<P>Windows 2000 and XP have a defragmenting program built in. For users of 
+Windows NT, there is a free program to do the same job. <Q>Diskeeper Lite</Q> 
+can be downloaded from: <A href="http://diskeeper.com/" 
+target=_blank>http://diskeeper.com/</A> </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=2.6></A>
+<H3>2.6 How do I resize an NTFS Volume?</H3>
+<P>Until recently the only way to resize and NTFS Volume without data loss, was 
+to pay lots of money. Now we have our own program, <B>ntfsresize</B>. It has 
+been tested, but for now it should be considered experimental. For more 
+information, please read the <A 
+href="http://linux-ntfs.sourceforge.net/info/ntfsresize.html">ntfsresize 
+FAQ</A>. </P>
+<P>One non-free program that can resize NTFS is <Q>Partition Magic</Q> from: <A 
+href="http://powerquest.com/" target=_blank>http://powerquest.com/</A> </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P>
+<HR>
+<!-- ............................................................. --><A 
+name=3.0></A>
+<H2>3. Linux and NTFS</H2><A name=3.1></A>
+<H3>3.1 Which versions of NTFS can Linux read?</H3>
+<P>The Linux Driver can read all the <A 
+href="http://linux-ntfs.sourceforge.net/info/ntfs.html#1.4">versions of 
+NTFS</A>. Each version is slightly different, but the driver only has to 
+interpret the files and directories. All the indexes that NTFS maintains can be 
+safely ignored. </P>
+<P>When the driver becomes able to write to an NTFS Volume, then it may be that 
+the abilities will vary according to the version of NTFS it is writing to. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=3.2></A>
+<H3>3.2 Can the Driver write to an NTFS volume, too?</H3>
+<P>Not really, but if you only need to copy files from Linux to Windows on a 
+dual-boot machine, see "<A 
+href="http://linux-ntfs.sourceforge.net/info/ntfs.html#3.2workaround">How to 
+write to NTFS</A>" below for a possible way to work around the lack of write 
+support. For write support in Linux, read on. </P>
+<P>There are two drivers, currently. The original driver, in 2.4 has some write 
+code in it, but it is <B>extremely dangerous</B> to use it. The possibility of 
+destroying your filesystem is very high. </P>
+<P>The new driver, introduced in 2.5.11, has some write code, but it's very 
+limited. The driver can overwrite existing files, but it cannot change the 
+length, add new or delete existing files. </P>
+<P>Adding write support will take a <B>long time</B>. NTFS is built like a 
+database. Any changes you make, necessitate making changes in many places, for 
+consistancy. Make a mistake and the filesystem will be damaged, make too many 
+mistakes and the filesystem will be destroyed. Also, the current developers are 
+only working on NTFS as a hobby, during their free time. If you'd like to help, 
+please email me: <IMG alt=email src="NTFS FAQ (en)_files/emailntfs.png"> </P><A 
+name=3.2workaround></A>
+<P><STRONG>How to write to NTFS.</STRONG> If you are using a dual-boot machine 
+and just need NTFS write support to transfer files from Linux to Windows, you 
+can instead use a Windows driver for ext2/ext3 and, while running Windows, read 
+the files from the Linux partition instead. This way, using two read-only 
+drivers, you can still copy files from one file system type to the other. </P>
+<P>We know about these open source Windows drivers for ext2 and ext3 Linux 
+filesystems, as of June 4th, 2003: </P>
+<UL type=square>
+  <LI><STRONG>explore2fs</STRONG> 
+  <UL>
+    <LI>Home page: <A 
+    href="http://uranus.it.swin.edu.au/~jn/linux/explore2fs.htm">http://uranus.it.swin.edu.au/~jn/linux/explore2fs.htm</A> 
+
+    <LI>For Windows NT, Windows 2000 and Windows XP. </LI></UL>
+  <LI><STRONG>ext2fsd</STRONG> 
+  <UL>
+    <LI>Home page: <A 
+    href="http://www.tuningsoft.com/projects/projects.htm">http://www.tuningsoft.com/projects/projects.htm</A> 
+
+    <LI>For Windows NT, Windows 2000 and Windows XP. </LI></UL>
+  <LI><STRONG>winext2fsd</STRONG> 
+  <UL>
+    <LI>Home page: <A 
+    href="http://sourceforge.net/projects/winext2fsd/">winext2fsd project 
+    page</A> 
+    <LI><A 
+    href="http://sourceforge.net/forum/forum.php?thread_id=787262&amp;forum_id=220066">Reportedly</A> 
+    works on Windows NT and Windows XP, likely also on Windows 2000. </LI></UL>
+  <LI><STRONG>ext2forxp</STRONG> 
+  <UL>
+    <LI>Home page: <A 
+    href="http://sourceforge.net/projects/ext2forxp/">http://sourceforge.net/projects/ext2forxp/</A> 
+
+    <LI>In early stages, not ready for use yet (June 4th, 2003). </LI></UL>
+  <LI><STRONG>vmware</STRONG> 
+  <UL>
+    <LI>Home page: <A href="http://www.vmware.com/">http://www.vmware.com/</A> 
+    <LI>VMWare allows you to run entire operating systems with other operating 
+    systems. 
+    <LI>So, you could run Windows inside Linux and get it to write to NTFS 
+    partitions natively. 
+    <LI>As safe as the Windows you're running, but it is expensive. 
+</LI></UL></LI></UL>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=3.3></A>
+<H3>3.3 What features of NTFS does Linux support?</H3>
+<P>NTFS supports a wide range of features, but few are honoured by the Linux 
+NTFS Driver. </P>
+<P>The Linux NTFS Driver supports: Unicode filenames (converted into a local 
+codepage, or utf8); compressed files; sparse files. </P>
+<P>However, the driver cannot read encrypted files, it ignores Windows' security 
+information and ignores quotas set by Windows. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=3.4></A>
+<H3>3.4 What should I do if something goes wrong?</H3>
+<P>The driver is <A 
+href="http://linux-ntfs.sourceforge.net/info/ntfs.html#4.2">pretty safe</A> 
+read-only, but it's impossible to test every eventuality. If something goes 
+wrong, please help us to find the problem and fix it. </P>
+<P>Please email the development team at <A 
+href="mailto:linux-ntfs-dev@lists.sourceforge.net">linux-ntfs-dev@lists.sourceforge.net</A> 
+and tell us which <A 
+href="http://linux-ntfs.sourceforge.net/info/ntfs.html#4.4">version of the 
+driver</A> you are using, which Linux version (uname -a) and which version of 
+NTFS (Win NT, 2K or XP). </P>
+<P>Additionally, if there are any logs (/var/log/messages) that you think may be 
+useful, please include them. </P>
+<P>Thanks. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=3.5></A>
+<H3>3.5 How do I add NTFS support to Linux?</H3>
+<P>Most users won't have to compile anything to enable NTFS support. Almost 
+every Linux distribution (with the notable exception of RedHat) comes with NTFS 
+support out of the box. </P>
+<P>If you are using RedHat 9 (Shrike), 8.0 (Psyche) or 7.3 (Valhalla), then you 
+can simply <A href="http://linux-ntfs.sourceforge.net/rpm/index.html">install an 
+rpm</A> for NTFS support. The rpm comes will detailed instructions. </P>
+<P>If you have an older version of RedHat, or another distribution which doesn't 
+include NTFS support, then you will have to compile the kernel yourself. This 
+isn't as difficult as it sounds. Have a look at the <A 
+href="http://linux-ntfs.sourceforge.net/info/compile.html">Compile Page</A> for 
+more details. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=3.6></A>
+<H3>3.6 Which version is best?</H3>
+<P>The new version of the driver is better. It is better written, much faster, 
+has fewer bugs and is SMP-safe. The new driver is available in 2.5.11 onwards 
+and a <A href="http://linux-ntfs.sourceforge.net/downloads.html">patch is 
+available</A> to add the new driver to 2.4 kernels. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=3.7></A>
+<H3>3.7 What other tools are there?</H3>
+<P>At the moment, there are only a few tools and they are aimed at developers. 
+We keep a <A href="http://linux-ntfs.sourceforge.net/status.html">status 
+list</A> of all our tools. </P>
+<P>Naturally the priorities lie in getting NTFS write support coded. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=3.8></A>
+<H3>3.8 How was the Linux NTFS Driver written?</H3>
+<P>Microsoft haven't released any documention about the internals of NTFS, so we 
+had to reverse engineer the filesystem from scratch. The method was roughly: 
+</P>
+<OL>
+  <LI>Look at the volume with a hex editor 
+  <LI>Perform some operation, e.g. create a file 
+  <LI>Use the hex editor to look for changes 
+  <LI>Classify and document the changes 
+  <LI>Repeat steps 1-4 forever </LI></OL>
+<P>If this sounds like a lot of work, then you probably understand how hard the 
+task has been. We now understand pretty much everything about NTFS and we have 
+documented it for the benefit of others: <A 
+href="http://linux-ntfs.sourceforge.net/ntfs/index.html">http://linux-ntfs.sourceforge.net/ntfs/index.html</A> 
+</P>
+<P>Actually writing the driver was far simpler than gathering the information. 
+</P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=3.9></A>
+<H3>3.9 Who do we thank?</H3>
+<P>First we have to thank Martin von Löwis. He created the original NTFS driver 
+back in 1995. It was added to the Linux Kernel in December 1997 (2.1.74). He has 
+been helped by the following kind souls: </P>
+<P class=quote>Albert&nbsp;Cahalan, Anton&nbsp;Altaparmakov, Damon&nbsp;Casale, 
+David&nbsp;Dillard, Domagoj&nbsp;Pensa, Joseph&nbsp;Malicki, Matthew&nbsp;Fanto, 
+Olof&nbsp;Wolgast, Rani&nbsp;Assaf, Régis&nbsp;Duchesne, Richard&nbsp;Russon, 
+Steve&nbsp;Dodd, Werner&nbsp;Seiler. </P>
+<P>Next we have to thank Anton&nbsp;Altaparmakov, it was his enthusiasm which 
+kept the project alive. At a time when the project was effectively unmaintained, 
+he took over and stabilised the code. He went on to rewrite the driver from 
+scratch in order to have a clean base to progress with write support. He has 
+been helped by: </P>
+<P class=quote>Pawel&nbsp;Kot, Richard&nbsp;Russon. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P>
+<HR>
+<!-- ............................................................. --><A 
+name=4.0></A>
+<H2>4. Mounting NTFS Volumes</H2><A name=4.1></A>
+<H3>4.1 Can I mount an NTFS Volume?</H3>
+<P>Of course. The Driver can read all versions of NTFS, but it is read-only. 
+</P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=4.2></A>
+<H3>4.2 How safe is the NTFS Driver?</H3>
+<P>When used read-only, both the Original and New Drivers are safe for general 
+use. They <B>will not</B> make any changes to your filesystem, so they cannot 
+cause any damage. </P>
+<P>Additionally, the New Driver is SMP-safe. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=4.3></A>
+<H3>4.3 Which partition should I use?</H3>
+<P>In Linux disks are named hda, hdb for the first two disk on the first IDE 
+controller and hdc, hdd for the third and fourth disks. SCSI disks are named 
+sda, sdb, etc, in the order they are discovered. </P>
+<P>A simple way to look for NTFS Volumes is using: </P><PRE class=command>    <B>fdisk -l</B>
+    </PRE>
+<P>The output might look like: </P><PRE class=command>    Disk /dev/hda: 64 heads, 63 sectors, 4465 cylinders
+    Units = cylinders of 4032 * 512 bytes
+
+       Device Boot    Start       End    Blocks   Id  System
+       /dev/hda1             1      2125   4283968+  07  NTFS/HPFS
+       /dev/hda2          2126     19851  35735616   0f  Win95 Ext'd (LBA)
+       /dev/hda5   *      2126      4209   4201312+  83  Linux
+       /dev/hda6          4210      4465    516064+  82  Linux swap
+    </PRE>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=4.4></A>
+<H3>4.4 Which version of the NTFS Driver do I have?</H3>
+<P>If your kernel version is 2.4.*, or 2.5.0 - 2.5.10, then you probably have 
+the Original NTFS Driver. If you have 2.5.11 or later, then you have got the New 
+NTFS Driver. </P>
+<P>A better test is to look through the kernel logs for the NTFS log message. 
+Try <B>either</B> of these commands (you may need to be root to read the logs). 
+</P><PRE class=command>    <B>dmesg | grep -i ntfs</B>
+    <B>grep -i ntfs /var/log/messages</B>
+    </PRE>
+<P>The Original Driver is version 1.1.*, whereas the New Driver is version 2.*. 
+</P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=4.5></A>
+<H3>4.5 How do I mount an NTFS Volume?</H3>
+<P>First of all, it might be an idea to check that your kernel understands NTFS. 
+The command below will give a list of all the filesystems that Linux 
+understands. If you see <Q>ntfs</Q>, then you are OK. Also it might be a good 
+idea to read the mount manual, <Q>man 8 mount</Q>. </P><PRE class=command>    <B>cat /proc/filesystems</B>
+    </PRE>
+<P>Next you need to create a place to mount the NTFS Volume. Then you can mount 
+it. </P><PRE class=command>    <B>mkdir /mnt/windows</B>
+    <B>mount /dev/hda1 /mnt/windows -t ntfs -r</B>
+    </PRE>
+<P><IMG height=16 alt=NB src="NTFS FAQ (en)_files/red.png" width=16> To alter 
+the permissions of the mounted filesystem, see the <Q>umask</Q> option in <A 
+href="http://linux-ntfs.sourceforge.net/info/ntfs.html#4.6">Section 4.6</A>. If 
+you would like to have the volume mounted automatically at boot time, see <A 
+href="http://linux-ntfs.sourceforge.net/info/ntfs.html#4.10">Section 4.10</A>. 
+</P>
+<P>When you have finished, you can unmount the partition with <B>either of</B>: 
+</P><PRE class=command>    <B>umount /mnt/windows</B>
+    <B>umount /dev/hda1</B>
+    </PRE>
+<P><IMG height=16 alt=NB src="NTFS FAQ (en)_files/red.png" width=16> The command 
+is called <Q>umount</Q> (only one 'n'). </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=4.6></A>
+<H3>4.6 Common mount options.</H3>
+<P>These mount options are common to both drivers. It's recommended to also read 
+the man page for mount. The general form of mount is: </P><PRE class=command>    mount device directory [options]
+    </PRE>
+<P>Additional options of the for <Q>-o option</Q> can be given individually, or 
+as one parameter separated with commas. These two commands are equivalent: </P><PRE class=command>    <B>mount /dev/hda1 /mnt/windows -o X -o Y -o Z</B>
+    <B>mount /dev/hda1 /mnt/windows -o X,Y,Z</B>
+    </PRE>
+<DL>
+  <DT>-t ntfs 
+  <DD>Tell mount the type of the filesystem it will mount. This option isn't 
+  necessary, since mount knows how to identify most filesystem types. 
+  <DT>-r 
+  <DD>Mount the volume, read-only. By default, mount will attempt to mount the 
+  volume read-write. Unless forced, the driver will automatically mount the 
+  filesystem read-only. 
+  <DT>-o ro 
+  <DD>This is the same as <Q>-r</Q>. 
+  <DT>-o umask={VALUE} 
+  <DD>The default permissions given to a mounted NTFS Volume are rwx------ (this 
+  is for security reasons). The <B>umask</B> parameter controls the permissions 
+  of files and directories. For more details and examples, see <A 
+  href="http://linux-ntfs.sourceforge.net/info/ntfs.html#4.9">Section 4.9</A>. 
+  <DD class=wide><PRE class=command>    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o umask=0222</B>
+    </PRE>
+  <DT>-o uid={USERID} 
+  <DD>By default all the files on a mounted NTFS Volume will be owned by root. 
+  If you supply a <B>uid</B> parameter you can set the owner of the files. The 
+  userid can be any name from /etc/passwd, or any number representing a user id. 
+
+  <DD class=wide><PRE class=command>    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o uid=flatcap</B>
+    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o uid=500</B>
+    </PRE>
+  <DT>-o gid={GROUPID} 
+  <DD>By default all the files on a mounted NTFS Volume will have a group owner 
+  of root. If you supply a <B>gid</B> parameter you can set the group of the 
+  files. The groupid can be any name from /etc/group, or any number representing 
+  a group id. 
+  <DD class=wide><PRE class=command>    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o gid=winusers</B>
+    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o gid=520</B>
+    </PRE></DD></DL>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=4.7></A>
+<H3>4.7 Mount options for the Original Driver.</H3>
+<P>To find out which driver you are using, see <A 
+href="http://linux-ntfs.sourceforge.net/info/ntfs.html#4.4">Section 4.4</A>. 
+This section discusses the options for the Original Driver only. All the common 
+mount options are discussed in <A 
+href="http://linux-ntfs.sourceforge.net/info/ntfs.html#4.6">Section 4.6</A>. 
+</P>
+<P>Several options take a <Q>true</Q> or <Q>false</Q> parameter.<BR>You may 
+replace <Q>true</Q> with <Q>yes</Q> or <Q>1</Q>.<BR>You may replace <Q>false</Q> 
+with <Q>no</Q> or <Q>0</Q>. </P>
+<DL>
+  <DT>-o iocharset={NAME} 
+  <DD>
+  <P>NTFS stores all file and directory names in Unicode which can represent any 
+  character from any language. By default the Linux NTFS driver converts the 
+  names to ASCII which is OK for some people, but no good if your languages 
+  includes letters like å or é. </P>
+  <P>NLS (Native Language Support) controls how characters are displayed. You 
+  can choose either <B>utf8</B> which, like Unicode, can represent all 
+  characters, or your own codepage, e.g. iso8859-1 (Western Europe), iso8859-2 
+  (Central Europe), gb2312 (Simplified Chinese), iso8859-8 (Hebrew). Below are 
+  some example mount commands: </P>
+  <DD class=wide><PRE class=command>    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o iocharset=utf8</B>
+    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o iocharset=iso8859-2</B>
+    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o iocharset=gb2312</B>
+    </PRE>
+  <DT>utf8=true 
+  <DD>
+  <P>If your kernel doesn't support utf8, then you can use this option to work 
+  with utf8 support from the NTFS Driver. You should use <Q>-o 
+  iocharset=utf8</Q> wherever possible. </P>
+  <DD class=wide><PRE class=command>    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o utf8=true</B>
+    </PRE>
+  <DT>-o posix={BOOL} 
+  <DD>
+  <P>Windows preserves the case of filenames, but it doesn't distinguish when 
+  you read. Therefore you can create a file called <Q>MyFileName</Q> and then 
+  open it by asking for <Q>mYfILEname</Q>. </P>
+  <P>By default Linux is case sensitive, <Q>MyFile</Q>, <Q>MyFile</Q> and 
+  <Q>myfile</Q> are all different files. If you would like Linux to behave like 
+  Windows, for an NTFS volume, set the <B>posix</B> option to <Q>true</Q>. 
+  Setting the option to <Q>false</Q> will make the driver behave like Linux (the 
+  default). </P>
+  <DD class=wide><PRE class=command>    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o posix=true</B>
+    </PRE>
+  <DT>-o show_sys_files={BOOL} 
+  <DD>
+  <P>If this option is set to true, then the filesystem metadata will be 
+  visible. If the aren't visible, they can still be explicitly listed by 
+  providing their name, e.g. <Q>ls -l \$MFT</Q>. </P>
+  <P><IMG height=16 alt=NB src="NTFS FAQ (en)_files/red.png" width=16> Because 
+  of a limitation of glibc, <Q>$MFT</Q> may not appear in listings because it is 
+  inode number zero. </P>
+  <DD class=wide><PRE class=command>    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o show_sys_files=true</B>
+    </PRE></DD></DL>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=4.8></A>
+<H3>4.8 Mount options for the New Driver.</H3>
+<P>To find out which driver you are using, see <A 
+href="http://linux-ntfs.sourceforge.net/info/ntfs.html#4.4">Section 4.4</A>. 
+This section discusses the options for the New Driver only. All the common mount 
+options are discussed in <A 
+href="http://linux-ntfs.sourceforge.net/info/ntfs.html#4.6">Section 4.6</A>. 
+</P>
+<P>Several options take a <Q>true</Q> or <Q>false</Q> parameter.<BR>You may 
+replace <Q>true</Q> with <Q>yes</Q> or <Q>1</Q>.<BR>You may replace <Q>false</Q> 
+with <Q>no</Q> or <Q>0</Q>. </P>
+<DL>
+  <DT>-o nls={NAME} 
+  <DD>
+  <P>NTFS stores all file and directory names in Unicode which can represent any 
+  character from any language. By default the Linux NTFS driver converts the 
+  names to ASCII which is OK for some people, but no good if your languages 
+  includes letters like å or é. </P>
+  <P>NLS (Native Language Support) controls how characters are displayed. You 
+  can choose either <B>utf8</B> which, like Unicode, can represent all 
+  characters, or your own codepage, e.g. iso8859-1 (Western Europe), iso8859-2 
+  (Central Europe), gb2312 (Simplified Chinese), iso8859-8 (Hebrew). Below are 
+  some example mount commands: </P>
+  <DD class=wide><PRE class=command>    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o nls=utf8</B>
+    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o nls=iso8859-2</B>
+    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o nls=gb2312</B>
+    </PRE>
+  <DT>-o fmask={VALUE} 
+  <DT>-o dmask={VALUE} 
+  <DD>
+  <P>The <Q>umask</Q> parameter alters the permissions of both files and 
+  directories (see <A 
+  href="http://linux-ntfs.sourceforge.net/info/ntfs.html#4.6">Section 4.6</A> 
+  for a reminder). <Q>fmask</Q> works on files and <Q>dmask</Q> works on 
+  directories in the same way. The effect of the options can be combined, too. 
+  Here are some examples: </P>
+  <DD class=wide><PRE class=command>    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o fmask=0222</B>
+    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o dmask=0222</B>
+    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o fmask=0077,dmask=0222</B>
+    </PRE>
+  <DT>-o case_sensitive={BOOL} 
+  <DD>
+  <P>Windows preserves the case of filenames, but it doesn't distinguish when 
+  you read. Therefore you can create a file called <Q>MyFileName</Q> and then 
+  open it by asking for <Q>mYfILEname</Q>. </P>
+  <P>By default Linux is case sensitive, <Q>MyFile</Q>, <Q>MyFile</Q> and 
+  <Q>myfile</Q> are all different files. If you would like Linux to behave like 
+  Windows, for an NTFS volume, set the <B>case_sensitive</B> option to 
+  <Q>false</Q>. Setting the option to <Q>true</Q> will make the driver behave 
+  like Linux (the default). </P>
+  <DD class=wide><PRE class=command>    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o case_sensitive=true</B>
+    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o case_sensitive=false</B>
+    </PRE>
+  <DT>-o sloppy={BOOL} 
+  <DD>
+  <P>By default, the driver will refuse to mount if any of the options are 
+  incorrect. By adding the <B>sloppy</B> parameter the driver will simply ignore 
+  bad parameters. </P>
+  <DD class=wide><PRE class=command>    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o sloppy=true</B>
+    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o sloppy=false</B>
+    </PRE>
+  <DT>-o errors={VALUE} 
+  <DD>
+  <P>This option controls how the driver copes with problems. The default is to 
+  try and <B>continue</B>. Any corruption will be marked and worked around. The 
+  alternative is to get the driver to try and <B>recover</B>. At present the 
+  only recovery the driver can do is to replace the boot sector with the backup. 
+  </P>
+  <DD class=wide><PRE class=command>    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o errors=continue</B>
+    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o errors=recover</B>
+    </PRE></DD></DL>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=4.9></A>
+<H3>4.9 How do I change the permissions of a mounted NTFS Volume?</H3>
+<P>There are three options to control the permissions and ownership of files and 
+directories. They are: <Q>umask</Q>, <Q>uid</Q> and <Q>gid</Q>. They are 
+mentioned in <A 
+href="http://linux-ntfs.sourceforge.net/info/ntfs.html#4.6">Common mount 
+options</A>. </P>
+<P>Below are some examples of each option and how it affects the files. We will 
+use the same mount command each time and just show the options. </P><PRE class=command>    <B>mount /dev/hda1 /mnt/windows -t ntfs -r</B>
+    </PRE>
+<P><Q>umask</Q> is a filter of permissions, so it works in the opposite way to 
+chmod. Full permissions are equivalent to 777 (rwxrwxrwx). A umask of 0222 
+(-w--w--w-) leaves 555 (r-xr-xr-x). </P>
+<P>The default umask is set to 0077, for security reasons. </P><PRE class=command>    <B>mount ... -o umask=0277</B>
+
+    -r-x------ 1 root    root    28096 Aug 24 1996 chkdsk.exe
+    </PRE><PRE class=command>    <B>mount ... -o umask=0222</B>
+
+    -r-xr-xr-x 1 root    root    28096 Aug 24 1996 chkdsk.exe
+    </PRE>
+<P>So far the files still have an owner and group of <Q>root</Q>. Next we try 
+the <Q>uid</Q> and <Q>gid</Q> options. </P><PRE class=command>    <B>mount ... -o uid=flatcap</B>
+
+    -r-x------ 1 flatcap root    28096 Aug 24 1996 chkdsk.exe
+    </PRE><PRE class=command>    <B>mount ... -o gid=winuser</B>
+
+    -r-x------ 1 root    winuser 28096 Aug 24 1996 chkdsk.exe
+    </PRE><PRE class=command>    <B>mount ... -o uid=flatcap,gid=winuser</B>
+
+    -r-x------ 1 flatcap winuser 28096 Aug 24 1996 chkdsk.exe
+    </PRE>
+<P>Finally we combine a few options for precise control. Below we allow the user 
+<Q>flatcap</Q> full control, the group of users <Q>winuser</Q> has read 
+permissions and other people have no access at all. </P><PRE class=command>    <B>mount ... -o umask=0027,uid=flatcap,gid=winuser</B>
+
+    -rwxr-x--- 1 flatcap winuser 28096 Aug 24 1996 chkdsk.exe
+    </PRE>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=4.10></A>
+<H3>4.10 How do I mount an NTFS Volumes automatically?</H3>
+<P>Once you are happy with your mount command, you can teach Linux how to mount 
+the volume automatically by adding a line to <Q>/etc/fstab</Q> 
+(<B>f</B>ile<B>s</B>ystem <B>tab</B>le). </P>
+<P>Below are some example mount commands and their equivalent fstab.<BR><IMG 
+height=16 alt=NB src="NTFS FAQ (en)_files/red.png" width=16> Don't worry about 
+the meaning of the <Q>0&nbsp;0</Q> on the end. </P><PRE class=command>    <B>mount /dev/hda1 /mnt/windows -t ntfs -r</B>
+
+    /dev/hda1 /mnt/windows ntfs ro                                    0 0
+    </PRE>
+<P>Here we've transformed <Q>-r</Q> into the equivalent <Q>-o ro</Q>. </P><PRE class=command>    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o umask=0222</B>
+
+    /dev/hda1 /mnt/windows ntfs ro,umask=0222                         0 0
+    </PRE><PRE class=command>    <B>mount /dev/hda1 /mnt/windows -t ntfs -r -o umask=0222,uid=flatcap,gid=winuser</B>
+
+    /dev/hda1 /mnt/windows ntfs ro,umask=0222,uid=flatcap,gid=winuser 0 0
+    </PRE>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P>
+<HR>
+<!-- ............................................................. --><A 
+name=5.0></A>
+<H2>5. Booting Operating Systems on NTFS</H2><A name=5.1></A>
+<H3>5.1 Can I boot Windows on an NTFS volume?</H3>
+<P>Yes, both grub and lilo can boot Windows from an NTFS Volume. What actually 
+happens, is that the Linux boot loader finds the NTFS boot loader and gives 
+control to it. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=5.2></A>
+<H3>5.2 How do I use lilo?</H3>
+<P>Add this entry to /etc/lilo.conf, then rerun lilo. </P><PRE class=command>    other = /dev/hda1
+        table = /dev/hda
+        label = Windows
+    </PRE>
+<P>The <Q>other</Q> points to the partition containing Windows and <Q>table</Q> 
+points to the partition table of the disk. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=5.3></A>
+<H3>5.3 How do I use grub?</H3>
+<P>Add this entry to /boot/grub/grub.conf </P><PRE class=command>    title Windows
+        root (hd0,0)
+        makeactive
+        chainloader +1
+    </PRE>
+<P>According to the grub disk numbering, /dev/hda is hd0, hdb is hd1, etc. The 
+partitions are numbered from zero. Therefore, hda1 is hd0,0, hdc4 is hd2,3. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P>
+<HR>
+<!-- ............................................................. --><A 
+name=6.0></A>
+<H2>6. Linux Distributions</H2><A name=6.1></A>
+<H3>6.1 Which distributions support NTFS out of the box?</H3>
+<P>The Linux Distributions that are known to support NTFS are: <A 
+href="http://www.mandrake.com/" target=_blank>Mandrake</A>, <A 
+href="http://www.debian.org/" target=_blank>Debian</A>, <A 
+href="http://www.suse.com/" target=_blank>SuSE</A>, <A 
+href="http://www.gentoo.org/" target=_blank>Gentoo</A>, <A 
+href="http://www.lindows.com/" target=_blank>Lindows</A> and <A 
+href="http://www.caldera.com/" target=_blank>Caldera</A> </P>
+<P>In fact, the pattern is, that if the name isn't RedHat, then they will 
+support NTFS. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=6.2></A>
+<H3>6.2 Why don't RedHat support NTFS?</H3>
+<P>I'd really like to know. The rumours are that it's a legal worry. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=6.3></A>
+<H3>6.3 Why does RedHat Linux lock up when accessing an NTFS Volume?</H3>
+<P>Check which kernel version you are using with the command <Q>uname -a</Q>. If 
+the version is 2.4.9 then it is important for you to update your kernel. See the 
+<A href="http://www.redhat.com/" target=_blank>RedHat Website</A> for more 
+details. </P>
+<P>If you'd prefer, you could compile your own kernel. See <A 
+href="http://linux-ntfs.sourceforge.net/info/ntfs.html#3.5">How do I add NTFS 
+support to Linux?</A> for more details. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=6.4></A>
+<H3>6.4 Do any distributions install onto NTFS?</H3>
+<P>Not quite. <A href="http://phatlinux.com/" target=_blank>Phat Linux</A> can 
+install onto a FAT partition within Windows, then boot from the files inside 
+Windows. The New Driver nearly has enough support for them to perform this trick 
+using NTFS. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P>
+<HR>
+<!-- ............................................................. --><A 
+name=7.0></A>
+<H2>7. The New Linux NTFS Driver</H2><A name=7.1></A>
+<H3>7.1 What is the new NTFS Driver?</H3>
+<P>It is a complete rewrite of the NTFS driver. The original driver was writen 
+over a period of many years. In the beginning we knew little about NTFS or Linux 
+and the source code became hard to maintain. </P>
+<P>We created a new driver, with our new knowledge, which is much simpler, 
+faster and easier to maintain. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=7.2></A>
+<H3>7.2 Do I have to use it?</H3>
+<P>No. There is already an NTFS driver in the current Linux kernel, so you don't 
+need to use the new driver. The original driver, though old, is reliable enough 
+for everyday use. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=7.3></A>
+<H3>7.3 How do I use the new Driver?</H3>
+<P>We release the <A href="http://linux-ntfs.sourceforge.net/downloads.html">new 
+driver as a patch</A> to the <A 
+href="http://www.kernel.org/pub/linux/kernel/v2.4/">official Linux kernel source 
+code</A>. </P>
+<P><A 
+href="http://linux-ntfs.sourceforge.net/downloads.html">http://linux-ntfs.sourceforge.net/downloads.html</A> 
+<BR><A href="http://www.kernel.org/pub/linux/kernel/v2.4/" 
+target=_blank>http://www.kernel.org/pub/linux/kernel/v2.4/</A> </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=7.4></A>
+<H3>7.4 What is a patch?</H3>
+<P>A patch is a set of changes for a set of text files. Since we are only 
+altering the NTFS code, it is inefficient to release all the kernel code every 
+time we make a small change. We make our patches against official Linux kernel 
+releases. </P>
+<P>Once you have unpacked the source, change directory into the source directory 
+and use the command (replacing the path and patchname as necessary): </P><PRE class=command>    <B>patch -p1 &lt; path/to/patchname</B>
+    </PRE>
+<P>This will modify the source code. There should be no rejects or failures. 
+Next build the kernel as normal. There are instructions for this elsewhere in 
+this FAQ. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=7.5></A>
+<H3>7.5 What if I still don't understand?</H3>
+<P>Sorry. We try to help everyone we can, but we have a limited amount of time. 
+There are a few sites that might help you understand the basics about Linux. 
+Alternatively, find out if there is a Linux User Group near you. </P>
+<UL>
+  <LI><A href="http://www.justlinux.com/" target=_blank>Just Linux</A> 
+  <LI><A href="http://tldp.org/" target=_blank>The Linux Documentation 
+  Project</A> 
+  <LI><A href="http://tldp.org/HOWTO/Kernel-HOWTO.html" target=_blank>The Linux 
+  Kernel HOWTO</A> 
+  <LI><A href="http://www.linux.org/groups/index.html" target=_blank>Linux User 
+  Groups</A> </LI></UL>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=7.6></A>
+<H3>7.6 When will the new code be in the Linux Kernel?</H3>
+<P>There are two kernels to consider. The new code is already in the development 
+Linux Kernel. It was introduced in 2.5.11. </P>
+<P>The stable Linux Kernel, currently 2.4.20, still has the old driver. We are 
+happy with the state of the code, but we still have to convince the Kernel Gods 
+that it's good. </P>
+<P>Until it is incorporated, we will make frequent releases in patch form. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P><A name=7.7></A>
+<H3>7.7 Can't we write a wrapper for Windows' driver?</H3>
+<P>It sounds like a great idea, to start with, but there are numerous problems. 
+</P>
+<P>The largest technical problem is joining the Windows system DLL to the Linux 
+VFS. It could be done, but it wouldn't be pretty. It would have to run as part 
+of the kernel which would mean that if it went wrong it could crash the machine. 
+With no source, we might not be able to work around the problem. </P>
+<P>The next major problem is compatability. Which version of the Windows system 
+file would we use? Picking one would limit its use, making the wrapper versatile 
+for all of them would be a programming nightmare. </P>
+<P>And it gets worse. The legal implications of distributing Windows systems 
+files would cause problems. Also the proprietary nature of the driver would mean 
+that the other kernel coders would not investigate any problems if someone had 
+used the NTFS wrapper. </P>
+<P>Anyway, there has been a brave man that done it. Jan Kratochvil's <A 
+href="http://www.jankratochvil.net/project/captive/">Captive</A> is such 
+Windows' driver wrapper. It is able to write NTFS files, but is known to have 
+bugs and is much slower then Linux NTFS driver. Captive is based on <A 
+href="http://www.reactos.com/">ReactOS</A> and uses <A 
+href="http://lufs.sourceforge.net/lufs/">LUFS</A> driver. Probably if amount of 
+work that was put into Captive development was spent on Linux NTFS driver, we'd 
+have reliable and fully open source driver with write support. </P>
+<P><A href="http://linux-ntfs.sourceforge.net/info/ntfs.html#top">Back to the 
+top</A></P>
+<TABLE cellSpacing=0 width="100%" summary="" border=0>
+  <TBODY>
+  <TR>
+    <TD class=copyright width="99%">Copyright © flatcap (Richard Russon)</TD>
+    <TD vAlign=bottom width=88><A href="http://sourceforge.net/"><IMG 
+      height=31 alt=SourceForge src="NTFS FAQ (en)_files/sflogo.png" width=88 
+      border=0></A></TD>
+    <TD vAlign=bottom width=88><A class=contact 
+      href="http://validator.w3.org/check?uri=http://linux-ntfs.sourceforge.net/info/ntfs.html"><IMG 
+      height=31 alt="Validate HTML" src="NTFS FAQ (en)_files/valid-html401.png" 
+      width=88 border=0></A></TD>
+    <TD vAlign=bottom width=88><A class=contact 
+      href="http://jigsaw.w3.org/css-validator/validator?uri=http://linux-ntfs.sourceforge.net/info/ntfs.html"><IMG 
+      height=31 alt="Validate CSS" src="NTFS FAQ (en)_files/valid-css.png" 
+      width=88 border=0></A></TD></TR></TBODY></TABLE></BODY></HTML>

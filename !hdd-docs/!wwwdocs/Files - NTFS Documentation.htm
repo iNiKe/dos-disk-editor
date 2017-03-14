@@ -1,0 +1,220 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0055)http://linux-ntfs.sourceforge.net/ntfs/files/index.html -->
+<!-- http://linux-ntfs.sourceforge.net/ntfs/files/index.html --><HTML 
+lang=en><HEAD><TITLE>Files - NTFS Documentation</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<META content="NTFS Documentation" name=description><LINK 
+href="Files - NTFS Documentation_files/ntfsdoc.css" type=text/css 
+rel=stylesheet><LINK href="../style/ntfsicon.png" type=image/png rel=icon><LINK 
+title="NTFS Documentation" href="../index.html" type=text/html rel=start><LINK 
+href="mft.html" rel=next><LINK href="usnjrnl.html" rel=previous><LINK 
+href="../index.html" rel=contents>
+<META content="MSHTML 6.00.2800.1400" name=GENERATOR></HEAD>
+<BODY>
+<TABLE class=toolbar cellSpacing=0 summary="" border=0>
+  <TBODY>
+  <TR>
+    <TD class=toolbar>
+      <DIV class=toolbar><A class=toolbar accessKey=1 
+      href="http://linux-ntfs.sourceforge.net/ntfs/index.html">Home</A></DIV></TD>
+    <TD class=toolbar>
+      <DIV class=toolbar><A class=toolbar accessKey=2 
+      href="http://linux-ntfs.sourceforge.net/ntfs/files/index.html">Files</A></DIV></TD>
+    <TD class=toolbar>
+      <DIV class=toolbar><A class=toolbar accessKey=3 
+      href="http://linux-ntfs.sourceforge.net/ntfs/attributes/index.html">Attributes</A></DIV></TD>
+    <TD class=toolbar>
+      <DIV class=toolbar><A class=toolbar accessKey=4 
+      href="http://linux-ntfs.sourceforge.net/ntfs/concepts/index.html">Concepts</A></DIV></TD>
+    <TD class=toolbar><A class=toolbar accessKey=5 
+      href="http://linux-ntfs.sourceforge.net/ntfs/help/glossary.html">Glossary</A></TD></TR></TBODY></TABLE>
+<H1>NTFS - Files</H1><A class=prevnext accessKey=, 
+href="http://linux-ntfs.sourceforge.net/ntfs/files/usnjrnl.html">Previous</A> <A 
+class=prevnext accessKey=. 
+href="http://linux-ntfs.sourceforge.net/ntfs/files/mft.html">Next</A> 
+<H2>Overview</H2>
+<P>Everything on an NTFS volume is a file. There are two categories: Metadata 
+and Normal. The Metadata files contain information about the volume and the 
+Normal files contain your data. </P>
+<H2>Layout of the Volume</H2>
+<P>Below is a table of files found on a Win2K volume <A 
+href="http://linux-ntfs.sourceforge.net/ntfs/help/table.html">(Key)</A>. </P>
+<TABLE cellSpacing=0 summary="" border=1>
+  <TBODY>
+  <TR>
+    <TH class=numeric>Inode</TH>
+    <TH>Filename</TH>
+    <TH>OS</TH>
+    <TH>Description</TH></TR>
+  <TR>
+    <TD class=numeric>0</TD>
+    <TD><A 
+      href="http://linux-ntfs.sourceforge.net/ntfs/files/mft.html">$MFT</A></TD>
+    <TD>&nbsp;</TD>
+    <TD>Master File Table - An index of every file</TD></TR>
+  <TR>
+    <TD class=numeric>1</TD>
+    <TD><A 
+      href="http://linux-ntfs.sourceforge.net/ntfs/files/mftmirr.html">$MFTMirr</A></TD>
+    <TD>&nbsp;</TD>
+    <TD>A backup copy of the first 4 records of the MFT</TD></TR>
+  <TR>
+    <TD class=numeric>2</TD>
+    <TD><A 
+      href="http://linux-ntfs.sourceforge.net/ntfs/files/logfile.html">$LogFile</A></TD>
+    <TD>&nbsp;</TD>
+    <TD>Transactional logging file</TD></TR>
+  <TR>
+    <TD class=numeric>3</TD>
+    <TD><A 
+      href="http://linux-ntfs.sourceforge.net/ntfs/files/volume.html">$Volume</A></TD>
+    <TD>&nbsp;</TD>
+    <TD>Serial number, creation time, dirty flag</TD></TR>
+  <TR>
+    <TD class=numeric>4</TD>
+    <TD><A 
+      href="http://linux-ntfs.sourceforge.net/ntfs/files/attrdef.html">$AttrDef</A></TD>
+    <TD>&nbsp;</TD>
+    <TD>Attribute definitions</TD></TR>
+  <TR>
+    <TD class=numeric>5</TD>
+    <TD><A 
+      href="http://linux-ntfs.sourceforge.net/ntfs/files/dot.html">.&nbsp;(dot)</A></TD>
+    <TD>&nbsp;</TD>
+    <TD>Root directory of the disk</TD></TR>
+  <TR>
+    <TD class=numeric>6</TD>
+    <TD><A 
+      href="http://linux-ntfs.sourceforge.net/ntfs/files/bitmap.html">$Bitmap</A></TD>
+    <TD>&nbsp;</TD>
+    <TD>Contains volume's cluster map (in-use vs. free)</TD></TR>
+  <TR>
+    <TD class=numeric>7</TD>
+    <TD><A 
+      href="http://linux-ntfs.sourceforge.net/ntfs/files/boot.html">$Boot</A></TD>
+    <TD>&nbsp;</TD>
+    <TD>Boot record of the volume</TD></TR>
+  <TR>
+    <TD class=numeric>8</TD>
+    <TD><A 
+      href="http://linux-ntfs.sourceforge.net/ntfs/files/badclus.html">$BadClus</A></TD>
+    <TD>&nbsp;</TD>
+    <TD>Lists bad clusters on the volume</TD></TR>
+  <TR>
+    <TD class=numeric>9</TD>
+    <TD><A 
+      href="http://linux-ntfs.sourceforge.net/ntfs/files/quota.html">$Quota</A></TD>
+    <TD>NT</TD>
+    <TD>Quota information</TD></TR>
+  <TR>
+    <TD class=numeric>9</TD>
+    <TD><A 
+      href="http://linux-ntfs.sourceforge.net/ntfs/files/secure.html">$Secure</A></TD>
+    <TD>2K</TD>
+    <TD>Security descriptors used by the volume</TD></TR>
+  <TR>
+    <TD class=numeric>10</TD>
+    <TD><A 
+      href="http://linux-ntfs.sourceforge.net/ntfs/files/upcase.html">$UpCase</A></TD>
+    <TD>&nbsp;</TD>
+    <TD>Table of uppercase characters used for collating</TD></TR>
+  <TR>
+    <TD class=numeric>11</TD>
+    <TD><A 
+      href="http://linux-ntfs.sourceforge.net/ntfs/files/extend.html">$Extend</A></TD>
+    <TD>2K</TD>
+    <TD>A directory: $ObjId, $Quota, $Reparse, $UsnJrnl</TD></TR>
+  <TR>
+    <TD class=numeric>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD class=numeric>12-15</TD>
+    <TD>&lt;Unused&gt;</TD>
+    <TD>&nbsp;</TD>
+    <TD>Marked as in use but empty</TD></TR>
+  <TR>
+    <TD class=numeric>16-23</TD>
+    <TD>&lt;Unused&gt;</TD>
+    <TD>&nbsp;</TD>
+    <TD>Marked as unused</TD></TR>
+  <TR>
+    <TD class=numeric>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD class=numeric>Any</TD>
+    <TD><A 
+      href="http://linux-ntfs.sourceforge.net/ntfs/files/objid.html">$ObjId</A></TD>
+    <TD>2K</TD>
+    <TD>Unique Ids given to every file</TD></TR>
+  <TR>
+    <TD class=numeric>Any</TD>
+    <TD><A 
+      href="http://linux-ntfs.sourceforge.net/ntfs/files/quota.html">$Quota</A></TD>
+    <TD>2K</TD>
+    <TD>Quota information</TD></TR>
+  <TR>
+    <TD class=numeric>Any</TD>
+    <TD><A 
+      href="http://linux-ntfs.sourceforge.net/ntfs/files/reparse.html">$Reparse</A></TD>
+    <TD>2K</TD>
+    <TD>Reparse point information</TD></TR>
+  <TR>
+    <TD class=numeric>Any</TD>
+    <TD><A 
+      href="http://linux-ntfs.sourceforge.net/ntfs/files/usnjrnl.html">$UsnJrnl</A></TD>
+    <TD>2K</TD>
+    <TD>Journalling of Encryption</TD></TR>
+  <TR>
+    <TD class=numeric>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD class=numeric>&gt; 24</TD>
+    <TD><A 
+      href="http://linux-ntfs.sourceforge.net/ntfs/concepts/file.html">A_File</A></TD>
+    <TD>&nbsp;</TD>
+    <TD>An ordinary file</TD></TR>
+  <TR>
+    <TD class=numeric>&gt; 24</TD>
+    <TD><A 
+      href="http://linux-ntfs.sourceforge.net/ntfs/concepts/directory.html">A_Dir</A></TD>
+    <TD>&nbsp;</TD>
+    <TD>An ordinary directory</TD></TR>
+  <TR>
+    <TD class=numeric>...</TD>
+    <TD>...</TD>
+    <TD>&nbsp;</TD>
+    <TD>...</TD></TR></TBODY></TABLE>
+<H2>Notes</H2>
+<H3>Unused Inodes</H3>
+<P>On a freshly formatted volume, inodes 0x0B to 0x0F are marked as in use, but 
+empty. Inodes 0x10 to 0x17 are marked as free and not used. This doesn't change 
+until the volume is under a lot of stress. </P>
+<P>When the $MFT becomes very fragmented it won't fit into one FILE Record and 
+an extension record is needed. If a new record was simply allocated at the end 
+of the $MFT then we encounter a problem. The $DATA Attribute describing the 
+location of the new record is in the new record. </P>
+<P>The new records are therefore allocated from inode 0x0F, onwards. The $MFT is 
+always a minimum of 16 FILE Records long, therefore always exists. After inodes 
+0x0F to 0x17 are used up, higher, unreserved, inodes are used. </P>
+<P class=check>This effect may not be limited to the $MFT, but more evidence is 
+needed. </P>
+<H3>Other Information</H3>
+<P>For some reason $ObjId, $Quota, $Reparse and $UsnJrnl don't have inode 
+numbers below 24, like the rest of the Metadata files. </P>
+<P class=check>Also, the sequence number for each of the system files is always 
+equal to their mft record number and it is never modified. </P><BR><A 
+class=contact 
+href="http://linux-ntfs.sourceforge.net/ntfs/help/license.html">Copyright 
+(C)</A> <A class=contact 
+href="http://validator.w3.org/check?uri=http://linux-ntfs.sourceforge.net/ntfs/files/index.html">Validate 
+HTML</A> <A class=contact 
+href="http://jigsaw.w3.org/css-validator/validator?uri=http://linux-ntfs.sourceforge.net/ntfs/files/index.html">Validate 
+CSS</A> <IMG height=1 alt=SourceForge 
+src="Files - NTFS Documentation_files/sflogo.png" width=1 border=0> 
+</BODY></HTML>

@@ -1,0 +1,321 @@
+INTRFC version 7.00.  Written by D.J. Murdoch & M. Dadok.
+Warning:  Can't find unit System
+INTRFC version 7.00.  Written by D.J. Murdoch & M. Dadok.
+Dump of file DISKTOOL.TPU
+Warning:  Can't find unit System
+Unit  DiskTool;	{ checksum = 13FD}
+interface
+Uses  System	{ checksum = C40A}
+  ,Hex	{ checksum = 2744};
+Const
+  MaxLongName=  ?;
+  DosSectorSize=  ?;
+  Boot_Signature=  ?;
+  FSector_Signature=  ?;
+  FSinfo_Signature=  ?;
+  faReadOnly=  ?;
+  faHidden=  ?;
+  faSysFile=  ?;
+  faVolumeID=  ?;
+  faDirectory=  ?;
+  faArchive=  ?;
+  faAnyFile=  ?;
+  faNone=  ?;
+  faUnused=  ?;
+  faExt=  ?;
+  BAD_MsDOS_chars:  array[?..?] of SYSTEM.ofs462=  ?;	{ofs    0 in block    0}
+  UnKnownFAT=  ?;
+  FAT12=  ?;
+  FAT16=  ?;
+  FAT32=  ?;
+  NoError=  ?;
+  DiskError:  SYSTEM.ofs278=  ?;	{ofs    9 in block    0}
+type
+  tTransferBlock=  Record 
+    Size:  SYSTEM.ofs318;	{ofs    0}
+    Blocks:  SYSTEM.ofs318;	{ofs    2}
+    BufAdr:  SYSTEM.ofs174;	{ofs    4}
+    BegLo:  SYSTEM.ofs338;	{ofs    8}
+    BegHi:  SYSTEM.ofs338;	{ofs    C}
+  end;
+  tInt13ExtInfo=  Record 
+    majVer:  SYSTEM.ofs278;	{ofs    0}
+    extVer:  SYSTEM.ofs278;	{ofs    1}
+    Res:  SYSTEM.ofs278;	{ofs    2}
+    APB:  SYSTEM.ofs318;	{ofs    3}
+  end;
+  tInt13ExtDriveInfo=  Record 
+    IOSize:  SYSTEM.ofs318;	{ofs    0}
+    Flags:  SYSTEM.ofs318;	{ofs    2}
+    Cyls:  SYSTEM.ofs338;	{ofs    4}
+    Heads:  SYSTEM.ofs338;	{ofs    8}
+    Sect:  SYSTEM.ofs338;	{ofs    C}
+    ToSLo:  SYSTEM.ofs338;	{ofs   10}
+    ToSHi:  SYSTEM.ofs338;	{ofs   14}
+    SecSize:  SYSTEM.ofs318;	{ofs   18}
+    EnhInfo:  SYSTEM.ofs174;	{ofs   1A}
+  end;
+  tEnhDrvInfo=  Record 
+    Cyls:  SYSTEM.ofs318;	{ofs    0}
+    Heads:  SYSTEM.ofs278;	{ofs    2}
+    Sign:  SYSTEM.ofs278;	{ofs    3}
+    SWrPCyl:  SYSTEM.ofs318;	{ofs    4}
+    res:  SYSTEM.ofs278;	{ofs    6}
+    CtrlBt:  SYSTEM.ofs278;	{ofs    7}
+    PhysCyls:  SYSTEM.ofs318;	{ofs    8}
+    PhysHeads:  SYSTEM.ofs278;	{ofs    A}
+    LandCyl:  SYSTEM.ofs318;	{ofs    B}
+    LogSect:  SYSTEM.ofs278;	{ofs    D}
+    CRC:  SYSTEM.ofs278;	{ofs    E}
+  end;
+  PathStr=  string[79];
+  DirStr=  string[67];
+  NameStr=  string[8];
+  ExtStr=  string[4];
+  tLongName=  string[255];
+  Array512=  array[?..?] of SYSTEM.ofs462;
+  tDrvBiosInfo=  Record 
+    MaxSector:  SYSTEM.ofs278;	{ofs    0}
+    MaxHead:  SYSTEM.ofs278;	{ofs    1}
+    MaxTrack:  SYSTEM.ofs318;	{ofs    2}
+    SeHD:  SYSTEM.ofs338;	{ofs    4}
+  end;
+  tDirElement=  Record 
+    Name:  array[?..?] of SYSTEM.ofs462;	{ofs    0}
+    Ext:  array[?..?] of SYSTEM.ofs462;	{ofs    8}
+    Attr:  SYSTEM.ofs278;	{ofs    B}
+    lCase:  SYSTEM.ofs278;	{ofs    C}
+    cTime_ms:  SYSTEM.ofs278;	{ofs    D}
+    cTime:  SYSTEM.ofs318;	{ofs    E}
+    cDate:  SYSTEM.ofs318;	{ofs   10}
+    aDate:  SYSTEM.ofs318;	{ofs   12}
+    Clus_hi:  SYSTEM.ofs318;	{ofs   14}
+    Date:  SYSTEM.ofs338;	{ofs   16}
+    Cluster:  SYSTEM.ofs318;	{ofs   1A}
+    Size:  SYSTEM.ofs338;	{ofs   1C}
+    NameExt:  array[?..?] of SYSTEM.ofs462;	{ofs    0}
+  end;
+  tLFNelement=  Record 
+    ID:  SYSTEM.ofs278;	{ofs    0}
+    Name1:  array[?..?] of SYSTEM.ofs318;	{ofs    1}
+    attr:  SYSTEM.ofs278;	{ofs    B}
+    res1:  SYSTEM.ofs278;	{ofs    C}
+    CRC:  SYSTEM.ofs278;	{ofs    D}
+    Name2:  array[?..?] of SYSTEM.ofs318;	{ofs    E}
+    cluster:  SYSTEM.ofs318;	{ofs   1A}
+    Name3:  array[?..?] of SYSTEM.ofs318;	{ofs   1C}
+  end;
+  tFAT16Sec=  array[?..?] of SYSTEM.ofs318;
+  tFAT32Sec=  array[?..?] of SYSTEM.ofs338;
+  pPartition=  ^tPartition;
+  tPartition=  Record 
+    BootF:  SYSTEM.ofs278;	{ofs    0}
+    BegHd:  SYSTEM.ofs278;	{ofs    1}
+    BegSC:  SYSTEM.ofs318;	{ofs    2}
+    SysID:  SYSTEM.ofs278;	{ofs    4}
+    EndHd:  SYSTEM.ofs278;	{ofs    5}
+    EndSC:  SYSTEM.ofs318;	{ofs    6}
+    Secs:  SYSTEM.ofs338;	{ofs    8}
+    Size:  SYSTEM.ofs338;	{ofs    C}
+  end;
+  pBoot16=  ^tBoot16;
+  tBoot16=  Record 
+    JmpOp:  array[?..?] of SYSTEM.ofs278;	{ofs    0}
+    SysID:  array[?..?] of SYSTEM.ofs462;	{ofs    3}
+    SectSize:  SYSTEM.ofs318;	{ofs    B}
+    ClusSize:  SYSTEM.ofs278;	{ofs    D}
+    ResSecs:  SYSTEM.ofs318;	{ofs    E}
+    FatCnt:  SYSTEM.ofs278;	{ofs   10}
+    RootSize:  SYSTEM.ofs318;	{ofs   11}
+    TotSec16:  SYSTEM.ofs318;	{ofs   13}
+    Media:  SYSTEM.ofs278;	{ofs   15}
+    FatSize:  SYSTEM.ofs318;	{ofs   16}
+    SpTrk:  SYSTEM.ofs318;	{ofs   18}
+    HeadCnt:  SYSTEM.ofs318;	{ofs   1A}
+    HidnSecLo:  SYSTEM.ofs318;	{ofs   1C}
+    HidnSecHi:  SYSTEM.ofs318;	{ofs   1E}
+    TotSec32:  SYSTEM.ofs338;	{ofs   20}
+    DrvNum:  SYSTEM.ofs278;	{ofs   24}
+    res1:  SYSTEM.ofs278;	{ofs   25}
+    ExtBootSig:  SYSTEM.ofs278;	{ofs   26}
+    SerialNum:  SYSTEM.ofs338;	{ofs   27}
+    DLabel:  array[?..?] of SYSTEM.ofs462;	{ofs   2B}
+    FatID:  array[?..?] of SYSTEM.ofs462;	{ofs   36}
+    BootPrg:  array[?..?] of SYSTEM.ofs278;	{ofs   3E}
+    Part:  array[?..?] of tPartition;	{ofs  1BE}
+    BootSign:  SYSTEM.ofs318;	{ofs  1FE}
+  end;
+  pBoot32=  ^tBoot32;
+  tBoot32=  Record 
+    JmpOp:  array[?..?] of SYSTEM.ofs278;	{ofs    0}
+    SysID:  array[?..?] of SYSTEM.ofs462;	{ofs    3}
+    SectSize:  SYSTEM.ofs318;	{ofs    B}
+    ClusSize:  SYSTEM.ofs278;	{ofs    D}
+    ResSecs:  SYSTEM.ofs318;	{ofs    E}
+    FATcnt:  SYSTEM.ofs278;	{ofs   10}
+    RootSize:  SYSTEM.ofs318;	{ofs   11}
+    TotSec16:  SYSTEM.ofs318;	{ofs   13}
+    Media:  SYSTEM.ofs278;	{ofs   15}
+    FATsize:  SYSTEM.ofs318;	{ofs   16}
+    SpTrk:  SYSTEM.ofs318;	{ofs   18}
+    HeadCnt:  SYSTEM.ofs318;	{ofs   1A}
+    HidnSecLo:  SYSTEM.ofs318;	{ofs   1C}
+    HidnSecHi:  SYSTEM.ofs318;	{ofs   1E}
+    TotSec32:  SYSTEM.ofs338;	{ofs   20}
+    FAT32size:  SYSTEM.ofs338;	{ofs   24}
+    Flags:  SYSTEM.ofs278;	{ofs   28}
+    SysMajor:  SYSTEM.ofs278;	{ofs   29}
+    SysMinor:  SYSTEM.ofs318;	{ofs   2A}
+    RootClus:  SYSTEM.ofs338;	{ofs   2C}
+    FSect:  SYSTEM.ofs318;	{ofs   30}
+    ResBootSec:  SYSTEM.ofs318;	{ofs   32}
+    res1:  array[?..?] of SYSTEM.ofs278;	{ofs   34}
+    DrvNum:  SYSTEM.ofs278;	{ofs   40}
+    res2:  SYSTEM.ofs278;	{ofs   41}
+    ExtBootSig:  SYSTEM.ofs278;	{ofs   42}
+    SerialNum:  SYSTEM.ofs338;	{ofs   43}
+    DLabel:  array[?..?] of SYSTEM.ofs462;	{ofs   47}
+    FatID:  array[?..?] of SYSTEM.ofs462;	{ofs   52}
+    BootPrg:  array[?..?] of SYSTEM.ofs278;	{ofs   5A}
+    Part:  array[?..?] of tPartition;	{ofs  1BE}
+    BootSign:  SYSTEM.ofs318;	{ofs  1FE}
+  end;
+  tFSInfoSector=  Record 
+    Sector_Sign:  SYSTEM.ofs338;	{ofs    0}
+    res1:  array[?..?] of SYSTEM.ofs278;	{ofs    4}
+    Signature:  SYSTEM.ofs338;	{ofs  1E6}
+    Free_Clusters:  SYSTEM.ofs338;	{ofs  1EA}
+    Next_Free:  SYSTEM.ofs338;	{ofs  1EE}
+    res2:  array[?..?] of SYSTEM.ofs278;	{ofs  1F2}
+  end;
+  pBIOS_Drive=  ^tBIOS_Drive;
+  tBIOS_Drive=  Record 
+    Drive:  SYSTEM.ofs278;	{ofs    0}
+    MaxTrack:  SYSTEM.ofs318;	{ofs    1}
+    MaxHead:  SYSTEM.ofs318;	{ofs    3}
+    MaxSector:  SYSTEM.ofs278;	{ofs    5}
+    SEHD:  SYSTEM.ofs318;	{ofs    6}
+    SecSiz:  SYSTEM.ofs318;	{ofs    8}
+    DBI:  tDrvBiosInfo;	{ofs    A}
+    ExtSup:  SYSTEM.ofs370;	{ofs   12}
+    ExtInf:  tInt13ExtDriveInfo;	{ofs   13}
+  end;
+function  GetDriveInfo(
+        arg1:  SYSTEM.ofs278;
+  var   arg2:  tBIOS_Drive
+  ):  SYSTEM.ofs278;	{ Proc    8 Entry   10:0000}
+function  GetDrvBiosInfo(
+        arg1:  SYSTEM.ofs278;
+  var   arg2:  tDrvBiosInfo
+  ):  SYSTEM.ofs370;	{ Proc   10 Entry   98:0000}
+function  Int13ExtIntalled(
+        arg1:  SYSTEM.ofs278;
+  var   arg2:  tInt13ExtInfo
+  ):  SYSTEM.ofs278;	{ Proc   18 Entry   20:0000}
+function  GetInt13ExtDriveInfo(
+        arg1:  SYSTEM.ofs278;
+  var   arg2:  tInt13ExtDriveInfo;
+  var   arg3:  SYSTEM.ofs130
+  ):  SYSTEM.ofs278;	{ Proc   20 Entry   18:0000}
+procedure  UnpackCylSec(
+        arg1:  SYSTEM.ofs318;
+  var   arg2:  SYSTEM.ofs318;
+  var   arg3:  SYSTEM.ofs278
+  );	{ Proc   28 Entry   40:0000}
+function  CalcFS(
+        arg1:  tBIOS_Drive;
+        arg2:  SYSTEM.ofs318;
+        arg3:  SYSTEM.ofs278;
+        arg4:  SYSTEM.ofs278
+  ):  SYSTEM.ofs338;	{ Proc   30 Entry   58:0000}
+procedure  DeCalcFS(
+        arg1:  tBIOS_Drive;
+        arg2:  SYSTEM.ofs338;
+  var   arg3:  SYSTEM.ofs318;
+  var   arg4:  SYSTEM.ofs278;
+  var   arg5:  SYSTEM.ofs278
+  );	{ Proc   38 Entry   50:0000}
+function  ErrToStr(
+        arg1:  SYSTEM.ofs278
+  ):  SYSTEM.ofs186;	{ Proc   40 Entry   A8:01B4}
+procedure  Recalibrate(
+        arg1:  SYSTEM.ofs278
+  ); assembler;	{ Proc   48 Entry   88:0000}
+function  CheckSectors(
+        arg1:  tBIOS_Drive;
+        arg2:  SYSTEM.ofs318;
+        arg3:  SYSTEM.ofs278;
+        arg4:  SYSTEM.ofs278;
+        arg5:  SYSTEM.ofs278
+  ):  SYSTEM.ofs370;	{ Proc   50 Entry   60:0000}
+function  ReadSectors(
+        arg1:  tBIOS_Drive;
+        arg2:  SYSTEM.ofs278;
+        arg3:  SYSTEM.ofs318;
+        arg4:  SYSTEM.ofs278;
+  var   arg5:  SYSTEM.ofs130
+  ):  SYSTEM.ofs370;	{ Proc   58 Entry   68:0000}
+function  WriteSectors(
+        arg1:  tBIOS_Drive;
+        arg2:  SYSTEM.ofs278;
+        arg3:  SYSTEM.ofs318;
+        arg4:  SYSTEM.ofs278;
+  var   arg5:  SYSTEM.ofs130
+  ):  SYSTEM.ofs370;	{ Proc   60 Entry   80:0000}
+function  ReadDataS(
+        arg1:  tBIOS_Drive;
+        arg2:  SYSTEM.ofs318;
+        arg3:  SYSTEM.ofs278;
+        arg4:  SYSTEM.ofs278;
+        arg5:  SYSTEM.ofs278;
+  var   arg6:  SYSTEM.ofs130
+  ):  SYSTEM.ofs370;	{ Proc   68 Entry   70:0000}
+function  WriteDataS(
+        arg1:  tBIOS_Drive;
+        arg2:  SYSTEM.ofs318;
+        arg3:  SYSTEM.ofs278;
+        arg4:  SYSTEM.ofs278;
+        arg5:  SYSTEM.ofs278;
+  var   arg6:  SYSTEM.ofs130
+  ):  SYSTEM.ofs370;	{ Proc   70 Entry   78:0000}
+function  Diskette_Changed(
+        arg1:  SYSTEM.ofs278
+  ):  SYSTEM.ofs370; assembler;	{ Proc   78 Entry   90:0000}
+function  GetSysSt(
+        arg1:  SYSTEM.ofs278
+  ):  SYSTEM.ofs186;	{ Proc   80 Entry   A0:02C6}
+function  DosChar(
+        arg1:  SYSTEM.ofs462
+  ):  SYSTEM.ofs370;	{ Proc   88 Entry   30:0000}
+function  WinChar(
+        arg1:  SYSTEM.ofs462
+  ):  SYSTEM.ofs370;	{ Proc   90 Entry   38:0000}
+function  Flush_Cache:  SYSTEM.ofs298;	{ Proc   98 Entry   28:0000}
+function  ReadAbsSector(
+        arg1:  SYSTEM.ofs278;
+        arg2:  SYSTEM.ofs338;
+        arg3:  SYSTEM.ofs338;
+  var   arg4:  SYSTEM.ofs130
+  ):  SYSTEM.ofs370;	{ Proc   A0 Entry    0:0000}
+function  WriteAbsSector(
+        arg1:  SYSTEM.ofs278;
+        arg2:  SYSTEM.ofs338;
+        arg3:  SYSTEM.ofs338;
+  var   arg4:  SYSTEM.ofs130
+  ):  SYSTEM.ofs370;	{ Proc   A8 Entry    8:0000}
+Const
+  Max_Cache_Pages=  ?;
+type
+  pCache=  ^tCache;
+  tCache=  Record 
+    Drive:  SYSTEM.ofs278;	{ofs    0}
+    Data:  array[?..?] of SYSTEM.ofs462;	{ofs    1}
+    Track:  SYSTEM.ofs318;	{ofs  201}
+    Head:  SYSTEM.ofs278;	{ofs  203}
+    Sec:  SYSTEM.ofs278;	{ofs  204}
+  end;
+var
+  _Cache:  array[?..?] of pCache;	{ofs    0 in block    0}
+  nCPages:  SYSTEM.ofs298;	{ofs  200 in block    0}
+  CachePos:  SYSTEM.ofs298;	{ofs  202 in block    0}
+  dap:  tTransferBlock;	{ofs  204 in block    0}

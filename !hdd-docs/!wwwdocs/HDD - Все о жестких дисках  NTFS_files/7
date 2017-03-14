@@ -1,0 +1,669 @@
+<html>
+<head><title>:: HDD - Все о жестких дисках :: NTFS</title>
+<meta name="author" content="Alexander Prudko">
+<meta name="description" content=" NTFS">
+<meta name="robots" content="all">
+<meta name="generator" content="AceHTML 5 Pro">
+
+<link rel="stylesheet" type="text/css" href="http://hdd.kulichki.com/admin/disign/style.css">
+</STYLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- begin script
+function netie(net, ie) {
+  if ((navigator.appVersion.substring(0,3) >= net && navigator.appName == 'Netscape' && net != -1) || (navigator.appVersion.substring(0,3) >= ie && navigator.appName.substring(0,9) == 'Microsoft' && ie != -1))
+    return true;
+else return false;
+}
+//  end script -->
+</SCRIPT>
+</head>
+<body background="http://hdd.kulichki.com/admin/disign/bcg3.gif" marginheight="0" marginwidth="0" leftmargin="0" topmargin="5">
+<table cellpadding="0" cellspacing="0" width="800" height="100%" border="0" align="center" summary="">
+        <tr>
+                <td valign="top"  align="center"><a href="http://hdd.kulichki.com" ><img alt="На главную" src="http://hdd.kulichki.com/admin/disign/l1.gif" align="top" vspace="0" hspace="0" border="0"><img alt="На главную" src="http://hdd.kulichki.com/admin/disign/l2.gif" align="top" vspace="0" hspace="0" border="0"><img alt="На главную" src="http://hdd.kulichki.com/admin/disign/l3.gif" align="top" vspace="0" hspace="0" border="0"><img alt="На главную" src="http://hdd.kulichki.com/admin/disign/l4.gif" align="top" vspace="0" hspace="0" border="0"><img alt="На главную" src="http://hdd.kulichki.com/admin/disign/l5.gif" align="top" vspace="0" hspace="0" border="0"><img alt="На главную" src="http://hdd.kulichki.com/admin/disign/l6.gif" align="top" vspace="0" hspace="0" border="0"><img alt="На главную" src="http://hdd.kulichki.com/admin/disign/l7.gif" align="top" vspace="0" hspace="0" border="0"><img alt="На главную" src="http://hdd.kulichki.com/admin/disign/l8.gif" align="top" vspace="0" hspace="0" border="0"><img alt="На главную" src="http://hdd.kulichki.com/admin/disign/l9.gif" align="top" vspace="0" hspace="0" border="0"><img alt="На главную" src="http://hdd.kulichki.com/admin/disign/l10.gif" align="top" vspace="0" hspace="0" border="0"></a>
+                <table width="800" height="20" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" summary="" >
+    <tr>
+      <td align="center" valign="bottom">
+  <nobr>
+  
+  <a href="http://hdd.kulichki.com/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Главная</a>
+  <span class="divise">|</span>
+
+  <a href="http://hdd.kulichki.com/news/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Новости</a>
+  <span class="divise">|</span>
+  <a href="http://hdd.kulichki.com/anatomy/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Анатомия</a>
+  <span class="divise">|</span>
+
+  <a href="http://hdd.kulichki.com/service/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Обслуживание</a>
+  <span class="divise">|</span>
+
+  <a href="http://hdd.kulichki.com/recovery/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Восстановление&Ремонт</a>
+  <span class="divise">|</span>
+
+      <a href="http://hdd.kulichki.com/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Guarding</a>
+  <span class="divise">|</span>
+  
+  <a href="http://hdd.kulichki.com/soft/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Программы</a>
+  <span class="divise">|</span>
+
+  <a href="http://hdd.kulichki.com/brand/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Модели</a>
+  <span class="divise">|</span>
+  
+        <a href="http://hdd.kulichki.com/forum" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Форум</a>
+  <span class="divise">|</span>
+  
+  <a href="http://hdd.kulichki.com/soft/link.shtml" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Ссылки</a>
+
+  
+  </nobr>
+      </td>
+    </tr>
+  </table>
+<table cellpadding="0" cellspacing="0" width="800" border="0" bgcolor="#F2F2F1">
+<tr>
+<td width="180" valign="top" height="100%" background="http://hdd.kulichki.com/admin/disign/tbg.gif" style="border: thin">
+<div class="panel_big_yellow">Рассылка</div>
+<table align="center">
+<tr>
+<td bgcolor="#FFFFFF">
+<table bgcolor="#3A6EA5" width="100%">
+<tr>
+	<td>
+	<div class="pwhite">
+	
+<FORM TARGET=_top ACTION=http://subscribe.ru/member/quick METHOD=GET>
+<div class="pleftmargin">HDD:<br>-обслуживание<br> -анатомия<br>  -профилактика поломок </div>
+<INPUT TYPE=hidden NAME=action VALUE=quick>
+
+
+<FONT SIZE=2>
+<INPUT TYPE=hidden NAME=grp VALUE=comp.hard.hdd>
+<INPUT TYPE=text NAME=email SIZE=16 MAXLEN=100 VALUE="Ваш e-mail" style="font-size: 9pt">&nbsp;
+<INPUT TYPE=submit VALUE="ok " style="font-size: 9pt">
+</FONT>
+
+
+
+</td>
+</tr>
+</table>
+
+
+
+</td>
+</tr>
+</table>
+
+</FORM>
+<div class="pwhite">&nbsp;Подробно о рассылке <a href="http://hdd.kulichki.com/archive/podpiska.shtml" style="color:#FFFFFF;">»»</a></div>
+<hr size=1 style="color: #FFFFFF;" noshade>
+
+<div class="panel_big_yellow">Новости сайта</div>
+<div class="pwhite">&nbsp;Новые материалы [5] <a href="http://hdd.kulichki.com/index.php#nm" style="color:#FFFFFF;">»»</a><br><br>
+
+&nbsp;Новые модели (15) <a href="http://hdd.kulichki.com/index.php#" style="color:#FFFFFF;">»»</a><br><br>
+&nbsp;Помощь сайту <a href="http://hdd.kulichki.com/index.php#" style="color:#FFFFFF;">»»</a><br><br>
+&nbsp;Новые программы (3) <a href="http://hdd.kulichki.com/index.php#" style="color:#FFFFFF;">»»</a><br><br>
+
+&nbsp;Новые ссылки (11) <a href="http://hdd.kulichki.com/index.php#" style="color:#FFFFFF;">»»</a>
+</div>
+
+<hr size=1 style="color: #FFFFFF;" noshade>
+
+
+<div class="panel_big_yellow">Поиск товаров и цен </div>
+<form method="GET" action="http://www.1price.ru/searchp1.php?">
+<table align="center" WIDTH=90%>
+<tr>
+<td bgcolor="#FFFFFF">
+<table bgcolor="#3A6EA5" width="100%">
+<tr>
+	<td>
+	<div class="pwhite">
+<div class="pleftmargin">Чтобы узнать в каком магазине, и по какой цене продается товар, введите, например - "Seagate ST380021A"</div>
+ 
+<p color=black style="font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 11px;">
+  &nbsp;<input type="text" name="keywords" size="16" style="font-size: 9pt">&nbsp;
+<INPUT TYPE=submit VALUE="ok" style="font-size: 9pt">
+
+</td>
+</tr>
+</table>
+
+
+
+</td>
+</tr>
+</table>
+</form>	
+
+
+<hr size=1 style="color: #FFFFFF;" noshade>
+
+<div class="panel_big_yellow">Голосование</div>
+<div class="pwhite" align="center">Какие жесткие диски самые <strong>надежные</strong>?</div>
+
+<form action="http://hdd.kulichki.com/glas/voting.php">
+<table align="center" WIDTH=110px>
+<tr>
+<td bgcolor="#FFFFFF">
+<table bgcolor="#3A6EA5" width="100%">
+<tr>
+	<td>
+	<div class="pwhite">
+<input type=radio name="mark" value=0> Maxtor <br>
+<input type=radio name="mark" value=1> Samsung <br>
+<input type=radio name="mark" value=2> Seagate <br>
+<input type=radio name="mark" value=3> WD <br>
+<input type=radio name="mark" value=4> IBM/Hitachi<br>
+<input type=radio name="mark" value=5> Fujitsu <br><br>
+<input type="submit" value="Голосовать">
+</td>
+</tr>
+</table>
+
+
+
+</td>
+</tr>
+</table>
+</form>
+
+	
+	
+<hr size=1 style="color: #FFFFFF;" noshade>
+
+
+<div class="panel_big_yellow">Контакты</div>
+<table align="center" WIDTH=110px>
+<tr>
+<td bgcolor="#FFFFFF">
+<table alidn="left" WIDTH=110px bgcolor="#3A6EA5" width="100%">
+<tr>
+	<td>
+	<div class="pwhite">
+<div align="left"><a class="lien" href="mailto:hdd@kulichki.com?subject=[admin]:">
+администратор</a><br>
+ <a href="mailto:hdd@kulichki.com?subject=[read]:" class="lien">
+редактор</a><br>
+ <a href="mailto:hdd@kulichki.com?subject=[master]:" class="lien">
+web-мастер</a></div>
+</td>
+</tr>
+</table>
+
+
+
+</td>
+</tr>
+</table>
+
+
+<hr size=1 style="color: #FFFFFF;" noshade><td valign="top" height="100%" width="620">
+
+<table width="620" align="center">
+<tr>
+		
+<td align="center" valign="middle">
+
+<p style="font-size:11px;"><a href="http://optima.h12.ru" target="_blank">Нужен свой сайт? Заходите! »»</a><br>
+<a href="mailto:hdd@kulichki.com">Хотите сотрудничать? Пишите! »»</a>
+
+</td>
+
+<td valign="top" align="right">
+
+
+	<A HREF="http://www.kulichki.com/advert"><font class="light_gray">Реклама в
+Интернет</A>&nbsp;&nbsp;&nbsp;</font><A
+HREF="http://kulichki.kulichki.net/entsikl/"><font class="light_gray">Все Кулички</font></A><br>
+<SCRIPT LANGUAGE="JavaScript"><!--
+var rb1_login = "hdd";
+var rb1_random = Math.round(Math.random() * 100000);
+document.write('<iframe src="http://rotabanner.kulichki.net/cgi-bin/iframe/'+rb1_login+'?'+rb1_random +'" width=468 height=60 marginwidth=0 marginheight=0' +' scrolling=no frameborder=0><a '+ 'href="http://rotabanner.kulichki.net/cgi-bin/href/' + rb1_login+'?'+rb1_random +'" target=_top><img '+ 'src="http://rotabanner.kulichki.net/cgi-bin/banner/'+rb1_login+'?'+rb1_random +'" alt="Kulichki Networks" width=468 height=60 border=0 ismap></a></iframe>');
+//-->
+</script>
+<noscript>
+<iframe src=" width=468 height=60 marginwidth=0 marginheight=0 scrolling=no frameborder=0"><a href=" target=_top><img src="http://rotabanner.kulichki.net/cgi-bin/banner/hdd?1001" alt="Kulichki Networks" width=468 height=60 border=0 ismap></a></iframe>
+</noscript> 
+</td>
+	
+
+ 
+	
+</tr>
+</table>
+<hr size="1" width="99%" noshade>
+
+
+
+<table bgcolor="#F2F2F1" align="center" width="600">
+<tr>
+	<td style="text-align: justify;"><h5>NTFS</h5>
+
+<table border="0" bgcolor="#DCDCDC" align="center" width="90%">
+	<tr>
+		<td>
+		<div align="left" class="author">Источник: <b><a href="http://www.mtu-net.ru/pinetar/dm/index.htm">http://www.mtu-net.ru</a></b><br>
+		Автор: <b><a href="http://www.mtu-net.ru/pinetar/dm/index.htm">http://www.mtu-net.ru</a></b><br>
+		Дата публикации: <b>01.01.2004</b><br>
+		
+		
+		</div>
+		
+		</td>
+	</tr>
+</table>
+<br>
+
+
+<p>Начнем с общих фактов. Раздел NTFS, теоретически, может быть почти какого угодно размера. Предел, конечно, есть, но я даже не буду указывать его, так как его с запасом хватит на последующие сто лет развития вычислительной техники - при любых темпах роста. Как обстоит с этим дело на практике? Почти так же. Максимальный размер раздела NTFS в данный момент ограничен лишь размерами жестких дисков. NT4, правда, будет испытывать проблемы при попытке установки на раздел, если хоть какая-нибудь его часть отступает более чем на 8 Гб от физического начала диска, но эта проблема касается лишь загрузочного раздела.</p>
+
+<p><em>Лирическое отступление. Метод инсталляции NT4.0 на пустой диск довольно оригинален и может навести на неправильные мысли о возможностях NTFS. Если вы укажете программе установки, что желаете отформатировать диск в NTFS, максимальный размер, который она вам предложит, будет всего 4 Гб. Почему так мало, если размер раздела NTFS на самом деле практически неограничен? Дело в том, что установочная секция просто не знает этой файловой системы :) Программа установки форматирует этот диск в обычный FAT, максимальный размер которого в NT составляет 4 Гбайт (с использованием не совсем стандартного огромного кластера 64 Кбайта), и на этот FAT устанавливает NT. А вот уже в процессе первой загрузки самой операционной системы (еще в установочной фазе) производится быстрое преобразование раздела в NTFS; так что пользователь ничего и не замечает, кроме странного "ограничения" на размер NTFS при установке. :) </em></p>
+<p><strong>Структура раздела - общий взгляд</strong></p>
+<p>Как и любая другая система, NTFS делит все полезное место на кластеры - блоки данных, используемые единовременно. NTFS поддерживает почти любые размеры кластеров - от 512 байт до 64 Кбайт, неким стандартом же считается кластер размером 4 Кбайт. Никаких аномалий кластерной структуры NTFS не имеет, поэтому на эту, в общем-то, довольно банальную тему, сказать особо нечего.</p>
+
+<p>Диск NTFS условно делится на две части. Первые 12% диска отводятся под так называемую MFT зону - пространство, в которое растет метафайл MFT (об этом ниже). Запись каких-либо данных в эту область невозможна. MFT-зона всегда держится пустой - это делается для того, чтобы самый главный, служебный файл (MFT) не фрагментировался при своем росте. Остальные 88% диска представляют собой обычное пространство для хранения файлов.  </p>
+
+<div align="center"><img src="1.gif" alt="" width="421" height="143" border="0"></div><br>
+
+<p>Свободное место диска, однако, включает в себя всё физически свободное место - незаполненные куски MFT-зоны туда тоже включаются. Механизм использования MFT-зоны таков: когда файлы уже нельзя записывать в обычное пространство, MFT-зона просто сокращается (в текущих версиях операционных систем ровно в два раза), освобождая таким образом место для записи файлов. При освобождении места в обычной области MFT зона может снова расширится. При этом не исключена ситуация, когда в этой зоне остались и обычные файлы: никакой аномалии тут нет. Что ж, система старалась оставить её свободной, но ничего не получилось. Жизнь продолжается... Метафайл MFT все-таки может фрагментироваться, хоть это и было бы нежелательно.</p>
+
+<p><strong>MFT и его структура</strong></p>
+<p>Файловая система NTFS представляет собой выдающееся достижение структуризации: каждый элемент системы представляет собой файл - даже служебная информация. Самый главный файл на NTFS называется MFT, или Master File Table - общая таблица файлов. Именно он размещается в MFT зоне и представляет собой централизованный каталог всех остальных файлов диска, и, как не парадоксально, себя самого. MFT поделен на записи фиксированного размера (обычно 1 Кбайт), и каждая запись соответствует какому либо файлу (в общем смысле этого слова). Первые 16 файлов носят служебный характер и недоступны операционной системе - они называются метафайлами, причем самый первый метафайл - сам MFT. Эти первые 16 элементов MFT - единственная часть диска, имеющая фиксированное положение. Интересно, что вторая копия первых трех записей, для надежности (они очень важны) хранится ровно посередине диска. Остальной MFT-файл может располагаться, как и любой другой файл, в произвольных местах диска - восстановить его положение можно с помощью его самого, "зацепившись" за самую основу - за первый элемент MFT.</p>
+
+<p><strong>Метафайлы</strong></p>
+<p>Первые 16 файлов NTFS (метафайлы) носят служебный характер. Каждый из них отвечает за какой-либо аспект работы системы. Преимущество настолько модульного подхода заключается в поразительной гибкости - например, на FAT-е физическое повреждение в самой области FAT фатально для функционирования всего диска, а NTFS может сместить, даже фрагментировать по диску, все свои служебные области, обойдя любые неисправности поверхности - кроме первых 16 элементов MFT.</p>
+
+<p>Метафайлы находятся корневом каталоге NTFS диска - они начинаются с символа имени "$", хотя получить какую-либо информацию о них стандартными средствами сложно. Любопытно, что и для этих файлов указан вполне реальный размер - можно узнать, например, сколько операционная система тратит на каталогизацию всего вашего диска, посмотрев размер файла $MFT. В следующей таблице приведены используемые в данный момент метафайлы и их назначение.</p>
+
+<p><TABLE borderColor=#d8d8d8 cellSpacing=0 
+      cellPadding=3 width="75%" border=1 align="center" >
+                          <TBODY>
+                          <TR>
+                            <TD width="16%" class="td">$MFT</TD>
+                            <TD width="84%" class="td">сам MFT</TD></TR>
+                          <TR>
+                            <TD width="16%" class="td">$MFTmirr</TD>
+                            <TD width="84%" class="td">копия первых 16 записей MFT, 
+                              размещенная посередине диска</TD></TR>
+                          <TR>
+                            <TD width="16%" class="td">$LogFile</TD>
+                            <TD width="84%" class="td">файл поддержки журналирования (см. 
+                              ниже)</TD></TR>
+                          <TR>
+                            <TD width="16%" class="td">$Volume</TD>
+                            <TD width="84%" class="td">служебная информация - метка тома, 
+                              версия файловой системы, т.д.</TD></TR>
+                          <TR>
+                            <TD width="16%" class="td">$AttrDef</TD>
+                            <TD width="84%" class="td">список стандартных атрибутов 
+                              файлов на томе</TD></TR>
+                          <TR>
+                            <TD width="16%" class="td">$.</TD>
+                            <TD width="84%" class="td">корневой каталог</TD></TR>
+                          <TR>
+                            <TD width="16%" class="td">$Bitmap</TD>
+                            <TD width="84%" class="td">карта свободного места тома</TD></TR>
+                          <TR>
+                            <TD width="16%" height=25 class="td">$Boot</TD>
+                            <TD width="84%" height=25 class="td">загрузочный сектор (если 
+                              раздел загрузочный)</TD></TR>
+                          <TR>
+                            <TD width="16%" class="td">$Quota</TD>
+                            <TD width="84%" class="td">файл, в котором записаны права 
+                              пользователей на использование дискового 
+                              пространства (начал работать лишь в NT5)</TD></TR>
+                          <TR>
+                            <TD width="16%" class="td">$Upcase</TD>
+                            <TD width="84%" class="td">файл - таблица соответствия 
+                              заглавных и прописных букв в имен файлов на 
+                              текущем томе. Нужен в основном потому, что в NTFS 
+                              имена файлов записываются в Unicode, что 
+                              составляет 65 тысяч различных символов, искать 
+                              большие и малые эквиваленты которых очень 
+                              нетривиально.</TD></TR></TBODY></TABLE>
+</p>
+
+<p><strong>Файлы и потоки</strong></p>
+<p>Итак, у системы есть файлы - и ничего кроме файлов. Что включает в себя это понятие на NTFS?</p>
+<ul>
+<li>
+<p>Прежде всего, обязательный элемент - запись в MFT, ведь, как было сказано ранее, все файлы диска упоминаются в MFT. В этом месте хранится вся информация о файле, за исключением собственно данных. Имя файла, размер, положение на диске отдельных фрагментов, и т.д. Если для информации не хватает одной записи MFT, то используются несколько, причем не обязательно подряд.</p> 
+</li>
+<li>
+<p>Опциональный элемент - потоки данных файла. Может показаться странным определение "опциональный", но, тем не менее, ничего странного тут нет. Во-первых, файл может не иметь данных - в таком случае на него не расходуется свободное место самого диска. Во-вторых, файл может иметь не очень большой размер. Тогда идет в ход довольно удачное решение: данные файла хранятся прямо в MFT, в оставшемся от основных данных месте в пределах одной записи MFT. Файлы, занимающие сотни байт, обычно не имеют своего "физического" воплощения в основной файловой области - все данные такого файла хранятся в одном месте - в MFT. </p>
+</li></ul>
+<p>Довольно интересно обстоит дело и с данными файла. Каждый файл на NTFS, в общем-то, имеет несколько абстрактное строение - у него нет как таковых данных, а есть потоки (streams). Один из потоков и носит привычный нам смысл - данные файла. Но большинство атрибутов файла - тоже потоки! Таким образом, получается, что базовая сущность у файла только одна - номер в MFT, а всё остальное опционально. Данная абстракция может использоваться для создания довольно удобных вещей - например, файлу можно "прилепить" еще один поток, записав в него любые данные - например, информацию об авторе и содержании файла, как это сделано в Windows 2000 (самая правая закладка в свойствах файла, просматриваемых из проводника). Интересно, что эти дополнительные потоки не видны стандартными средствами: наблюдаемый размер файла - это лишь размер основного потока, который содержит традиционные данные. Можно, к примеру, иметь файл нулевой длинны, при стирании которого освободится 1 Гбайт свободного места - просто потому, что какая-нибудь хитрая программа или технология прилепила в нему дополнительный поток (альтернативные данные) гигабайтового размера. Но на самом деле в текущий момент потоки практически не используются, так что опасаться подобных ситуаций не следует, хотя гипотетически они возможны. Просто имейте в виду, что файл на NTFS - это более глубокое и глобальное понятие, чем можно себе вообразить просто просматривая каталоги диска. Ну и напоследок: имя файла может содержать любые символы, включая полый набор национальных алфавитов, так как данные представлены в Unicode - 16-битном представлении, которое дает 65535 разных символов. Максимальная длина имени файла - 255 символов.</p>
+
+<p><strong>Каталоги</strong></p>
+<p>Каталог на NTFS представляет собой специфический файл, хранящий ссылки на другие файлы и каталоги, создавая иерархическое строение данных на диске. Файл каталога поделен на блоки, каждый из которых содержит имя файла, базовые атрибуты и ссылку на элемент MFT, который уже предоставляет полную информацию об элементе каталога. Внутренняя структура каталога представляет собой бинарное дерево. Вот что это означает: для поиска файла с данным именем в линейном каталоге, таком, например, как у FAT-а, операционной системе приходится просматривать все элементы каталога, пока она не найдет нужный. Бинарное же дерево располагает имена файлов таким образом, чтобы поиск файла осуществлялся более быстрым способом - с помощью получения двухзначных ответов на вопросы о положении файла. Вопрос, на который бинарное дерево способно дать ответ, таков: в какой группе, относительно данного элемента, находится искомое имя - выше или ниже? Мы начинаем с такого вопроса к среднему элементу, и каждый ответ сужает зону поиска в среднем в два раза. Файлы, скажем, просто отсортированы по алфавиту, и ответ на вопрос осуществляется очевидным способом - сравнением начальных букв. Область поиска, суженная в два раза, начинает исследоваться аналогичным образом, начиная опять же со среднего элемента.</p>
+
+<div align="center"> <img src="2.gif" alt="" width="422" height="265" border="0"></div><br>
+
+<p>Вывод - для поиска одного файла среди 1000, например, FAT придется осуществить в среднем 500 сравнений (наиболее вероятно, что файл будет найден на середине поиска), а системе на основе дерева - всего около 10-ти (2^10 = 1024). Экономия времени поиска налицо. Не стоит, однако думать, что в традиционных системах (FAT) всё так запущено: во-первых, поддержание списка файлов в виде бинарного дерева довольно трудоемко, а во-вторых - даже FAT в исполнении современной системы (Windows2000 или Windows98) использует сходную оптимизацию поиска. Это просто еще один факт в вашу копилку знаний. Хочется также развеять распространенное заблуждение (которое я сам разделял совсем еще недавно) о том, что добавлять файл в каталог в виде дерева труднее, чем в линейный каталог: это достаточно сравнимые по времени операции - дело в том, что для того, чтобы добавить файл в каталог, нужно сначала убедится, что файла с таким именем там еще нет :) - и вот тут-то в линейной системе у нас будут трудности с поиском файла, описанные выше, которые с лихвой компенсируют саму простоту добавления файла в каталог.</p>
+
+<p>Какую информацию можно получить, просто прочитав файл каталога? Ровно то, что выдает команда dir. Для выполнения простейшей навигации по диску не нужно лазить в MFT за каждым файлом, надо лишь читать самую общую информацию о файлах из файлов каталогов. Главный каталог диска - корневой - ничем не отличается об обычных каталогов, кроме специальной ссылки на него из начала метафайла MFT.</p>
+
+<p><strong>Журналирование</strong></p>
+<p>NTFS - отказоустойчивая система, которая вполне может привести себя в корректное состояние при практически любых реальных сбоях. Любая современная файловая система основана на таком понятии, как транзакция - действие, совершаемое целиком и корректно или не совершаемое вообще. У NTFS просто не бывает промежуточных (ошибочных или некорректных) состояний - квант изменения данных не может быть поделен на до и после сбоя, принося разрушения и путаницу - он либо совершен, либо отменен.</p>
+
+<p><em>Пример 1:</em> осуществляется запись данных на диск. Вдруг выясняется, что в то место, куда мы только что решили записать очередную порцию данных, писать не удалось - физическое повреждение поверхности. Поведение NTFS в этом случае довольно логично: транзакция записи откатывается целиком - система осознает, что запись не произведена. Место помечается как сбойное, а данные записываются в другое место - начинается новая транзакция.</p>
+
+<p><em>Пример 2:</em> более сложный случай - идет запись данных на диск. Вдруг, бах - отключается питание и система перезагружается. На какой фазе остановилась запись, где есть данные, а где чушь? На помощь приходит другой механизм системы - журнал транзакций. Дело в том, что система, осознав свое желание писать на диск, пометила в метафайле $LogFile это свое состояние. При перезагрузке это файл изучается на предмет наличия незавершенных транзакций, которые были прерваны аварией и результат которых непредсказуем - все эти транзакции отменяются: место, в которое осуществлялась запись, помечается снова как свободное, индексы и элементы MFT приводятся в с состояние, в котором они были до сбоя, и система в целом остается стабильна. Ну а если ошибка произошла при записи в журнал? Тоже ничего страшного: транзакция либо еще и не начиналась (идет только попытка записать намерения её произвести), либо уже закончилась - то есть идет попытка записать, что транзакция на самом деле уже выполнена. В последнем случае при следующей загрузке система сама вполне разберется, что на самом деле всё и так записано корректно, и не обратит внимания на "незаконченную" транзакцию.</p>
+
+<p>И все-таки помните, что журналирование - не абсолютная панацея, а лишь средство существенно сократить число ошибок и сбоев системы. Вряд ли рядовой пользователь NTFS хоть когда-нибудь заметит ошибку системы или вынужден будет запускать chkdsk - опыт показывает, что NTFS восстанавливается в полностью корректное состояние даже при сбоях в очень загруженные дисковой активностью моменты. Вы можете даже оптимизировать диск и в самый разгар этого процесса нажать reset - вероятность потерь данных даже в этом случае будет очень низка. Важно понимать, однако, что система восстановления NTFS гарантирует корректность файловой системы, а не ваших данных. Если вы производили запись на диск и получили аварию - ваши данные могут и не записаться. Чудес не бывает.</p>
+
+<p><strong>Сжатие</strong></p>
+<p>Файлы NTFS имеют один довольно полезный атрибут - "сжатый". Дело в том, что NTFS имеет встроенную поддержку сжатия дисков - то, для чего раньше приходилось использовать Stacker или DoubleSpace. Любой файл или каталог в индивидуальном порядке может хранится на диске в сжатом виде - этот процесс совершенно прозрачен для приложений. Сжатие файлов имеет очень высокую скорость и только одно большое отрицательное свойство - огромная виртуальная фрагментация сжатых файлов, которая, правда, никому особо не мешает. Сжатие осуществляется блоками по 16 кластеров и использует так называемые "виртуальные кластеры" - опять же предельно гибкое решение, позволяющее добиться интересных эффектов - например, половина файла может быть сжата, а половина - нет. Это достигается благодаря тому, что хранение информации о компрессированности определенных фрагментов очень похоже на обычную фрагментацию файлов: например, типичная запись физической раскладки для реального, несжатого, файла:</p>
+
+<pre>
+<p>кластеры файла с 1 по 43-й хранятся в кластерах диска начиная с 400-го
+кластеры файла с 44 по 52-й хранятся в кластерах диска начиная с 8530-го
+...</p>
+</pre>
+
+<p>Физическая раскладка типичного сжатого файла:</p>
+
+<pre>
+<p>кластеры файла с 1 по 9-й хранятся в кластерах диска начиная с 400-го
+кластеры файла с 10 по 16-й нигде не хранятся
+кластеры файла с 17 по 18-й хранятся в кластерах диска начиная с 409-го
+кластеры файла с 19 по 36-й нигде не хранятся
+....</p>
+</pre>
+
+ <div align="center"><img src="3.gif" alt="" width="445" height="143" border="0"></div><br>
+
+<p>Видно, что сжатый файл имеет "виртуальные" кластеры, реальной информации в которых нет. Как только система видит такие виртуальные кластеры, она тут же понимает, что данные предыдущего блока, кратного 16-ти, должны быть разжаты, а получившиеся данные как раз заполнят виртуальные кластеры - вот, по сути, и весь алгоритм.</p>
+
+<p><strong>Безопасность</strong></p>
+<p>NTFS содержит множество средств разграничения прав объектов - есть мнение, что это самая совершенная файловая система из всех ныне существующих. В теории это, без сомнения, так, но в текущих реализациях, к сожалению, система прав достаточно далека от идеала и представляет собой хоть и жесткий, но не всегда логичный набор характеристик. Права, назначаемые любому объекту и однозначно соблюдаемые системой, эволюционируют - крупные изменения и дополнения прав осуществлялись уже несколько раз и к Windows 2000 все-таки они пришли к достаточно разумному набору.
+</p>
+<p>Права файловой системы NTFS неразрывно связаны с самой системой - то есть они, вообще говоря, необязательны к соблюдению другой системой, если ей дать физический доступ к диску. Для предотвращения физического доступа в Windows2000 (NT5) всё же ввели стандартную возможность - об этом см. ниже. Система прав в своем текущем состоянии достаточно сложна, и я сомневаюсь, что смогу сказать широкому читателю что-нибудь интересное и полезное ему в обычной жизни. Если вас интересует эта тема - вы найдете множество книг по сетевой архитектуре NT, в которых это описано более чем подробно.
+</p>
+<p>На этом описание строение файловой системы можно закончить, осталось описать лишь некоторое количество просто практичных или оригинальных вещей.</p>
+
+<p><strong>Hard Links</strong></p>
+<p>Эта штука была в NTFS с незапамятных времен, но использовалась очень редко - и тем не менее: Hard Link - это когда один и тот же файл имеет два имени (несколько указателей файла-каталога или разных каталогов указывают на одну и ту же MFT запись). Допустим, один и тот же файл имеет имена 1.txt и 2.txt: если пользователь сотрет файл 1, останется файл 2. Если сотрет 2 - останется файл 1, то есть оба имени, с момента создания, совершенно равноправны. Файл физически стирается лишь тогда, когда будет удалено его последнее имя.</p>
+
+<p><strong>Symbolic Links (NT5)</strong></p>
+<p>Гораздо более практичная возможность, позволяющая делать виртуальные каталоги - ровно так же, как и виртуальные диски командой subst в DOSе. Применения достаточно разнообразны: во-первых, упрощение системы каталогов. Если вам не нравится каталог Documents and settings\Administrator\Documents, вы можете прилинковать его в корневой каталог - система будет по прежнему общаться с каталогом с дремучим путем, а вы - с гораздо более коротким именем, полностью ему эквивалентным. Для создания таких связей можно воспользоваться программой junction <a href="http://ixbt.stack.net/storage/images/ntfs/junction.zip" target="_blank">(junction.zip (15 Kb), 36 кб)</a>, которую написал известный специалист Mark Russinovich <a href="http://www.sysinternals.com/" target="_blank" tabindex=".">(http://www.sysinternals.com/)</a>. Программа работает только в NT5 (Windows 2000), как и сама возможность. Для удаления связи можно воспользоваться стандартной командой rd. ВНИМАНИЕ: Попытка удаления связи с помощью проводника или других файловых менеджеров, не понимающих виртуальную природу каталога (например, FAR), приведет к удалению данных, на которые ссылается ссылка! Будьте осторожны.</p>
+
+<p><strong>Шифрование (NT5)</strong></p>
+<p>Полезная возможность для людей, которые беспокоятся за свои секреты - каждый файл или каталог может также быть зашифрован, что не даст возможность прочесть его другой инсталляцией NT. В сочетании со стандартным и практически непрошибаемым паролем на загрузку самой системы, эта возможность обеспечивает достаточную для большинства применений безопасность избранных вами важных данных.</p>
+<br>
+<table border="0" bgcolor="#DCDCDC" align="center" width="90%">
+	<tr>
+		<td>
+		<div align="left" class="author">Источник: <b><a href="http://www.mtu-net.ru/pinetar/dm/index.htm">http://www.mtu-net.ru</a></b><br>
+		Автор: <b><a href="http://www.mtu-net.ru/pinetar/dm/index.htm">http://www.mtu-net.ru</a></b><br>
+		Дата публикации: <b>01.01.2004</b><br>
+		
+		
+		</div>
+		
+		</td>
+	</tr>
+</table>
+<br>
+</td>
+	
+	
+</tr>
+</table>
+</td>
+<!-- DOWN MENU & COPY -->
+<table width="800" height="25" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" summary="" align="center">
+    <tr>
+      <td align="center">
+  <nobr>
+  
+  <a href="http://hdd.kulichki.com/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Главная</a>
+  <span class="divise">|</span>
+
+  <a href="http://hdd.kulichki.com/news/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Новости</a>
+  <span class="divise">|</span>
+  <a href="http://hdd.kulichki.com/anatomy/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Анатомия</a>
+  <span class="divise">|</span>
+
+  <a href="http://hdd.kulichki.com/service/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Обслуживание</a>
+  <span class="divise">|</span>
+
+  <a href="http://hdd.kulichki.com/recovery/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Восстановление&Ремонт</a>
+  <span class="divise">|</span>
+
+      <a href="http://hdd.kulichki.com/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Guarding</a>
+  <span class="divise">|</span>
+  
+  <a href="http://hdd.kulichki.com/soft/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Программы</a>
+  <span class="divise">|</span>
+
+  <a href="http://hdd.kulichki.com/brand/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Модели</a>
+  <span class="divise">|</span>
+  
+        <a href="http://hdd.kulichki.com/forum" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Форум</a>
+  <span class="divise">|</span>
+  
+  <a href="http://hdd.kulichki.com/soft/link.shtml" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Ссылки</a>
+
+  
+
+  
+  </nobr>
+      </td>
+    </tr>
+  </table>
+<div class="pe_litle"><font color="red">Уважаемый посетитель! </font><font color="green">Исключительно для блага сайта! Зайдите по любой ссылке (ссылки ниже) в каталог Begun, а оттуда на несколько сайтов. Я буду Вам очень благодарен. С уважением, администратор hdd.kulichki.com! </font></div>
+<center>
+<TABLE cellSpacing=0 cellPadding=0 border=0 width=800>
+  <TBODY>
+  <TR bgColor="#77B94E">
+    <TD valign="bottom" background="/archive/disign/reklama/begun_logo.gif" bgcolor="#77B94E">
+      <table width="100%" border="0" cellspacing="0" cellpadding="5">
+        <tr>
+          <td background="">
+            <table cellspacing=0 cellpadding=1 border=0 style="cursor: hand;">
+              <tr>
+                <td colspan=2 onClick="top.location.href='http://partner.begun.ru/comming.jsp?soid=3124964';return true;" background="" valign=bottom><span style="FONT-SIZE: 10px; COLOR: #E3E9F4; FONT-FAMILY: Verdana, Arial, sans-serif;">Найди
+                  на Бегуне:</span></td>
+              </tr>
+              <form action="http://partner.begun.ru/comming.jsp" target="_blank">
+                <input type=hidden name="oid" value="3124962">
+                <tr>
+                  <td background="">
+                    <input style="FONT-SIZE: 10px; WIDTH: 106px; FONT-FAMILY: Verdana, Arial, sans-serif" name="q" size="12" value="">
+                  </td>
+                  <td background="">
+                    <input type=image height=18 alt="" width=18  src="http://hdd.kulichki.com/archive/disign/reklama/begun_submit.gif" border=0 name="image" align="middle">
+                  </td>
+                </tr>
+              </form>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </TD>
+    <TD bgcolor="#FFFFFF"><img src="http://hdd.kulichki.com/archive/disign/reklama/begun_line1.gif" width="14" height="100" border=0></TD>
+    <TD bgcolor="#FFFFFF">
+      <table cellspacing=0 cellpadding=2 border=0>
+        <tbody>
+        <tr>
+          <td>
+<a target="_blank" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=11"><img height=25 src="http://hdd.kulichki.com/archive/disign/reklama/begun_ico11.gif" width=25 border=0 alt="Досуг и отдых"></a></td>
+          <td><a target="_blank" style="FONT-SIZE: 10px; COLOR: #3366cc; FONT-FAMILY: Verdana, Arial, sans-serif; FONT-WEIGHT: bold;" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=11">Все для дома и офиса</a>
+        <tr>
+          <td><a target="_blank" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=3"><img height=25 src="http://hdd.kulichki.com/archive/disign/reklama/begun_ico3.gif" width=25 border=0 alt="Компьютеры и оргтехника"></a></td>
+          <td><a target="_blank" style="FONT-SIZE: 10px; COLOR: #3366cc; FONT-FAMILY: Verdana, Arial, sans-serif; FONT-WEIGHT: bold;" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=3">Компьютеры и оргтехника</a></td>
+        </tr>
+        <tr>
+          <td><a target="_blank" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=7"><img height=25 src="http://hdd.kulichki.com/archive/disign/reklama/begun_ico7.gif" width=25 border=0 alt="Связь"></a></td>
+          <td><a target="_blank" style="FONT-SIZE: 10px; COLOR: #3366cc; FONT-FAMILY: Verdana, Arial, sans-serif; FONT-WEIGHT: bold;" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=7">Связь</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </TD>
+    <TD bgcolor="#FFFFFF">
+      <table width="14" border="0" cellspacing="3" cellpadding="0" height="100">
+        <tbody>
+        <tr>
+          <td background="/archive/disign/reklama/begun_line2.gif">
+            <table width="7" border="0" cellspacing="0" cellpadding="0" height="1">
+              <tr>
+                <td></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </TD>
+    <TD bgcolor="#FFFFFF">
+      <table cellspacing=0 cellpadding=2 border=0>
+        <tbody>
+        <tr>
+          <td><a target="_blank" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=12"><img height=25 src="http://hdd.kulichki.com/archive/disign/reklama/begun_ico12.gif" width=25 border=0 alt="Красота и здоровье"></a></td>
+          <td><a target="_blank" style="FONT-SIZE: 10px; COLOR: #3366cc; FONT-FAMILY: Verdana, Arial, sans-serif; FONT-WEIGHT: bold;" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=12">Красота и здоровье</a></td>
+        </tr>
+        <tr>
+          <td><a target="_blank" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=13"><img height=25 src="http://hdd.kulichki.com/archive/disign/reklama/begun_ico13.gif" width=25 border=0 alt="Книги, музыка и видео"></a></td>
+          <td><a target="_blank" style="FONT-SIZE: 10px; COLOR: #3366cc; FONT-FAMILY: Verdana, Arial, sans-serif; FONT-WEIGHT: bold;" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=13">Книги, музыка и видео</a></td>
+        </tr>
+        <tr>
+        
+          <td><a target="_blank" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=1"><img height=25 src="http://hdd.kulichki.com/archive/disign/reklama/begun_ico1.gif" width=25 border=0 alt="Интернет-услуги и сервисы"></a></td>
+          <td><a target="_blank" style="FONT-SIZE: 10px; COLOR: #3366cc; FONT-FAMILY: Verdana, Arial, sans-serif; FONT-WEIGHT: bold;" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=1">Интернет-услуги и сервисы</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </TD>
+    <TD bgcolor="#FFFFFF">
+      <table width="14" border="0" cellspacing="3" cellpadding="0" height="100">
+        <tbody>
+        <tr>
+          <td background="/archive/disign/reklama/begun_line2.gif">
+            <table width="7" border="0" cellspacing="0" cellpadding="0" height="1">
+              <tr>
+                <td></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </TD>
+    <TD bgcolor="#FFFFFF">
+      <table cellspacing=0 cellpadding=2 border=0>
+        <tbody>
+        <tr>
+          <td><a target="_blank" style="FONT-SIZE: 10px; COLOR: #666666; FONT-FAMILY: Verdana, Arial, sans-serif" href="http://partner.begun.ru/comming.jsp?soid=3124964">Продаем
+            целевых<br>
+            посетителей!</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </TD>
+    <TD bgcolor="#77B94E">
+      <table width="7" border="0" cellspacing="0" cellpadding="0" height="1">
+        <tr>
+          <td></td>
+        </tr>
+      </table>
+    </TD>
+  </TR>
+</TABLE></center>
+</p>
+
+<div  class="pe_litle">При перепечатке материалов сайта ссылка на первоисточник обязательна<br>
+Разработка сайта - <a href="mailto:hdd@kulichki.com">Прудько Александр</a>. 2003-2004
+</div><br>
+
+
+
+	<center><!-- Another Banner Network -->
+<script language="javascript" type="text/javascript"><!--
+bn_id='102437';
+bn_url='http://b468.abn.com.ua';
+bn_rnd=Math.round((Math.random()*10000000));
+bn_addurl='?t=468&w=468&h=60&id='+bn_id;
+if(window.screen) bn_addurl+='&c='+screen.colorDepth+'&cw='+screen.width;
+if(document.referrer) bn_addurl+='&ref='+escape(document.referrer);
+bn_addurl+='&tz='+(new Date()).getTimezoneOffset()+'&r='+bn_rnd;
+document.write('<iframe src="'+bn_url+'/iframe'+bn_addurl+'" width=468 height=60 frameborder=0 vspace=0 hspace=0 marginwidth=0 marginheight=0 scrolling=no><a href="'+bn_url+'/nsanchor'+bn_addurl+'" target=_top><img src="'+bn_url+'/nsimg'+bn_addurl+'" width="468" height="60" border=0 /></a></iframe>');
+//--></script><noscript><a href="http://b468.abn.com.ua/nsanchor?t=468&id=102437" target=_top><img src="http://b468.abn.com.ua/nsimg?t=468&w=468&h=60&id=102437" width="468" height="60" border=0 /></a></noscript>
+<!-- /Another Banner Network --><center>
+
+<br>
+
+
+<center><!-- HotLog -->
+<script language="javascript">
+hotlog_js="1.0";
+hotlog_r=""+Math.random()+"&s=163190&im=133&r="+escape(document.referrer)+"&pg="+
+escape(window.location.href);
+document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");
+</script><script language="javascript1.1">
+hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script>
+<script language="javascript1.2">
+hotlog_js="1.2";
+hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+
+(((navigator.appName.substring(0,3)=="Mic"))?
+screen.colorDepth:screen.pixelDepth)</script>
+<script language="javascript1.3">hotlog_js="1.3"</script>
+<script language="javascript">hotlog_r+="&js="+hotlog_js;
+document.write("<a href='http://click.hotlog.ru/?163190' target='_top'><img "+
+" src='http://hit8.hotlog.ru/cgi-bin/hotlog/count?"+
+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script>
+<noscript><a href=http://click.hotlog.ru/?163190 target=_top><img
+src="http://hit8.hotlog.ru/cgi-bin/hotlog/count?s=163190&im=133" border=0
+width="88" height="31" alt="HotLog"></a></noscript>
+<!-- /HotLog --> <!-- bigmir)net TOP 100 --><a href=http://www.bigmir.net/?cl=69721 target=_blank><script language="javascript"><!--
+bmQ='<img src=http://c.bigmir.net/?s69721&t12'
+bmD=document
+bmD.cookie="b=b"
+if(bmD.cookie)bmQ+='&c1'
+//--></script><script language="javascript1.2"><!--
+bmS=screen;bmQ+='&d'+(bmS.colorDepth?bmS.colorDepth:bmS.pixelDepth)+"&r"+bmS.width;
+//--></script><script language="javascript"><!--
+bmF = bmD.referrer.slice(7);
+((bmI=bmF.indexOf('/'))!=-1)?(bmF=bmF.substring(0,bmI)):(bmI=bmF.length);
+if(bmF!=window.location.href.substring(7,7+bmI))bmQ+='&f'+escape(bmD.referrer);
+bmD.write(bmQ+" border=0 width=88 height=31 alt='bigmir TOP100'>");
+//--></script></a>
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=673317"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=673317;t=99;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=18 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=673317"><img
+src="http://top.list.ru/counter?js=na;id=673317;t=99"
+border=0 height=18 width=88
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+
+
+</center>
+
+
+<tr>
+<td></td>
+</tr>
+</table></tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+</body>
+</html>

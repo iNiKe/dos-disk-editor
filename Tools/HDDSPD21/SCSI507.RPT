@@ -1,0 +1,46 @@
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄİTest background informationŞÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ş Running under: MS DOS ver. 7.10
+ş CPU: Intel Pentium at 166MHz
+ş BIOS: Award Modular BIOS v4.51PGM
+   Version : AP5T R1.80 Aug.06.1998    AOpen Inc.
+   ID      : 08/06/1998-i430TX-00000000C-00
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄİHddSpeed v2.0 ResultsŞÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ş Hard Disk 1: Unknown Type
+ş Size:
+    BIOS: 507 MBytes
+ş Geometry:
+    BIOS: 507 Cylinders, 64 Heads, 32 Sectors 
+ş Disk Rotation Speed: 4500 RPM
+
+ş Average Seek Time: Not Determined
+ş Average Seek Time: Not Determined
+ş Track-To-Track Seek Time: Not Determined
+ş Average Access Time: 27.6 ms
+
+                              Read (MBytes/sec.) Write (MBytes/sec.)
+ş Linear Speed At Track    1:   0.9                Not Tested     
+ş Linear Speed At Track  505:   0.9                Not Tested     
+
+ş Average Linear Speed:         0.9                Not Tested     
+ş Min. Linear Speed:            0.9                Not Tested     
+ş Max. Linear Speed:            0.9                Not Tested     
+
+ş Max. Cache Read Speed: 4.8 MBytes/sec. (56K block)
+ş Random Read Speed: 1.1 MBytes/sec.
+
+ş Disk Speed Index: 33
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄİTests Summary TableŞÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÂÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÂÄÄÄÂÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÂÄÄÄÄÄ¿
+³Vendor/Model       ³Total³Average³Maximal³Average³TTT³Average³  Max.  ³ IDX ³
+³                   ³Size,³ Seek  ³ Seek  ³Access ³   ³Linear ³ Cache  ³     ³
+³                   ³Cache³ Time  ³ Time  ³ Time  ³   ³ Speed ³  Read  ³     ³
+³                   ³Size ³  ms.  ³  ms.  ³  ms.  ³ms.³MB/sec.³ MB/sec.³     ³
+ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄ´
+³Non-IDE Drive      ³507MB³  N/A  ³  N/A  ³ 27.6  ³N/A³ R=0.9 ³   4.8  ³  33 ³
+³                   ³     ³       ³       ³       ³   ³       ³        ³     ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÁÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÁÄÄÄÁÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÁÄÄÄÄÄÙ
+

@@ -1,0 +1,60 @@
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄİTest background informationŞÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ş Running under: MS DOS ver. 7.10
+ş CPU: AMD 586-class processor (undistinguished) at 689MHz
+ş BIOS: Award Modular BIOS v4.51PG
+   Version : Release 06/12/1998 S
+   ID      : 06/08/1998-577+ITE8661-2A5LEH0AC-00
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄİHddSpeed v2.0 ResultsŞÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ş Hard Disk 0: IDE Primary/Master
+ş Model: WDC AC36400L
+ş Serial Number: WD-WM4200792393      Firmware Revision: 08.09L08
+ş Size:
+    BIOS: 6149 MBytes
+    IDE Default: 6149 MBytes
+ş Geometry:
+    BIOS: 784 Cylinders, 255 Heads, 63 Sectors, Using LBA translation
+    IDE Default: 13328 Cylinders, 15 Heads, 63 Sectors
+ş Supported Features:
+   [û] DMA Transfer
+   [û] LBA
+   [û] Block Mode (Max=16,Current=16)
+   [û] Power Management
+   [û] S.M.A.R.T. (Status: Ok)
+ş Maximal Supported Modes: PIO4, DMA2, UltraDMA2
+ş Buffer: Type 3 (Dual ported multi-sector buffer with a read caching)
+    IDE Size: 256 Kb
+    Effective Size: Not Determined
+ş Disk Rotation Speed: 5400 RPM
+
+ş Average Seek Time: 9.3 ms
+ş Maximal Seek Time: 18.7 ms
+ş Track-To-Track Seek Time: 1.8 ms
+ş Average Access Time: 16.2 ms
+
+                              Read (MBytes/sec.) Write (MBytes/sec.)
+ş Linear Speed At Track    1:   9.1                Not Tested     
+ş Linear Speed At Track  782:   5.9                Not Tested     
+
+ş Average Linear Speed:         8.4                Not Tested     
+ş Min. Linear Speed:            5.9                Not Tested     
+ş Max. Linear Speed:            9.1                Not Tested     
+
+ş Max. Cache Read Speed: 9.3 MBytes/sec. (56K block)
+ş Random Read Speed: 1.5 MBytes/sec.
+
+ş Disk Speed Index: 533
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄİTests Summary TableŞÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÂÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÂÄÄÄÂÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÂÄÄÄÄÄ¿
+³Vendor/Model       ³Total³Average³Maximal³Average³TTT³Average³  Max.  ³ IDX ³
+³                   ³Size,³ Seek  ³ Seek  ³Access ³   ³Linear ³ Cache  ³     ³
+³                   ³Cache³ Time  ³ Time  ³ Time  ³   ³ Speed ³  Read  ³     ³
+³                   ³Size ³  ms.  ³  ms.  ³  ms.  ³ms.³MB/sec.³ MB/sec.³     ³
+ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄ´
+³WDC AC36400L       ³6.0GB³  9.3  ³ 18.7  ³ 16.2  ³1.8³ R=8.4 ³   9.3  ³ 533 ³
+³                   ³256KB³       ³       ³       ³   ³       ³        ³     ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÁÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÁÄÄÄÁÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÁÄÄÄÄÄÙ
+

@@ -1,0 +1,51 @@
+.lien {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #ffffff; FONT-FAMILY: verdana; LETTER-SPACING: -1pt; POSITION: relative; TOP: -3px; TEXT-DECORATION: none
+}
+.divise {
+	FONT-SIZE: 11pt; BACKGROUND: #000000; COLOR: #c0c0c0; POSITION: relative; TOP: -2px
+}
+A:hover {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+A {
+	COLOR: #446b88; TEXT-DECORATION: none
+}
+P {
+	FONT-SIZE: 13px; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif
+}
+.pe_big {
+	FONT-SIZE: 13px; COLOR: #446b88; FONT-FAMILY: Verdana
+}
+.light_gray {
+	FONT-WEIGHT: lighter; FONT-SIZE: 10px; COLOR: gray; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif
+}
+.panel_big_yellow {
+	FONT-SIZE: 13px; COLOR: yellow; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; TEXT-ALIGN: center
+}
+.p {
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif : 13px
+}
+.pwhite {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif
+}
+.pleftmargin {
+	FONT-SIZE: 11px; MARGIN-LEFT: 5px; COLOR: white; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif
+}
+.pe_litle {
+	FONT-SIZE: 11px; FONT-FAMILY: Verdana
+}
+.author {
+	FONT-SIZE: 11px; FONT-FAMILY: Verdana
+}
+H5 {
+	FONT-SIZE: 17px; COLOR: #446b88; FONT-FAMILY: Verdana; TEXT-ALIGN: center
+}
+.pe {
+	FONT-SIZE: 11px; FONT-FAMILY: Verdana
+}
+LI {
+	FONT-SIZE: 13px; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif
+}
+.p12 {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana
+}

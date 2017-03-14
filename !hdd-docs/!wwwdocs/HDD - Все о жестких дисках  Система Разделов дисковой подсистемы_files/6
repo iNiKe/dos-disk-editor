@@ -1,0 +1,926 @@
+<html>
+<head><title>:: HDD - Все о жестких дисках :: Система Разделов дисковой подсистемы.</title>
+<meta name="author" content="Alexander Prudko">
+<meta name="description" content="Система Разделов дисковой подсистемы.">
+<meta name="robots" content="all">
+<meta name="generator" content="AceHTML 5 Pro">
+
+<link rel="stylesheet" type="text/css" href="http://hdd.kulichki.com/admin/disign/style.css">
+</STYLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- begin script
+function netie(net, ie) {
+  if ((navigator.appVersion.substring(0,3) >= net && navigator.appName == 'Netscape' && net != -1) || (navigator.appVersion.substring(0,3) >= ie && navigator.appName.substring(0,9) == 'Microsoft' && ie != -1))
+    return true;
+else return false;
+}
+//  end script -->
+</SCRIPT>
+</head>
+<body background="http://hdd.kulichki.com/admin/disign/bcg3.gif" marginheight="0" marginwidth="0" leftmargin="0" topmargin="5">
+<table cellpadding="0" cellspacing="0" width="800" height="100%" border="0" align="center" summary="">
+        <tr>
+                <td valign="top"  align="center"><a href="http://hdd.kulichki.com" ><img alt="На главную" src="http://hdd.kulichki.com/admin/disign/l1.gif" align="top" vspace="0" hspace="0" border="0"><img alt="На главную" src="http://hdd.kulichki.com/admin/disign/l2.gif" align="top" vspace="0" hspace="0" border="0"><img alt="На главную" src="http://hdd.kulichki.com/admin/disign/l3.gif" align="top" vspace="0" hspace="0" border="0"><img alt="На главную" src="http://hdd.kulichki.com/admin/disign/l4.gif" align="top" vspace="0" hspace="0" border="0"><img alt="На главную" src="http://hdd.kulichki.com/admin/disign/l5.gif" align="top" vspace="0" hspace="0" border="0"><img alt="На главную" src="http://hdd.kulichki.com/admin/disign/l6.gif" align="top" vspace="0" hspace="0" border="0"><img alt="На главную" src="http://hdd.kulichki.com/admin/disign/l7.gif" align="top" vspace="0" hspace="0" border="0"><img alt="На главную" src="http://hdd.kulichki.com/admin/disign/l8.gif" align="top" vspace="0" hspace="0" border="0"><img alt="На главную" src="http://hdd.kulichki.com/admin/disign/l9.gif" align="top" vspace="0" hspace="0" border="0"><img alt="На главную" src="http://hdd.kulichki.com/admin/disign/l10.gif" align="top" vspace="0" hspace="0" border="0"></a>
+                <table width="800" height="20" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" summary="" >
+    <tr>
+      <td align="center" valign="bottom">
+  <nobr>
+  
+  <a href="http://hdd.kulichki.com/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Главная</a>
+  <span class="divise">|</span>
+
+  <a href="http://hdd.kulichki.com/news/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Новости</a>
+  <span class="divise">|</span>
+  <a href="http://hdd.kulichki.com/anatomy/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Анатомия</a>
+  <span class="divise">|</span>
+
+  <a href="http://hdd.kulichki.com/service/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Обслуживание</a>
+  <span class="divise">|</span>
+
+  <a href="http://hdd.kulichki.com/recovery/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Восстановление&Ремонт</a>
+  <span class="divise">|</span>
+
+      <a href="http://hdd.kulichki.com/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Guarding</a>
+  <span class="divise">|</span>
+  
+  <a href="http://hdd.kulichki.com/soft/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Программы</a>
+  <span class="divise">|</span>
+
+  <a href="http://hdd.kulichki.com/brand/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Модели</a>
+  <span class="divise">|</span>
+  
+        <a href="http://hdd.kulichki.com/forum" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Форум</a>
+  <span class="divise">|</span>
+  
+  <a href="http://hdd.kulichki.com/soft/link.shtml" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Ссылки</a>
+
+  
+  </nobr>
+      </td>
+    </tr>
+  </table>
+<table cellpadding="0" cellspacing="0" width="800" border="0" bgcolor="#F2F2F1">
+<tr>
+<td width="180" valign="top" height="100%" background="http://hdd.kulichki.com/admin/disign/tbg.gif" style="border: thin">
+<div class="panel_big_yellow">Рассылка</div>
+<table align="center">
+<tr>
+<td bgcolor="#FFFFFF">
+<table bgcolor="#3A6EA5" width="100%">
+<tr>
+	<td>
+	<div class="pwhite">
+	
+<FORM TARGET=_top ACTION=http://subscribe.ru/member/quick METHOD=GET>
+<div class="pleftmargin">HDD:<br>-обслуживание<br> -анатомия<br>  -профилактика поломок </div>
+<INPUT TYPE=hidden NAME=action VALUE=quick>
+
+
+<FONT SIZE=2>
+<INPUT TYPE=hidden NAME=grp VALUE=comp.hard.hdd>
+<INPUT TYPE=text NAME=email SIZE=16 MAXLEN=100 VALUE="Ваш e-mail" style="font-size: 9pt">&nbsp;
+<INPUT TYPE=submit VALUE="ok " style="font-size: 9pt">
+</FONT>
+
+
+
+</td>
+</tr>
+</table>
+
+
+
+</td>
+</tr>
+</table>
+
+</FORM>
+<div class="pwhite">&nbsp;Подробно о рассылке <a href="http://hdd.kulichki.com/archive/podpiska.shtml" style="color:#FFFFFF;">»»</a></div>
+<hr size=1 style="color: #FFFFFF;" noshade>
+
+<div class="panel_big_yellow">Новости сайта</div>
+<div class="pwhite">&nbsp;Новые материалы [5] <a href="http://hdd.kulichki.com/index.php#nm" style="color:#FFFFFF;">»»</a><br><br>
+
+&nbsp;Новые модели (15) <a href="http://hdd.kulichki.com/index.php#" style="color:#FFFFFF;">»»</a><br><br>
+&nbsp;Помощь сайту <a href="http://hdd.kulichki.com/index.php#" style="color:#FFFFFF;">»»</a><br><br>
+&nbsp;Новые программы (3) <a href="http://hdd.kulichki.com/index.php#" style="color:#FFFFFF;">»»</a><br><br>
+
+&nbsp;Новые ссылки (11) <a href="http://hdd.kulichki.com/index.php#" style="color:#FFFFFF;">»»</a>
+</div>
+
+<hr size=1 style="color: #FFFFFF;" noshade>
+
+
+<div class="panel_big_yellow">Поиск товаров и цен </div>
+<form method="GET" action="http://www.1price.ru/searchp1.php?">
+<table align="center" WIDTH=90%>
+<tr>
+<td bgcolor="#FFFFFF">
+<table bgcolor="#3A6EA5" width="100%">
+<tr>
+	<td>
+	<div class="pwhite">
+<div class="pleftmargin">Чтобы узнать в каком магазине, и по какой цене продается товар, введите, например - "Seagate ST380021A"</div>
+ 
+<p color=black style="font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 11px;">
+  &nbsp;<input type="text" name="keywords" size="16" style="font-size: 9pt">&nbsp;
+<INPUT TYPE=submit VALUE="ok" style="font-size: 9pt">
+
+</td>
+</tr>
+</table>
+
+
+
+</td>
+</tr>
+</table>
+</form>	
+
+
+<hr size=1 style="color: #FFFFFF;" noshade>
+
+<div class="panel_big_yellow">Голосование</div>
+<div class="pwhite" align="center">Какие жесткие диски самые <strong>надежные</strong>?</div>
+
+<form action="http://hdd.kulichki.com/glas/voting.php">
+<table align="center" WIDTH=110px>
+<tr>
+<td bgcolor="#FFFFFF">
+<table bgcolor="#3A6EA5" width="100%">
+<tr>
+	<td>
+	<div class="pwhite">
+<input type=radio name="mark" value=0> Maxtor <br>
+<input type=radio name="mark" value=1> Samsung <br>
+<input type=radio name="mark" value=2> Seagate <br>
+<input type=radio name="mark" value=3> WD <br>
+<input type=radio name="mark" value=4> IBM/Hitachi<br>
+<input type=radio name="mark" value=5> Fujitsu <br><br>
+<input type="submit" value="Голосовать">
+</td>
+</tr>
+</table>
+
+
+
+</td>
+</tr>
+</table>
+</form>
+
+	
+	
+<hr size=1 style="color: #FFFFFF;" noshade>
+
+
+<div class="panel_big_yellow">Контакты</div>
+<table align="center" WIDTH=110px>
+<tr>
+<td bgcolor="#FFFFFF">
+<table alidn="left" WIDTH=110px bgcolor="#3A6EA5" width="100%">
+<tr>
+	<td>
+	<div class="pwhite">
+<div align="left"><a class="lien" href="mailto:hdd@kulichki.com?subject=[admin]:">
+администратор</a><br>
+ <a href="mailto:hdd@kulichki.com?subject=[read]:" class="lien">
+редактор</a><br>
+ <a href="mailto:hdd@kulichki.com?subject=[master]:" class="lien">
+web-мастер</a></div>
+</td>
+</tr>
+</table>
+
+
+
+</td>
+</tr>
+</table>
+
+
+<hr size=1 style="color: #FFFFFF;" noshade><td valign="top" height="100%" width="620">
+
+<table width="620" align="center">
+<tr>
+		
+<td align="center" valign="middle">
+
+<p style="font-size:11px;"><a href="http://optima.h12.ru" target="_blank">Нужен свой сайт? Заходите! »»</a><br>
+<a href="mailto:hdd@kulichki.com">Хотите сотрудничать? Пишите! »»</a>
+
+</td>
+
+<td valign="top" align="right">
+
+
+	<A HREF="http://www.kulichki.com/advert"><font class="light_gray">Реклама в
+Интернет</A>&nbsp;&nbsp;&nbsp;</font><A
+HREF="http://kulichki.kulichki.net/entsikl/"><font class="light_gray">Все Кулички</font></A><br>
+<SCRIPT LANGUAGE="JavaScript"><!--
+var rb1_login = "hdd";
+var rb1_random = Math.round(Math.random() * 100000);
+document.write('<iframe src="http://rotabanner.kulichki.net/cgi-bin/iframe/'+rb1_login+'?'+rb1_random +'" width=468 height=60 marginwidth=0 marginheight=0' +' scrolling=no frameborder=0><a '+ 'href="http://rotabanner.kulichki.net/cgi-bin/href/' + rb1_login+'?'+rb1_random +'" target=_top><img '+ 'src="http://rotabanner.kulichki.net/cgi-bin/banner/'+rb1_login+'?'+rb1_random +'" alt="Kulichki Networks" width=468 height=60 border=0 ismap></a></iframe>');
+//-->
+</script>
+<noscript>
+<iframe src=" width=468 height=60 marginwidth=0 marginheight=0 scrolling=no frameborder=0"><a href=" target=_top><img src="http://rotabanner.kulichki.net/cgi-bin/banner/hdd?1001" alt="Kulichki Networks" width=468 height=60 border=0 ismap></a></iframe>
+</noscript> 
+</td>
+	
+
+ 
+	
+</tr>
+</table>
+<hr size="1" width="99%" noshade>
+
+
+
+<table bgcolor="#F2F2F1" align="center" width="600">
+<tr>
+	<td style="text-align: justify;">
+
+
+
+<h5>Система Разделов дисковой подсистемы.</h5>
+
+<table border="0" bgcolor="#DCDCDC" align="center" width="90%">
+	<tr>
+		<td>
+		<div align="left" class="author">Источник: <b><a href="http://hdd.kulichki.com">http://hdd.kulichki.com</a></b><br>
+		Автор: <b>неизвестно</b><br>
+		Дата публикации: <b>01.01.2004</b><br>
+		
+		
+		</div>
+		
+		</td>
+	</tr>
+</table>
+<br>
+      <P>Система разделов - одна из наиболее 
+      важных элементов в дисковой подсистеме. Ее стандарт не зависит от Файловых 
+      и Операционных систем. 
+      <P>Структура разделов выглядит очень похоже на структуру каталога 
+      DOS.<BR>Корневому каталогу (<B>ROOT</B>) в структуре разделов 
+      соответствует первый (корневой) сектор диска. Это сектор загрузочной 
+      области (<B>BA</B> - <FONT size=2>boot area</FONT><I> </I>). Когда 
+      компьютер загружается, BIOS загружает этот сектор в адрес 7C00:0000, и 
+      передает туда управление. В начале этого сектора записан код начальной 
+      загрузки. Этот код просматривает таблицу первичных разделов (PT - <FONT 
+      size=2>Partition Table</FONT> ), определяет раздел, который является 
+      активным (самозагружаемым), затем загружает его первый сектор (загрузочный 
+      сектор) в тот же самый адрес (7C00:0000), и вновь передает туда 
+      управление. После этого дальнейшее управление загрузкой берет на себя 
+      операционная система (<B>ОС</B>).</P>
+      <P>Жесткий диск может содержать до четырех первичных разделов.</P>
+      <P>Таблица разделов, расположена так же в самом первом секторе 
+      (<B>MBR</B>) жесткого диска. Она описывает тип, активность 
+      (самозагружаемость) разделов и начальный / конечный номер цилиндра 
+      раздела.</P>
+      <P>В активных (самозагружаемых) разделах, первый сектор - всегда так 
+      называемый “загрузочный сектор”, который содержит небольшой ОС загрузчик. 
+      Теоретически в эти разделы Вы можете установить любую операционную 
+      систему.</P>
+      <P>Рассмотрим подробнее. Ниже приведена детальная таблица корневого 
+      сектора диска (цилиндр 0, головка 0, сектор 1). Очень часто эту область 
+      загрузки BA (boot area), обозначают как блок начальной загрузки 
+      (<B>M</B>aster <B>B</B>oot <B>R</B>ecord):</P>
+<TABLE align=center bgColor=#eeeeee border="0" borderColor="#808080" cellPadding="2" 
+cellSpacing="1" width="435">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffff vAlign=top width="21%">
+      <P><FONT face="Courier New" size=2>Смещение</FONT> </P></TD>
+    <TD bgColor=#ffffff vAlign=top width="55%"><FONT face="Courier New" 
+size=2>
+      <P>Описание </FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width="25%">
+      <P> </P></TD></TR>
+  <TR>
+    <TD vAlign=top width="21%"><FONT face="Courier New" size=2>
+      <P>0000h-01BDh </FONT></P></TD>
+    <TD vAlign=top width="55%"><FONT face="Courier New" size=2>
+      <P>Код начальной загрузки </FONT></P></TD>
+    <TD vAlign=top width="25%"><B><FONT face="Courier New" size=2>
+      <P>MBR </FONT></B></P></TD></TR>
+  <TR>
+    <TD vAlign="top" width="21%" bgcolor="#CCCCCC"><FONT face="Courier New" size=2>
+      <P>01BEh-01CDh </FONT></P></TD>
+    <TD vAlign="top" width="55%" bgcolor="#CCCCCC"><FONT face="Courier New" size=2>
+      <P>Описатель 1-го основного раздела </FONT></P></TD>
+    <TD rowSpan="4" vAlign="top" width="25%" bgcolor="#CCCCCC"><B></B>
+      <P><FONT face="Courier New" size=2><B>P</B></FONT><FONT face="Courier New" 
+      size=2>artition</FONT></P><FONT face="Courier New" size=2>
+      <P><B>T</B>able </FONT></P></TD></TR>
+  <TR>
+    <TD vAlign="top" width="21%" bgcolor="#CCCCCC"><FONT face="Courier New" size=2>
+      <P>01CEh-01DDh </FONT></P></TD>
+    <TD vAlign="top" width="55%" bgcolor="#CCCCCC"><FONT face="Courier New" size=2>
+      <P>Описатель 2-го основного раздела </FONT></P></TD></TR>
+  <TR>
+    <TD vAlign="top" width="21%" bgcolor="#CCCCCC"><FONT face="Courier New" size=2>
+      <P>01DEh-01EDh </FONT></P></TD>
+    <TD vAlign="top" width="55%" bgcolor="#CCCCCC"><FONT face="Courier New" size=2>
+      <P>Описатель 3-го основного раздела </FONT></P></TD></TR>
+  <TR>
+    <TD vAlign="top" width="21%" bgcolor="#CCCCCC"><FONT face="Courier New" size=2>
+      <P>01EEh-01FDh </FONT></P></TD>
+    <TD vAlign="top" width="55%" bgcolor="#CCCCCC"><FONT face="Courier New" size=2>
+      <P>Описатель 4-го основного раздела </FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=top width="21%"><FONT face="Courier New" size=2>
+      <P>01FEh-01FFh </FONT></P></TD>
+    <TD vAlign=top width="55%"><FONT face="Courier New" size=2>
+      <P>Сигнатура системного байта (0xAA55) </FONT></P></TD>
+    <TD vAlign=top width="25%">
+      <P> </P></TD></TR></TBODY></TABLE><BR>
+
+      <P>Код начальной загрузки (Boot Code) - исполняемый код, который был 
+      описан выше. 
+      <P>Описатели разделов имеют следующую форму:</P>
+	  
+<TABLE align=center border=0 borderColor=#808080 cellPadding=2 cellSpacing=1 
+width=435>
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffff vAlign=top width="21%">
+      <P><FONT face="Courier New" size=2>Смещение</FONT> </P></TD>
+    <TD bgColor=#ffffff vAlign=top width="48%"><FONT face="Courier New" 
+size=2>
+      <P>Описание </FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width="31%">
+      <P> </P></TD></TR>
+  <TR>
+    <TD vAlign=top width="21%"><FONT face="Courier New" size=2>
+      <P>0000h </FONT></P></TD>
+    <TD vAlign=top width="48%"><FONT face="Courier New" size=2>
+      <P>Маркер начальной загрузки </FONT></P></TD>
+    <TD vAlign=top width="31%">
+      <P> </P></TD></TR>
+  <TR>
+    <TD vAlign="top" width="21%" bgcolor="#CCCCCC"><FONT face="Courier New" size=2>
+      <P>0001h </FONT></P></TD>
+    <TD vAlign="top" width="48%" bgcolor="#CCCCCC"><FONT face="Courier New" size=2>
+      <P>Головка </FONT></P></TD>
+    <TD rowSpan="3" vAlign="top" width="31%" bgcolor="#CCCCCC"><FONT face="Courier New" size=2>
+      <P>Начало размещения </FONT></P></TD></TR>
+  <TR>
+    <TD vAlign="top" width="21%" bgcolor="#CCCCCC"><FONT face="Courier New" size=2>
+      <P>0002h </FONT></P></TD>
+    <TD vAlign="top" width="48%" bgcolor="#CCCCCC"><FONT face="Courier New" size=2>
+      <P>Сектор и Цилиндр (биты 8-9) </FONT></P></TD></TR>
+  <TR>
+    <TD vAlign="top" width="21%" bgcolor="#CCCCCC"><FONT face="Courier New" size=2>
+      <P>0003h </FONT></P></TD>
+    <TD vAlign="top" width="48%" bgcolor="#CCCCCC"><FONT face="Courier New" size=2>
+      <P>Цилиндр (биты 0-7) </FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=top width="21%"><FONT face="Courier New" size=2>
+      <P>0004h </FONT></P></TD>
+    <TD vAlign=top width="48%"><FONT face="Courier New" size=2>
+      <P>Системное Описание </FONT></P></TD>
+    <TD vAlign=top width="31%">
+      <P> </P></TD></TR>
+  <TR>
+    <TD vAlign="top" width="21%" bgcolor="#CCCCCC"><FONT face="Courier New" size=2>
+      <P>0005h </FONT></P></TD>
+    <TD vAlign="top" width="48%" bgcolor="#CCCCCC"><FONT face="Courier New" size=2>
+      <P>Головка </FONT></P></TD>
+    <TD rowSpan="3" vAlign="top" width="31%" bgcolor="#CCCCCC"><FONT face="Courier New" size=2>
+      <P>Конец размещения </FONT></P></TD></TR>
+  <TR>
+    <TD vAlign="top" width="21%" bgcolor="#CCCCCC"><FONT face="Courier New" size=2>
+      <P>0006h </FONT></P></TD>
+    <TD vAlign="top" width="48%" bgcolor="#CCCCCC"><FONT face="Courier New" size=2>
+      <P>Сектор и Цилиндр (биты 8-9) </FONT></P></TD></TR>
+  <TR>
+    <TD vAlign="top" width="21%" bgcolor="#CCCCCC"><FONT face="Courier New" size=2>
+      <P>0007h </FONT></P></TD>
+    <TD vAlign="top" width="48%" bgcolor="#CCCCCC"><FONT face="Courier New" size=2>
+      <P>Цилиндр (биты 0-7) </FONT></P></TD></TR>
+  <TR>
+    <TD vAlign="top" width="21%" bgcolor="#999999"><FONT face="Courier New" size=2>
+      <P>0008h-000Bh </FONT></P></TD>
+    <TD vAlign="top" width="48%" bgcolor="#999999"><FONT face="Courier New" size=2>
+      <P>Смещение секторов </FONT></P></TD>
+    <TD vAlign=top width="31%">
+      <P> </P></TD></TR>
+  <TR>
+    <TD vAlign="top" width="21%" bgcolor="#999999"><FONT face="Courier New" size=2>
+      <P>000Ch-000Fh </FONT></P></TD>
+    <TD vAlign="top" width="48%" bgcolor="#999999"><FONT face="Courier New" size=2>
+      <P>Количество секторов в разделе </FONT></P></TD>
+    <TD vAlign=top width="31%">
+      <P> </P></TD></TR></TBODY></TABLE>
+
+      <P>Маркер начальной загрузки – байт, значение которого может быть или 0 
+      или номер диска (80h). Если 80h, тогда раздел является активным разделом 
+      диска (разделом начальной загрузки), с которого будет осуществляться 
+      загрузка операционной системы. 
+      <P>Следующие 3 байта содержат информацию о начале размещения раздела 
+      (номера головки, цилиндра и сектора). Номера сектора и цилиндра хранятся в 
+      двух байтах. Биты 0-7 номера цилиндра сохранены во втором байте, в то 
+      время как биты 8-9 сохранены в старших разрядах первого байта. Значение 
+      сектора сохранено в битах 0-5 первого байта. Бинарную карту байтов можно 
+      представить в виде таблицы:</P>
+
+<TABLE align=center border=1 borderColor=#808080 cellPadding=2 cellSpacing=1 
+width=450>
+  <TBODY>
+  <TR>
+    <TD align=middle bgColor=#ffffff colSpan=16 height=20>
+      2-й байт </TD>
+    <TD align=middle bgColor=#ffffff colSpan=16 height=20>
+      1-й байт </TD></TR>
+  <TR align=middle>
+    <TD colSpan=2 height=15>
+      <FONT color=#808080 size=1>F </FONT></TD>
+    <TD colSpan=2 height=15>
+      <FONT color=#808080 size=1>E </FONT></TD>
+    <TD colSpan=2 height=15>
+    <FONT color=#808080 size=1>D </FONT></TD>
+    <TD colSpan=2 height=15>
+     <FONT color=#808080 size=1>C </FONT></TD>
+    <TD colSpan=2 height=15>
+      <FONT color=#808080 size=1>B </FONT></TD>
+    <TD colSpan=2 height=15>
+      <FONT color=#808080 size=1>A </FONT></TD>
+    <TD colSpan=2 height=15>
+      <FONT color=#808080 size=1>9 </FONT></TD>
+    <TD colSpan=2 height=15>
+      <FONT color=#808080 size=1>8 </FONT></TD>
+    <TD colSpan=2 height=15>
+      <FONT color=#808080 size=1>7 </FONT></TD>
+    <TD colSpan=2 height=15>
+      <FONT color=#808080 size=1>6 </FONT></TD>
+    <TD colSpan=2 height=15>
+      <FONT color=#808080 size=1>5 </FONT></TD>
+    <TD colSpan=2 height=15>
+      <FONT color=#808080 size=1>4 </FONT></TD>
+    <TD colSpan=2 height=15>
+      <FONT color=#808080 size=1>3 </FONT></TD>
+    <TD colSpan=2 height=15>
+      <FONT color=#808080 size=1>2 </FONT></TD>
+    <TD colSpan=2 height=15>
+      <FONT color=#808080 size=1>1 </FONT></TD>
+    <TD colSpan=2 height=15>
+      <FONT color=#808080 size=1>0 </FONT></TD></TR>
+  <TR align=middle>
+    <TD bgColor=#cccccc colSpan=2 height=25><FONT size=2>
+      <B>C </B></FONT></TD>
+    <TD bgColor=#cccccc colSpan=2 height=25><FONT size=2>
+      <B>C </B></FONT></TD>
+    <TD bgColor=#cccccc colSpan=2 height=25><FONT size=2>
+      <B>C </B></FONT></TD>
+    <TD bgColor=#cccccc colSpan=2 height=25><FONT size=2>
+      <B>C </B></FONT></TD>
+    <TD bgColor=#cccccc colSpan=2 height=25><FONT size=2>
+      <B>C </B></FONT></TD>
+    <TD bgColor=#cccccc colSpan=2 height=25><FONT size=2>
+      <B>C </B></FONT></TD>
+    <TD bgColor=#cccccc colSpan=2 height=25><FONT size=2>
+      <B>C </B></FONT></TD>
+    <TD bgColor=#cccccc colSpan=2 height=25><FONT size=2>
+      <B>C </B></FONT></TD>
+    <TD bgColor=#fccccc colSpan=2 height=25><FONT size=2>
+      <B>C </B></FONT></TD>
+    <TD bgColor=#fccccc colSpan=2 height=25><FONT size=2>
+      <B>C </B></FONT></TD>
+    <TD bgColor=#eeeeee colSpan=2 height=25><FONT size=2>
+      S </FONT></TD>
+    <TD bgColor=#eeeeee colSpan=2 height=25><FONT size=2>
+      S </FONT></TD>
+    <TD bgColor=#eeeeee colSpan=2 height=25><FONT size=2>
+      S </FONT></TD>
+    <TD bgColor=#eeeeee colSpan=2 height=25><FONT size=2>
+      S </FONT></TD>
+    <TD bgColor=#eeeeee colSpan=2 height=25><FONT size=2>
+      S </FONT></TD>
+    <TD bgColor=#eeeeee colSpan=2 height=25 width=45><FONT size=2>
+      S </FONT></TD></TR>
+  <TR align=middle>
+    <TD bgColor=#cccccc colSpan=2 height=20>
+      <B><FONT size=2>7 </FONT></B></TD>
+    <TD bgColor=#cccccc colSpan=2 height=20>
+      <B><FONT size=2>6 </FONT></B></TD>
+    <TD bgColor=#cccccc colSpan=2 height=20>
+      <B><FONT size=2>5 </FONT></B></TD>
+    <TD bgColor=#cccccc colSpan=2 height=20>
+      <B><FONT size=2>4 </FONT></B></TD>
+    <TD bgColor=#cccccc colSpan=2 height=20>
+      <B><FONT size=2>3 </FONT></B></TD>
+    <TD bgColor=#cccccc colSpan=2 height=20>
+      <B><FONT size=2>2 </FONT></B></TD>
+    <TD bgColor=#cccccc colSpan=2 height=20>
+      <B><FONT size=2>1 </FONT></B></TD>
+    <TD bgColor=#cccccc colSpan=2 height=20>
+      <B><FONT size=2>0 </FONT></B></TD>
+    <TD bgColor=#fccccc colSpan=2 height=20>
+      <B><FONT size=2>9 </FONT></B></TD>
+    <TD bgColor=#fccccc colSpan=2 height=20>
+      <B><FONT size=2>8 </FONT></B></TD>
+    <TD bgColor=#eeeeee colSpan=2 height=20>
+      <FONT size=2>5 </FONT></TD>
+    <TD bgColor=#eeeeee colSpan=2 height=20>
+      <FONT size=2>4 </FONT></TD>
+    <TD bgColor=#eeeeee colSpan=2 height=20>
+      <FONT size=2>3 </FONT></TD>
+    <TD bgColor=#eeeeee colSpan=2 height=20>
+      <FONT size=2>2 </FONT></TD>
+    <TD bgColor=#eeeeee colSpan=2 height=20>
+      <FONT size=2>1 </FONT></TD>
+    <TD bgColor=#eeeeee colSpan=2 height=20 >
+      <FONT size=2>0 </FONT></TD></TR></TBODY></TABLE><BR>
+      <P>Далее расположен системный байт, который является идентифицирующим 
+      байтом раздела. Значение 0, для разделов не используется, в то время как 
+      другие значения зависят от файловой системы. DOS использует значения 1,4 и 
+      6 соответственно для FAT12, FAT16 и раздела BigDOS. Значение 5 обозначает 
+      Расширенный раздел, которое объясняется позже. 
+      <P>Затем, идут байты с информацией о размещении конечного сектора раздела 
+      (номера головки, цилиндра и сектора).</P>
+      <P>За ними - значение смещения сектора. Это - число, которое показывает 
+      позицию раздела относительно существующего сектора. Так, для основных 
+      разделов, это - стартовый сектор раздела. Основные разделы - разделы, 
+      которые описаны в корневой структуре разделения. Несколько позже мы 
+      увидим, что имеются описатели разделов также в других местах на диске, 
+      которые называются логическими дисками.</P>
+      <P>В последнем элементе описателя, находиться информация о длине раздела 
+      (в секторах).</P>
+      <P>Когда диск работает в режиме LBA (логической адресации блоков), 
+      значения CHS (цилиндр – головка – сектор) для начала и конца размещения 
+      игнорируются. Отображение диска выполняется с абсолютным номером сектора, 
+      а не в терминах CHS (cylinder-head-sector). Таким образом, относительное 
+      значение сектора и длина раздела используются для идентификации объема 
+      раздела на диске. CHS значения вообще недопустимы для дисков объемом более 
+      чем 8.4GB.</P>
+      <P>В корневом секторе выделены адреса для 4 описателей. Сразу после них, 
+      расположена сигнатура (два байта) AA55h, которая метит сектор как 
+      системный сектор. Это значение существует в каждом секторе структуры 
+      разделов (включая загрузочные секторы) и его отсутствие может 
+      свидетельствовать о вероятном повреждении структуры разделов.</P>
+      <P>Теперь, относительно дополнительных разделов. Они описаны, как и любой 
+      другой раздел в корневом секторе, но их обработка Операционными системами 
+      несколько иная. Они указывают на сектор, который содержит описатели 
+      разделов для других разделов и дополнительные разделы, и так далее. Именно 
+      поэтому мы можем иметь более чем 4 раздела на диске. Рассмотрим как пример 
+      небольшую таблицу:</P>
+      <P></P>
+<center><TABLE border=1 borderColor=#808080 cellPadding=2 cellSpacing=1 width=435>
+  <TBODY>
+  <TR align=middle>
+    <TD bgColor=#ffffff>
+      <P><FONT face="Courier New" size=2>MBR</FONT> </P></TD>
+    <TD bgColor=#ffffff><FONT face="Courier New" size=2>
+      <P>1st Ext </FONT></P></TD>
+    <TD bgColor=#ffffff><FONT face="Courier New" size=2>
+      <P>2nd Ext </FONT></P></TD>
+    <TD bgColor=#ffffff><FONT face="Courier New" size=2>
+      <P>3rd Ext </FONT></P></TD></TR>
+  <TR>
+    <TD width="26%"><FONT face="Courier New" size=2>
+      <P>1 : P </FONT></P></TD>
+    <TD width="26%"><FONT face="Courier New" size=2>
+      <P>1 : L </FONT></P></TD>
+    <TD width="26%"><FONT face="Courier New" size=2>
+      <P>1 : L </FONT></P></TD>
+    <TD width="23%"><FONT face="Courier New" size=2>
+      <P>1 : L </FONT></P></TD></TR>
+  <TR>
+    <TD width="26%"><FONT face="Courier New" size=2>
+      <P>2 : P </FONT></P></TD>
+    <TD width="26%"><FONT face="Courier New" size=2>
+      <P>2 : E ----- </FONT></P></TD>
+    <TD width="26%"><FONT face="Courier New" size=2>
+      <P>2 : E ----- </FONT></P></TD>
+    <TD width="23%"><FONT face="Courier New" size=2>
+      <P>2 : - </FONT></P></TD></TR>
+  <TR>
+    <TD width="26%"><FONT face="Courier New" size=2>
+      <P>3 : E ----- </FONT></P></TD>
+    <TD width="26%"><FONT face="Courier New" size=2>
+      <P>3 : - </FONT></P></TD>
+    <TD width="26%"><FONT face="Courier New" size=2>
+      <P>3 : - </FONT></P></TD>
+    <TD width="23%"><FONT face="Courier New" size=2>
+      <P>3 : - </FONT></P></TD></TR>
+  <TR>
+    <TD width="26%"><FONT face="Courier New" size=2>
+      <P>4 : P </FONT></P></TD>
+    <TD width="26%"><FONT face="Courier New" size=2>
+      <P>4 : - </FONT></P></TD>
+    <TD width="26%"><FONT face="Courier New" size=2>
+      <P>4 : - </FONT></P></TD>
+    <TD width="23%"><FONT face="Courier New" size=2>
+      <P>4 : - </FONT></P></TD></TR></TBODY></TABLE></center><BR>
+
+      <P>&nbsp;В этом примере, показана карта структуры разделов. MBR обозначает 
+      блок начальной загрузки (корневой сектор) и 1st, 2nd и 3rd Ext - позиции 
+      1-го, 2-го и 3-го описателей дополнительных разделов. 'P' обозначает 
+      основной (Primary) раздел, 'E' обозначает дополнительный (Extended) 
+      раздел, и 'L' обозначает (Logical) логический диск. Раздел 'E' в MBR, 
+      называется главным (корневым или основным) дополнительным разделом. Это – 
+      потому, что он включает в себя все остальные дополнительные разделы. 
+      Начало расположения основного дополнительного раздела указывает на 1-й 
+      дополнительный раздел. Объем, который занимает основной дополнительный 
+      раздел, зарезервирован для логических дисков. Все дополнительные разделы 
+      содержат информацию относительно соответствующих им логических дисков, 
+      аналогично MBR (описанному выше), но без части кода начальной загрузки. 
+      Каждый дополнительный раздел также имеет 4 описателя (но используются 
+      только первые два). Первый описатель идентифицирует соответствующий 
+      логический диск, а второй является описателем, указывающим на следующий 
+      логический диск в цепочке разделов. Т.о. структура разделов - структура 
+      списка связей, которая может быть такой длины, какой необходимо. (Каждый 
+      дополнительный сектор описания раздела имеет в конце сигнатуру 0xAA55, 
+      идентифицирующую его как системный сектор). 
+      <P>Для разделов существуют некоторые общепринятые ограничения геометрии. 
+      Разделы должны начинаться в начале цилиндра, и заканчиваться в конце 
+      цилиндра (хотя это иногда нарушается).</P>
+      <P>Начало должно всегда быть - Цилиндр: XXXX Головка: 0 (или 1) Сектор: 1 
+      </P>
+      <P>Окончание должно быть - Цилиндр: YYYY Головка: <B>m</B>-1 Сектор 
+      <B>n</B>,</P>
+      <P> где <B>m</B>&nbsp; - число головок физического диска, и 
+      <B>n</B>&nbsp; - число секторов на дорожку физического диска.</P>
+      <P>При чем, если Вы удаляете один из средних логических дисков (например, 
+      2-ой), предыдущий дополнительный раздел будет связан непосредственно со 
+      следующим, изменяя параметры связи. Ограничения геометрия распространяются 
+      также и на диски, которые работают с LBA 
+трансляцией.</P>
+
+<br>
+<table border="0" bgcolor="#DCDCDC" align="center" width="90%">
+	<tr>
+		<td>
+		<div align="left" class="author">Источник: <b><a href="http://hdd.kulichki.com">http://hdd.kulichki.com</a></b><br>
+		Автор: <b>неизвестно</b><br>
+		Дата публикации: <b>01.01.2004</b><br>
+		
+		
+		</div>
+		
+		</td>
+	</tr>
+</table>
+<br>
+</td>
+	
+	
+</tr>
+</table>
+</td>
+<!-- DOWN MENU & COPY -->
+<table width="800" height="25" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" summary="" align="center">
+    <tr>
+      <td align="center">
+  <nobr>
+  
+  <a href="http://hdd.kulichki.com/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Главная</a>
+  <span class="divise">|</span>
+
+  <a href="http://hdd.kulichki.com/news/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Новости</a>
+  <span class="divise">|</span>
+  <a href="http://hdd.kulichki.com/anatomy/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Анатомия</a>
+  <span class="divise">|</span>
+
+  <a href="http://hdd.kulichki.com/service/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Обслуживание</a>
+  <span class="divise">|</span>
+
+  <a href="http://hdd.kulichki.com/recovery/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Восстановление&Ремонт</a>
+  <span class="divise">|</span>
+
+      <a href="http://hdd.kulichki.com/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Guarding</a>
+  <span class="divise">|</span>
+  
+  <a href="http://hdd.kulichki.com/soft/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Программы</a>
+  <span class="divise">|</span>
+
+  <a href="http://hdd.kulichki.com/brand/" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Модели</a>
+  <span class="divise">|</span>
+  
+        <a href="http://hdd.kulichki.com/forum" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Форум</a>
+  <span class="divise">|</span>
+  
+  <a href="http://hdd.kulichki.com/soft/link.shtml" class="lien" onMouseOver="netie(-1,4)?this.style.color='#FF0000':null;" onmouseout="netie(-1,4)?this.style.color='#FFFFFF':null;">Ссылки</a>
+
+  
+
+  
+  </nobr>
+      </td>
+    </tr>
+  </table>
+<div class="pe_litle"><font color="red">Уважаемый посетитель! </font><font color="green">Исключительно для блага сайта! Зайдите по любой ссылке (ссылки ниже) в каталог Begun, а оттуда на несколько сайтов. Я буду Вам очень благодарен. С уважением, администратор hdd.kulichki.com! </font></div>
+<center>
+<TABLE cellSpacing=0 cellPadding=0 border=0 width=800>
+  <TBODY>
+  <TR bgColor="#77B94E">
+    <TD valign="bottom" background="/archive/disign/reklama/begun_logo.gif" bgcolor="#77B94E">
+      <table width="100%" border="0" cellspacing="0" cellpadding="5">
+        <tr>
+          <td background="">
+            <table cellspacing=0 cellpadding=1 border=0 style="cursor: hand;">
+              <tr>
+                <td colspan=2 onClick="top.location.href='http://partner.begun.ru/comming.jsp?soid=3124964';return true;" background="" valign=bottom><span style="FONT-SIZE: 10px; COLOR: #E3E9F4; FONT-FAMILY: Verdana, Arial, sans-serif;">Найди
+                  на Бегуне:</span></td>
+              </tr>
+              <form action="http://partner.begun.ru/comming.jsp" target="_blank">
+                <input type=hidden name="oid" value="3124962">
+                <tr>
+                  <td background="">
+                    <input style="FONT-SIZE: 10px; WIDTH: 106px; FONT-FAMILY: Verdana, Arial, sans-serif" name="q" size="12" value="">
+                  </td>
+                  <td background="">
+                    <input type=image height=18 alt="" width=18  src="http://hdd.kulichki.com/archive/disign/reklama/begun_submit.gif" border=0 name="image" align="middle">
+                  </td>
+                </tr>
+              </form>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </TD>
+    <TD bgcolor="#FFFFFF"><img src="http://hdd.kulichki.com/archive/disign/reklama/begun_line1.gif" width="14" height="100" border=0></TD>
+    <TD bgcolor="#FFFFFF">
+      <table cellspacing=0 cellpadding=2 border=0>
+        <tbody>
+        <tr>
+          <td>
+<a target="_blank" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=11"><img height=25 src="http://hdd.kulichki.com/archive/disign/reklama/begun_ico11.gif" width=25 border=0 alt="Досуг и отдых"></a></td>
+          <td><a target="_blank" style="FONT-SIZE: 10px; COLOR: #3366cc; FONT-FAMILY: Verdana, Arial, sans-serif; FONT-WEIGHT: bold;" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=11">Все для дома и офиса</a>
+        <tr>
+          <td><a target="_blank" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=3"><img height=25 src="http://hdd.kulichki.com/archive/disign/reklama/begun_ico3.gif" width=25 border=0 alt="Компьютеры и оргтехника"></a></td>
+          <td><a target="_blank" style="FONT-SIZE: 10px; COLOR: #3366cc; FONT-FAMILY: Verdana, Arial, sans-serif; FONT-WEIGHT: bold;" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=3">Компьютеры и оргтехника</a></td>
+        </tr>
+        <tr>
+          <td><a target="_blank" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=7"><img height=25 src="http://hdd.kulichki.com/archive/disign/reklama/begun_ico7.gif" width=25 border=0 alt="Связь"></a></td>
+          <td><a target="_blank" style="FONT-SIZE: 10px; COLOR: #3366cc; FONT-FAMILY: Verdana, Arial, sans-serif; FONT-WEIGHT: bold;" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=7">Связь</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </TD>
+    <TD bgcolor="#FFFFFF">
+      <table width="14" border="0" cellspacing="3" cellpadding="0" height="100">
+        <tbody>
+        <tr>
+          <td background="/archive/disign/reklama/begun_line2.gif">
+            <table width="7" border="0" cellspacing="0" cellpadding="0" height="1">
+              <tr>
+                <td></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </TD>
+    <TD bgcolor="#FFFFFF">
+      <table cellspacing=0 cellpadding=2 border=0>
+        <tbody>
+        <tr>
+          <td><a target="_blank" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=12"><img height=25 src="http://hdd.kulichki.com/archive/disign/reklama/begun_ico12.gif" width=25 border=0 alt="Красота и здоровье"></a></td>
+          <td><a target="_blank" style="FONT-SIZE: 10px; COLOR: #3366cc; FONT-FAMILY: Verdana, Arial, sans-serif; FONT-WEIGHT: bold;" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=12">Красота и здоровье</a></td>
+        </tr>
+        <tr>
+          <td><a target="_blank" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=13"><img height=25 src="http://hdd.kulichki.com/archive/disign/reklama/begun_ico13.gif" width=25 border=0 alt="Книги, музыка и видео"></a></td>
+          <td><a target="_blank" style="FONT-SIZE: 10px; COLOR: #3366cc; FONT-FAMILY: Verdana, Arial, sans-serif; FONT-WEIGHT: bold;" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=13">Книги, музыка и видео</a></td>
+        </tr>
+        <tr>
+        
+          <td><a target="_blank" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=1"><img height=25 src="http://hdd.kulichki.com/archive/disign/reklama/begun_ico1.gif" width=25 border=0 alt="Интернет-услуги и сервисы"></a></td>
+          <td><a target="_blank" style="FONT-SIZE: 10px; COLOR: #3366cc; FONT-FAMILY: Verdana, Arial, sans-serif; FONT-WEIGHT: bold;" href="http://partner.begun.ru/comming.jsp?soid=3124964&grid=1">Интернет-услуги и сервисы</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </TD>
+    <TD bgcolor="#FFFFFF">
+      <table width="14" border="0" cellspacing="3" cellpadding="0" height="100">
+        <tbody>
+        <tr>
+          <td background="/archive/disign/reklama/begun_line2.gif">
+            <table width="7" border="0" cellspacing="0" cellpadding="0" height="1">
+              <tr>
+                <td></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </TD>
+    <TD bgcolor="#FFFFFF">
+      <table cellspacing=0 cellpadding=2 border=0>
+        <tbody>
+        <tr>
+          <td><a target="_blank" style="FONT-SIZE: 10px; COLOR: #666666; FONT-FAMILY: Verdana, Arial, sans-serif" href="http://partner.begun.ru/comming.jsp?soid=3124964">Продаем
+            целевых<br>
+            посетителей!</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </TD>
+    <TD bgcolor="#77B94E">
+      <table width="7" border="0" cellspacing="0" cellpadding="0" height="1">
+        <tr>
+          <td></td>
+        </tr>
+      </table>
+    </TD>
+  </TR>
+</TABLE></center>
+</p>
+
+<div  class="pe_litle">При перепечатке материалов сайта ссылка на первоисточник обязательна<br>
+Разработка сайта - <a href="mailto:hdd@kulichki.com">Прудько Александр</a>. 2003-2004
+</div><br>
+
+
+
+	<center><!-- Another Banner Network -->
+<script language="javascript" type="text/javascript"><!--
+bn_id='102437';
+bn_url='http://b468.abn.com.ua';
+bn_rnd=Math.round((Math.random()*10000000));
+bn_addurl='?t=468&w=468&h=60&id='+bn_id;
+if(window.screen) bn_addurl+='&c='+screen.colorDepth+'&cw='+screen.width;
+if(document.referrer) bn_addurl+='&ref='+escape(document.referrer);
+bn_addurl+='&tz='+(new Date()).getTimezoneOffset()+'&r='+bn_rnd;
+document.write('<iframe src="'+bn_url+'/iframe'+bn_addurl+'" width=468 height=60 frameborder=0 vspace=0 hspace=0 marginwidth=0 marginheight=0 scrolling=no><a href="'+bn_url+'/nsanchor'+bn_addurl+'" target=_top><img src="'+bn_url+'/nsimg'+bn_addurl+'" width="468" height="60" border=0 /></a></iframe>');
+//--></script><noscript><a href="http://b468.abn.com.ua/nsanchor?t=468&id=102437" target=_top><img src="http://b468.abn.com.ua/nsimg?t=468&w=468&h=60&id=102437" width="468" height="60" border=0 /></a></noscript>
+<!-- /Another Banner Network --><center>
+
+<br>
+
+
+<center><!-- HotLog -->
+<script language="javascript">
+hotlog_js="1.0";
+hotlog_r=""+Math.random()+"&s=163190&im=133&r="+escape(document.referrer)+"&pg="+
+escape(window.location.href);
+document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");
+</script><script language="javascript1.1">
+hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script>
+<script language="javascript1.2">
+hotlog_js="1.2";
+hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+
+(((navigator.appName.substring(0,3)=="Mic"))?
+screen.colorDepth:screen.pixelDepth)</script>
+<script language="javascript1.3">hotlog_js="1.3"</script>
+<script language="javascript">hotlog_r+="&js="+hotlog_js;
+document.write("<a href='http://click.hotlog.ru/?163190' target='_top'><img "+
+" src='http://hit8.hotlog.ru/cgi-bin/hotlog/count?"+
+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script>
+<noscript><a href=http://click.hotlog.ru/?163190 target=_top><img
+src="http://hit8.hotlog.ru/cgi-bin/hotlog/count?s=163190&im=133" border=0
+width="88" height="31" alt="HotLog"></a></noscript>
+<!-- /HotLog --> <!-- bigmir)net TOP 100 --><a href=http://www.bigmir.net/?cl=69721 target=_blank><script language="javascript"><!--
+bmQ='<img src=http://c.bigmir.net/?s69721&t12'
+bmD=document
+bmD.cookie="b=b"
+if(bmD.cookie)bmQ+='&c1'
+//--></script><script language="javascript1.2"><!--
+bmS=screen;bmQ+='&d'+(bmS.colorDepth?bmS.colorDepth:bmS.pixelDepth)+"&r"+bmS.width;
+//--></script><script language="javascript"><!--
+bmF = bmD.referrer.slice(7);
+((bmI=bmF.indexOf('/'))!=-1)?(bmF=bmF.substring(0,bmI)):(bmI=bmF.length);
+if(bmF!=window.location.href.substring(7,7+bmI))bmQ+='&f'+escape(bmD.referrer);
+bmD.write(bmQ+" border=0 width=88 height=31 alt='bigmir TOP100'>");
+//--></script></a>
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=673317"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=673317;t=99;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=18 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=673317"><img
+src="http://top.list.ru/counter?js=na;id=673317;t=99"
+border=0 height=18 width=88
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+
+
+</center>
+
+
+<tr>
+<td></td>
+</tr>
+</table></tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+</body>
+</html>

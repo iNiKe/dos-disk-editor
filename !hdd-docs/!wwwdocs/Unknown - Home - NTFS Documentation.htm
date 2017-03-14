@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0056)http://linux-ntfs.sourceforge.net/ntfs/help/unknown.html -->
+<!-- http://linux-ntfs.sourceforge.net/ntfs/help/unknown.html --><HTML 
+lang=en><HEAD><TITLE>Unknown - Home - NTFS Documentation</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<META content="NTFS Documentation" name=description><LINK 
+href="Unknown - Home - NTFS Documentation_files/ntfsdoc.css" type=text/css 
+rel=stylesheet><LINK href="../style/ntfsicon.png" type=image/png rel=icon><LINK 
+title="NTFS Documentation" href="../index.html" type=text/html rel=start><LINK 
+href="../index.html" rel=next><LINK href="todo.html" rel=previous><LINK 
+href="../index.html" rel=contents>
+<META content="MSHTML 6.00.2800.1400" name=GENERATOR></HEAD>
+<BODY>
+<TABLE class=toolbar cellSpacing=0 summary="" border=0>
+  <TBODY>
+  <TR>
+    <TD class=toolbar>
+      <DIV class=toolbar><A class=toolbar accessKey=1 
+      href="http://linux-ntfs.sourceforge.net/ntfs/index.html">Home</A></DIV></TD>
+    <TD class=toolbar>
+      <DIV class=toolbar><A class=toolbar accessKey=2 
+      href="http://linux-ntfs.sourceforge.net/ntfs/files/index.html">Files</A></DIV></TD>
+    <TD class=toolbar>
+      <DIV class=toolbar><A class=toolbar accessKey=3 
+      href="http://linux-ntfs.sourceforge.net/ntfs/attributes/index.html">Attributes</A></DIV></TD>
+    <TD class=toolbar>
+      <DIV class=toolbar><A class=toolbar accessKey=4 
+      href="http://linux-ntfs.sourceforge.net/ntfs/concepts/index.html">Concepts</A></DIV></TD>
+    <TD class=toolbar><A class=toolbar accessKey=5 
+      href="http://linux-ntfs.sourceforge.net/ntfs/help/glossary.html">Glossary</A></TD></TR></TBODY></TABLE>
+<H1>Home - Unknown</H1><A class=prevnext accessKey=, 
+href="http://linux-ntfs.sourceforge.net/ntfs/help/todo.html">Previous</A> <A 
+class=prevnext accessKey=. 
+href="http://linux-ntfs.sourceforge.net/ntfs/index.html">Next</A> 
+<H2>Overview</H2>
+<P>This, final, section of the documentation is the place for all the unanswered 
+questions. Some relate to Windows' use of NTFS and some are very technical. Your 
+help is needed to fill in the blanks. Thanks. </P>
+<H2>Unanswered Questions</H2>
+<DL>
+  <DT>Why do some Metadata files on NTFS 3.0+ still have Security Descriptors? 
+  <DD>On NTFS 3.0+, $Volume, $AttrDef, dot and $Boot have Security Descriptors. 
+  Is this to save time at boot up? Perhaps to reduce the number of files it has 
+  to parse? Or is this the same as the previous question? 
+  <DT>$STANDARD_INFORMATION: Max Versions, Version Number and Class Id? 
+  <DD>Are any of the three fields used? 
+  <DT>Is $UsnJrnl's $J Data Stream a fixed size? 
+  <DD>Is it a fixed size? Does it wrap around like $LogFile? 
+  <DT>What does $UsnJrnl's $Max Data Stream do? 
+  <DD>There's a time stamp, two fields that might be flags and a field that 
+  might be a length. 
+  <DT>Attribute Header 
+  <DD>When is "Initialised" not the same size as "Real"? 
+  <DT>$MountMgrDatabase 
+  <DD>What is the format of this stream? 
+  <DT>MFT (FILE) Records 
+  <DD>Will we only see MFT Extension records with inodes &lt; 23? Is the 
+  sequence number always equal to the inode number for the Metadata? 
+  <DT>MFT Mirr 
+  <DD>How large is this if the cluster size is greater than 4kB? 
+  <DT>Index Records 
+  <DD>Are they always 4kB? 
+  <DT>Collation 
+  <DD>Is a collation type ULONGS equivalent to GUID? 
+  <DT>Security Descriptors 
+  <DD>How are ACEs inherited? </DD></DL><PRE>    copy questions to relevant pages and x-link
+    </PRE><BR><A class=contact 
+href="http://linux-ntfs.sourceforge.net/ntfs/help/license.html">Copyright 
+(C)</A> <A class=contact 
+href="http://validator.w3.org/check?uri=http://linux-ntfs.sourceforge.net/ntfs/help/unknown.html">Validate 
+HTML</A> <A class=contact 
+href="http://jigsaw.w3.org/css-validator/validator?uri=http://linux-ntfs.sourceforge.net/ntfs/help/unknown.html">Validate 
+CSS</A> <IMG height=1 alt=SourceForge 
+src="Unknown - Home - NTFS Documentation_files/sflogo.png" width=1 border=0> 
+</BODY></HTML>
